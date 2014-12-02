@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rectangle</title>
+	<script>
+		var ctx;
+		function init () {
+			ctx = document.getElementById('canvas').getContext('2d');
+			ctx.fillStyle = "rgb(250, 0, 0)";
+			ctx.rotate(-Math.PI/6);
+			ctx.fillRect(50, 50, 100, 200);
+			ctx.rotate(Math.PI/6);
+			ctx.fillStyle = "rgb(0, 0, 250)";
+			ctx.fillRect(50, 50, 5, 5);
+		}
+	</script>
+</head>
+<body onLoad="init();">
+	<canvas id="canvas" width="400" height="300">
+		tu navegador no soporta el elemento canvas de HTML5
+	</canvas>
+</body>
+</html>

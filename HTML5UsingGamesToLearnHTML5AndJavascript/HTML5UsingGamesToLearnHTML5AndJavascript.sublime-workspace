@@ -1,0 +1,1032 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hous",
+				"housexp"
+			],
+			[
+				"house",
+				"houseyp"
+			],
+			[
+				"fill",
+				"fillText	canvasCtxFillText"
+			],
+			[
+				"playe",
+				"playertotal"
+			],
+			[
+				"hos",
+				"housexp"
+			],
+			[
+				"visua",
+				"visualisacion"
+			],
+			[
+				"visuali",
+				"visualization"
+			],
+			[
+				"pick",
+				"pickelement"
+			],
+			[
+				"letter",
+				"lettersguessed"
+			],
+			[
+				"syle",
+				"style"
+			],
+			[
+				"drawle",
+				"drawleftleg"
+			],
+			[
+				"drawrig",
+				"drawrightleg"
+			],
+			[
+				"stroke",
+				"strokeStyle"
+			],
+			[
+				"music",
+				"musicch"
+			],
+			[
+				"pape",
+				"paperb"
+			],
+			[
+				"paper",
+				"paperby"
+			],
+			[
+				"fil",
+				"fillText	canvasCtxFillText"
+			],
+			[
+				"compch",
+				"compch"
+			],
+			[
+				"fillsy",
+				"fillstyle"
+			],
+			[
+				"wall",
+				"Wall"
+			],
+			[
+				"drawa",
+				"drawall"
+			],
+			[
+				"lay",
+				"layerY"
+			],
+			[
+				"line",
+				"lineTo"
+			],
+			[
+				"stle",
+				"style"
+			],
+			[
+				"loac",
+				"localStorage"
+			],
+			[
+				"local",
+				"localStorage"
+			],
+			[
+				"input",
+				"input	input - text"
+			],
+			[
+				"holder",
+				"holderimg"
+			],
+			[
+				"second",
+				"secondcard"
+			],
+			[
+				"i",
+				"ins	<ins>"
+			],
+			[
+				"vertical",
+				"verticalvel1"
+			],
+			[
+				"fillstyle",
+				"fillstyle"
+			],
+			[
+				"sheig",
+				"sheight"
+			],
+			[
+				"srock",
+				"startrocky"
+			],
+			[
+				"startrock",
+				"startrocky"
+			],
+			[
+				"htar",
+				"htarget"
+			],
+			[
+				"canno",
+				"cannonht"
+			],
+			[
+				"cw",
+				"cwidth"
+			],
+			[
+				"ibal",
+				"iballx"
+			],
+			[
+				"style",
+				"stylestring"
+			],
+			[
+				"ctx",
+				"ctx.fillRect	canvasCtxFillRect"
+			],
+			[
+				"boy",
+				"boxy"
+			],
+			[
+				"boxboudn",
+				"boxboundx"
+			],
+			[
+				"img",
+				"img	canvasImage"
+			],
+			[
+				"vi",
+				"viewer"
+			],
+			[
+				"upa",
+				"updatePrivateChannel"
+			],
+			[
+				"updateP",
+				"updatePublicChannel"
+			],
+			[
+				"blo",
+				"block"
+			],
+			[
+				"va",
+				"value	Attr"
+			],
+			[
+				"cals",
+				"class	Attr"
+			],
+			[
+				"clas",
+				"class	Attr"
+			],
+			[
+				"ite",
+				"item"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"u10",
+				"u1001"
+			],
+			[
+				"colo",
+				"_colors"
+			],
+			[
+				"bl",
+				"blue"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"pro",
+				"proto	Prototype"
+			],
+			[
+				"ele",
+				"elementWithId"
+			],
+			[
+				"tr",
+				"tree"
+			],
+			[
+				"say",
+				"sayHo"
+			],
+			[
+				"sa",
+				"sayHey"
+			],
+			[
+				"sayh",
+				"sayHey"
+			],
+			[
+				"str",
+				"String"
+			],
+			[
+				"num",
+				"Number"
+			],
+			[
+				"pto",
+				"prototype"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"a",
+				"android"
+			],
+			[
+				"class",
+				"classes"
+			],
+			[
+				"ro",
+				"room"
+			],
+			[
+				"pa",
+				"players"
+			],
+			[
+				"expres",
+				"express"
+			],
+			[
+				"click",
+				"ClickEvent"
+			],
+			[
+				"Clic",
+				"ClickHandler"
+			],
+			[
+				"but",
+				"Button"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"cle",
+				"client"
+			],
+			[
+				"ad",
+				"scene.addChild"
+			],
+			[
+				"pixel",
+				"pixelsToDraw"
+			],
+			[
+				"timelin",
+				"timelinePosition"
+			],
+			[
+				"keyfa",
+				"keyframeTimeline"
+			],
+			[
+				"curr",
+				"currentPlayer"
+			],
+			[
+				"requi",
+				"SGF.require"
+			],
+			[
+				"spe",
+				"self.speed"
+			],
+			[
+				"hello",
+				"HelloWorld"
+			],
+			[
+				"life",
+				"lifeLabel"
+			],
+			[
+				"back",
+				"Background"
+			],
+			[
+				"imga",
+				"images"
+			],
+			[
+				"dire",
+				"direction"
+			],
+			[
+				"Enemy",
+				"EnemyShoot"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"Player",
+				"PlayerShoot"
+			],
+			[
+				"rootScene",
+				"game.rootScene.addEventListener"
+			],
+			[
+				"lo",
+				"loop	Arduino loop"
+			],
+			[
+				"score",
+				"scoreLabel"
+			],
+			[
+				"add",
+				"addChild	gameRootSceneAddChild"
+			],
+			[
+				"to",
+				"girl.toY"
+			],
+			[
+				"map",
+				"map0"
+			],
+			[
+				"androi",
+				"Android"
+			],
+			[
+				"andoi",
+				"Android"
+			],
+			[
+				"wri",
+				"document.write"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"bouh",
+				"bounceheight"
+			],
+			[
+				"bounrate",
+				"bouncerate"
+			],
+			[
+				"re",
+				"Rect"
+			],
+			[
+				"cam",
+				"cameray"
+			],
+			[
+				"pla",
+				"playerCenterx"
+			],
+			[
+				"hal",
+				"HALF_WINWIDTH"
+			],
+			[
+				"invtm",
+				"INVULNTIME"
+			],
+			[
+				"grass",
+				"grassObjs"
+			],
+			[
+				"pix",
+				"pixelx"
+			],
+			[
+				"drawb",
+				"drawBox"
+			],
+			[
+				"box",
+				"BOXSIZE"
+			],
+			[
+				"boa",
+				"BOARDHEIGHT"
+			],
+			[
+				"drawbo",
+				"drawBoard"
+			],
+			[
+				"bla",
+				"BLANK"
+			],
+			[
+				"temp",
+				"TEMPLATEHEIGHT"
+			],
+			[
+				"fps",
+				"FPSCLOCK"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"movin",
+				"movingDown"
+			],
+			[
+				"movi",
+				"movingLeft"
+			],
+			[
+				"boar",
+				"board"
+			],
+			[
+				"mo",
+				"movingRight"
+			],
+			[
+				"fal",
+				"False"
+			],
+			[
+				"mov",
+				"movingLeft"
+			],
+			[
+				"kd",
+				"K_DOWN"
+			],
+			[
+				"fall",
+				"fallingPiece"
+			],
+			[
+				"O",
+				"O_SHAPE_TEMPLATE"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "chapter9Hangman/hangman.html",
+			"settings":
+			{
+				"buffer_size": 6004,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "chapter10BlackJack/BlackJack.html",
+			"settings":
+			{
+				"buffer_size": 6092,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 213.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML5"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"Snippet:",
+				"Snippet: html"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"Snippet: encha",
+				"Snippet: enchant"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/I/User/Preferences.sublime-settings",
+		"/I/User/Default (Windows).sublime-keymap",
+		"/C/Users/mc_li/Documents/googleDrive.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter8RockPaperScissors/rockPaperScissors.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter7Mazes/travelMaze.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter7Mazes/buildMaseAndTravel.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter7Mazes/localStorageTest.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter6Quiz/QuizMultipleVideos.html",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxRestore.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxStroke.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxScale.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxSave.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxArc.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxStrokeStyle.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxLineWidth.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxClosePath.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxBeginPath.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxFillRect.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxFillStyle.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxFillText.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxFont.sublime-snippet",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter8RockPaperScissors/paper.gif",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter7Mazes/localStorageTest.js",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter6Quiz/Quiz.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter6Mazes/localStorageTest.js",
+		"/C/Python27/Scripts/ipython-script.py",
+		"/C/mejorandola/diseñoYdesarrolloWeb/url.py",
+		"/G/archivos_base/archivos _finales/js/DisparoNave.js",
+		"/G/archivos_base/archivos _finales/js/ContenedorMalos.js",
+		"/G/archivos_base/archivos _finales/js/Cargador.js",
+		"/G/archivos_base/archivos _finales/js/App.js",
+		"/G/archivos_base/archivos _finales/js/Malo.js",
+		"/G/archivos_base/archivos _finales/js/easeljs-0.6.0.min.js",
+		"/G/archivos_base/archivos _finales/js/Nave.js",
+		"/G/archivos_base/archivos _finales/js/ndgmr.Collision.js",
+		"/G/archivos_base/archivos _finales/js/soundjs-0.4.0.min.js",
+		"/G/archivos_base/archivos _finales/js/CocoonJSAudioPlugin.js",
+		"/G/archivos_base/archivos _finales/index.html",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasImage.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasDraw.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxMoveTo.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/canvas/canvasCtxLineTo.sublime-snippet",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter5ThememorygameAKAconcentration/memoryGameUsingPictures.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter5ThememorygameAKAconcentration/memoryGameUsingPolygons.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter5ThememorygameAKAconcentration/fonts.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter4CannonballandSlingshot/slingshotPullingBack.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter4CannonballandSlingshot/cannonball_1.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter4CannonballandSlingshot/cannonball.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter4CannonballandSlingshot/rectangle_2.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter4CannonballandSlingshot/rectangle_1.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter4CannonballandSlingshot/rectangle.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter3Bouncingball/bouncingBallWithInputs_2.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter3Bouncingball/bouncingBallWithInputs_1.html",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/canvasDraw.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/canvasImage.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/canvasCtxArc.sublime-snippet",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter3Bouncingball/bouncingBallWithInputs.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter3Bouncingball/elapsed.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter3Bouncingball/theOrigamiFrog.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter2Dicegame/crapsGame_1.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter2Dicegame/crapsGame.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter2Dicegame/throwingDice.html",
+		"/C/HTML5UsingGamesToLearnHTML5AndJavascript/chapter2Dicegame/throwing1Die.html",
+		"/C/expertJavascript/chapter5/sharedWorkers.html",
+		"/C/expertJavascript/chapter5/dedicatedWorkers.html",
+		"/C/expertJavascript/chapter5/worker.js",
+		"/C/expertJavascript/chapter5/chat_worker.js",
+		"/C/expertJavascript/chapter5/blobTheBuilder.js",
+		"/C/expertJavascript/chapter5/servidor.js",
+		"/C/expertJavascript/chapter5/extras.txt",
+		"/C/expertJavascript/chapter5/blobTheBuilder.html",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Installed Packages/Emmet Css Snippets.sublime-package",
+		"/C/expertJavascript/sharedWorkers.html",
+		"/C/expertJavascript/chapter5/basicWorkers.html",
+		"/C/expertJavascript/chapter5/callbackHell.html",
+		"/C/expertJavascript/chapter5/pong.js",
+		"/C/expertJavascript/chapter5/continuableGenerators.js",
+		"/C/Users/mc_li/Documents/borderRadius.html",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/functionExpression.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/varFunctionExpression.sublime-snippet",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/consoleLog.sublime-snippet",
+		"/C/expertJavascript/expertJavascript.sublime-project",
+		"/C/expertJavascript/chapter5/index.html",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/mc_li/Documents/ejercicioSiete.html",
+		"/C/Users/mc_li/Documents/ejercicioSeis.html",
+		"/C/Users/mc_li/Documents/ejercicioCinco.html",
+		"/C/expertJavascript/chapter5/coroutinerByConvention.js",
+		"/C/expertJavascript/chapter5/generatorsTres.js",
+		"/C/expertJavascript/chapter5/generatorsDos.js",
+		"/C/expertJavascript/chapter5/generators.js",
+		"/C/expertJavascript/chapter5/parallelJoins.js",
+		"/C/expertJavascript/chapter5/generators.html",
+		"/C/expertJavascript/chapter5/chainedAndDeferredExecution.js",
+		"/C/expertJavascript/chapter5/promisesBackFromTheFuture.html",
+		"/C/expertJavascript/chapter5/continuationPassingStyle.html",
+		"/C/expertJavascript/chapter5/perceivedPerformance.html",
+		"/C/expertJavascript/chapter5/work.json",
+		"/C/expertJavascript/chapter5/callbacks.html",
+		"/C/expertJavascript/chapter5/stack.html",
+		"/C/expertJavascript/chapter4/watIndeed.html",
+		"/C/expertJavascript/chapter4/extras.txt",
+		"/C/expertJavascript/chapter4/unicodeForVariables.html",
+		"/C/expertJavascript/chapter4/allYourBase.html",
+		"/C/expertJavascript/chapter4/sneakyEval.html",
+		"/C/expertJavascript/chapter4/signumFunction.html",
+		"/C/expertJavascript/chapter4/parsingStringsIntoNumbers.html",
+		"/C/expertJavascript/chapter4/bitwiseArithmetic.html",
+		"/C/expertJavascript/chapter4/togglingBits.html",
+		"/C/expertJavascript/chapter4/determiningSignEquality.html",
+		"/C/expertJavascript/chapter4/truncatingNumbers.html",
+		"/C/expertJavascript/chapter4/convertingHexToRgb.html",
+		"/C/expertJavascript/chapter4/immediatelyInvokedFunctionExpression.html",
+		"/C/expertJavascript/chapter4/doubleNots.html",
+		"/C/expertJavascript/chapter4/shorthandBoolean.html",
+		"/C/expertJavascript/chapter4/defaultValues.html",
+		"/C/expertJavascript/chapter4/assignmentsThroughComparisonsOrImplicitFallback.html",
+		"/C/expertJavascript/chapter4/complexCoercion.html",
+		"/C/expertJavascript/chapter4/mixedTypeComparisonThroughCoercion.html",
+		"/C/expertJavascript/chapter4/coercionGotchas2.html",
+		"/C/expertJavascript/chapter4/coercionGotchas.html",
+		"/C/expertJavascript/chapter4/contextAwareCoercion.html",
+		"/C/expertJavascript/chapter4/coercion.html",
+		"/C/expertJavascript/chapter3/extras.txt",
+		"/C/expertJavascript/chapter3/singletonModulePattern.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"argument",
+			"i",
+			"tabla",
+			"i",
+			"top",
+			"argument",
+			"hello",
+			"compimg",
+			"paper.jpg",
+			"paper",
+			"jpg",
+			"paperbx",
+			"gif",
+			"n",
+			"score",
+			"Score",
+			"score",
+			"width",
+			"argument",
+			"rock",
+			"350",
+			"wall",
+			"Wall",
+			"x",
+			"Things",
+			"variable",
+			"sy",
+			"sx",
+			"cos",
+			"var",
+			"sx",
+			"body",
+			"argument",
+			"true",
+			"France",
+			"'",
+			"sx",
+			"info",
+			"deck[k].info = holderinfo;",
+			"info",
+			"holderinfo",
+			"info",
+			"times",
+			"firstcard",
+			"secondcard",
+			"firstcard",
+			"secondcard",
+			"boxheight",
+			"ballrad",
+			"boxy",
+			"true",
+			"Things",
+			"var",
+			"drawback",
+			"i",
+			"info",
+			"i",
+			"Things",
+			"Shuffle",
+			"shuffle",
+			"variable",
+			"boxheight",
+			"firstcard",
+			"pick1",
+			"Things",
+			"var",
+			"i",
+			"cardrad",
+			"carwidth",
+			"handwriting",
+			"moveit",
+			"findball",
+			"mousedown",
+			"variable",
+			"swidth",
+			"x",
+			"argument",
+			"swidth",
+			"x",
+			"2",
+			"1",
+			"x",
+			"this.s1x += dx;",
+			"1",
+			"x",
+			"by",
+			"x",
+			"img",
+			"cos",
+			"x",
+			"cos",
+			"horvelocity",
+			"cannonY",
+			"200",
+			"80",
+			"100",
+			"x",
+			"ibally",
+			"iballx",
+			"draw",
+			"Things",
+			"var",
+			"horvelocity",
+			"sx",
+			"argument",
+			"ground",
+			"target",
+			"swidth",
+			"sy",
+			"sx",
+			"50",
+			"b10515",
+			"i",
+			"x",
+			"argument",
+			"hello",
+			"dicewidth",
+			"x",
+			"public_channel",
+			"x",
+			"div",
+			"argument",
+			"tab",
+			"switch",
+			"yield",
+			"result",
+			"user",
+			"item5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "chapter9Hangman/hangman.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2112,
+								2112
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2641.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "chapter10BlackJack/BlackJack.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6092,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6040,
+								6040
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6425.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.stino_log":
+	{
+		"height": 100.0
+	},
+	"project": "HTML5UsingGamesToLearnHTML5AndJavascript.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 196.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

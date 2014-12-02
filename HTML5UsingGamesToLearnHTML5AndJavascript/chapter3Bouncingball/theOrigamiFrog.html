@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Origami Frog</title>
+	<script>
+		var img = new Image();
+		img.src = "sharingan.jpg";
+		var ctx;
+		function init () {
+			ctx = document.getElementById("canvas").getContext('2d');
+			ctx.drawImage(img, 10, 20, 100, 100);
+		}
+	</script>
+</head>
+<body onLoad="init();">
+	<canvas id="canvas" width="400" height="300">
+		Your browser doesn`t support the HTML5 element canvas
+	</canvas>
+</body>
+</html>

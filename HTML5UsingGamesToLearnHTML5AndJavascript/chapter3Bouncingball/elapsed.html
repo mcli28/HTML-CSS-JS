@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elapsed</title>
+	<script>
+	function init () {
+		setInterval(increase, 1000);
+	}
+	function increase () {
+		document.f.secs.value = String(1+number(document.f.secs.value));
+	}
+	</script>
+</head>
+<body onLoad="init();">
+	<fom name="f">
+		<input type="text" name="secs" value="0">
+	</fom>
+</body>
+</html>
