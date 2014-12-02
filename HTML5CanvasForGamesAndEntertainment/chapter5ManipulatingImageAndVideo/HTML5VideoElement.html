@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Learning the basics of canvas</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).on("ready",function () {
+			var video = $("#myVideo");
+			$("#play").click(function() {
+				video.get(0).play();
+			});
+			$("#stop").click(function() {
+				video.get(0).pause();
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<video id="myVideo" width="500" height="281" controls>
+		<source src="example.mp4" type="video/mp4"></source>
+		<source src="example.ogg" type="video/ogg"></source>
+	</video>
+	<div>
+		<button id="play">Play</button>
+		<button id="stop">Stop</button>
+	</div>
+</body>
+</html>

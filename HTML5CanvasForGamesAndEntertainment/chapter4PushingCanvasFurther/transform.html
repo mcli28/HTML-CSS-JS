@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Learning the basics of canvas</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).on("ready",function () {
+			var context = $('#myCanvas').get(0).getContext('2d');
+			context.setTransform(1, 0, 0, 1, 0, 0); // Identity matrix
+			var xScale = Math.cos(0.7854);
+			var ySkew = -Math.sin(0.7854);
+			var xSkew = Math.sin(0.7854);
+			var yScale = Math.cos(0.7854);
+			var xTrans = 200;
+			var yTrans = 200;
+			context.transform(xScale, ySkew, xSkew, yScale, xTrans, yTrans);
+			context.fillRect(-50, -50, 100, 100);
+		
+		});
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="500">
+		<!-- Inser fallback content here -->
+	</canvas>
+</body>
+</html>

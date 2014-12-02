@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Learning the basics of canvas</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).on("ready",function () {
+			var canvas = $('#myCanvas');
+			var context = $('#myCanvas').get(0).getContext('2d');
+
+			var firstX = 0;
+			var secondX = 50;
+			var thirdX = 100;
+
+			var canvasWidth = canvas.width();
+			var canvasHeight = canvas.height();
+			var playAnimation = true;
+			var startButton = $("#startAnimation");
+			var stopButton = $("#stopAnimation");
+			startButton.hide();
+			startButton.click(function() {
+				$(this).hide();
+				stopButton.show();
+				playAnimation = true;
+				animate();
+			});
+			stopButton.click(function() {
+				$(this).hide();
+				startButton.show();
+				playAnimation = false;
+				animate();
+			});
+
+			function animate() {
+				firstX++;
+				secondX++;
+				thirdX++;
+				context.clearRect(0, 0, canvasWidth, canvasHeight);
+				context.fillRect(firstX, 50, 10, 10);
+				context.fillRect(secondX, 100, 10, 10);
+				context.fillRect(thirdX, 150, 10, 10);
+				if (playAnimation) {
+					setTimeout(animate, 33);
+					// console.log('animacion');
+				}
+			}
+			animate();
+		});
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="500">
+		<!-- Inser fallback content here -->
+		
+	</canvas>
+	<div>
+		<button id="startAnimation">Start</button>
+		<button id="stopAnimation">Stop</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+1 http://en.wikipedia.org/wiki/Index_of_physics_articles
+2 http://en.wikipedia.org/wiki/Pythagorean_theorem

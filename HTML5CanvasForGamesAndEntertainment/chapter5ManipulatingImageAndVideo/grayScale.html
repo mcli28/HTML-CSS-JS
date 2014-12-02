@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Learning the basics of canvas</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).on("ready",function () {
+			var canvas = $('#myCanvas');
+			var context = $('#myCanvas').get(0).getContext('2d');
+
+			var image = new Image;
+			// image.crossOrigin = "";
+			image.src = "example.png";
+
+			$(image).load(function () {
+				context.drawImage(image, 0, 0, 1024, 683, 0, 0, 500, 500);
+				// localStorage.setItem( "savedImageData", canvas.toDataURL("image/png"));
+				var imageData = context.getImageData(0, 0, canvas.width(), canvas.height());
+				var pixels = imageData.data;
+				var numPixels = pixels.length;
+				context.clearRect(0, 0, canvas.width(), canvas.height());
+				for (var i = 0; i < numPixels; i++) {
+					var average = (pixels[i*4]+pixels[i*4+1]+pixels[i*4+2])/3;
+					pixels[i*4] = average; // Red
+					pixels[i*4+1] = average; // Green
+					pixels[i*4+2] = average; // Blue
+				}
+				context.putImageData(imageData, 0, 0);
+			});
+		});
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="500">
+		<!-- Inser fallback content here -->
+		
+	</canvas>
+</body>
+</html>

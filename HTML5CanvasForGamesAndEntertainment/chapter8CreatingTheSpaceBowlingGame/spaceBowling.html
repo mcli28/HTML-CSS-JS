@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Space Bowling</title>
+	<link rel="stylesheet" href="game.css" type="text/css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="game.js"></script>
+</head>
+<body>
+	<div id="game">
+		<div id="gameUI">
+			<div id="gameIntro">
+				<h1>Space Bowling</h1>
+				<p>This is an awesome game.</p>
+				<p><a href="" id="gamePlay" class="button">play</a></p>
+			</div>
+			<div id="gameStats">
+				<p>Asteroids: <span id="gameRemaining"></span> </p>
+				<p>Clicks: <span class="gameScore"></span></p>
+				<p><a href="" class="gameReset">Reset</a></p>
+			</div>
+			<div id="gameComplete">
+				<h1>You win!</h1>
+				<p>Congratulations, you completed the game in <span class="gameScore"></span> clicks.</p>
+				<p><a href="" class="gameReset button">again</a></p>
+			</div>
+		</div>
+		<canvas id="gameCanvas" width="350" height="600">
+			<!-- Insert fallback content here -->
+		</canvas>
+	</div>
+</body>
+</html>

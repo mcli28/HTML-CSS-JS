@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Learning the basics of canvas</title>
+	<script src="jquery.js"></script>
+	<script>
+	// var angle = 45;
+	// var adjRatio = Math.cos(angle*(Math.PI/180)); // CAH
+	// var oppRatio = Math.sin(angle*(Math.PI/180)); // SOH
+	
+	// var radius = 50;
+	// var x = radius * adjRatio;
+	// var y = radius * oppRatio;
+		$(document).on("ready",function () {
+			var canvas = $('#myCanvas');
+			var context = $('#myCanvas').get(0).getContext('2d');
+
+			var canvasWidth = canvas.width();
+			var canvasHeight = canvas.height();
+			var playAnimation = true;
+			var startButton = $("#startAnimation");
+			var stopButton = $("#stopAnimation");
+			startButton.hide();
+			startButton.click(function() {
+				$(this).hide();
+				stopButton.show();
+				playAnimation = true;
+				animate();
+			});
+			stopButton.click(function() {
+				$(this).hide();
+				startButton.show();
+				playAnimation = false;
+				animate();
+			});
+
+			var Shape = function(x, y, width, height) {
+				this.x = x;
+				this.y = y;
+				this.width = width;
+				this.height = height;
+				this.radius = Math.random()*30;
+				this.angle = 0;
+			}
+
+			var shapes = new Array();
+			shapes.push(new Shape(50, 50, 10, 10));
+			shapes.push(new Shape(100, 100, 10, 10));
+			shapes.push(new Shape(150, 150, 10, 10));
+
+			function animate() {
+				context.clearRect(0, 0, canvasWidth, canvasHeight);
+				var shapesLength = shapes.length;
+				
+				for (var i = 0; i < shapesLength; i++) {
+					var tmpShape = shapes[i];
+					var x = tmpShape.x+(tmpShape.radius*Math.cos(tmpShape.angle*(Math.PI/180)));
+					var y = tmpShape.y+(tmpShape.radius*Math.sin(tmpShape.angle*(Math.PI/180)));
+					tmpShape.angle += 5;
+					if (tmpShape.angle > 360) {
+						tmpShape.angle = 0;
+					}
+					var width = height = Math.random()*50;
+					shapes.push(new Shape(x, y, width, height))
+					context.fillRect(tmpShape.x, tmpShape.y, tmpShape.width, tmpShape.height);
+				}
+
+				if (playAnimation) {
+					setTimeout(animate, 2000);
+					// console.log('animacion');
+				}
+			}
+			animate();
+		});
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="500">
+		<!-- Inser fallback content here -->
+		
+	</canvas>
+	<div>
+		<button id="startAnimation">Start</button>
+		<button id="stopAnimation">Stop</button>
+	</div>
+</body>
+</html>

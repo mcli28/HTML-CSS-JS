@@ -1,0 +1,3 @@
+http://dean.edwards.name/weblog/2006/06/again/
+https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words
+www.w3schools.com 

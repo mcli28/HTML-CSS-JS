@@ -1,0 +1,21 @@
+1 http://www.w3.org/html/wg/wiki/History
+2 http://www.w3.org/TR/html4/
+3 http://wiki.whatwg.org/wiki/FAQ#When_will_HTML5_be_finished.3F
+4 TomiAhonen: Mobile Industry Numbers 2010
+5 http://www.whatwg.org/specs/web-apps/current-work/multipage/
+6 http://www.brucelawson.co.uk/2010/html5-articles-and-sections-whats-the-difference/
+7 https://wiki.mozilla.org/Audio_Data_API
+
+http://dev.w3.org/html5/webstorage/
+www.w3.org/TR/SVG/
+http://dev.w3.org/geo/api/spec-source.html
+http://dev.w3.org/csswg/css3-fonts/
+www.w3.org/Style/CSS/current-work
+www.whatwg.org/specs/web-workers/current-work/
+http://dev.w3.org/html5/websockets/
+
+?  Introducing HTML5, by Bruce Lawson and Remy Sharp [ http://introducinghtml5.com/ ]
+?  HTML5 Doctor [ http://html5doctor.com/ ]
+?  Dive Into HTML5, by Mark Pilgrim [ http://diveintohtml5.org/ ]
+?  WHATWG HTML5 Specification [ www.whatwg.org/specs/web-apps/current-
+work/multipage/ 
