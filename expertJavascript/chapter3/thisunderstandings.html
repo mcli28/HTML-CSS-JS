@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+</head>
+<body>
+	<div id="car_key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, illum.</div>
+	<script>
+		var Car, tesla;
+
+		Car = function () {
+			this.start = function () {
+				console.log("car started");
+			}
+			this.turnKey = function () {
+				var carKey = document.getElementById('car_key');
+				carKey.onclick = function (event) {
+					this.start();
+				}
+			}
+			return this;
+		}
+
+		tesla = new Car();
+
+		tesla.turnKey();
+			
+	</script>
+</body>
+</html>

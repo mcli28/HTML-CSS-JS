@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+</head>
+<body>
+	<script>
+		var user;
+		login('user', 'password', function (result) {
+			if (result.ok) {
+				user = result.user;
+			}
+		});
+		var promise = login('user', 'password');
+		promise.then(function (result) {
+			if (result.ok) {
+				user = result.user;
+			}
+		});
+	</script>	
+</body>
+</html>

@@ -1,0 +1,15 @@
+1 http://en.wikipedia.org/wiki/Quality_assurance
+2 http://37signals.com/svn/posts/3159-testing-like-the-tsa
+3 http://www.jslint.com/
+4 http://www.jshint.com/
+5 https://github.com/ariya/esprima
+6 http://www.skrenta.com/2007/05/code_is_our_enemy.html
+7 http://en.wikipedia.org/wiki/Control_flow_graph
+8 http://www.verifysoft.com/en_halstead_metrics.html
+9 http://en.wikipedia.org/wiki/Halstead_complexity_measures
+10 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
+11 http://esprima.org/demo/parse.html
+12 http://www.eetimes.com/author.asp?section_id=36&doc_id=1265859
+13 https://github.com/philbooth/complexityReport.js
+14 https://github.com/es-analysis/plato
+15 http://gruntjs.com/

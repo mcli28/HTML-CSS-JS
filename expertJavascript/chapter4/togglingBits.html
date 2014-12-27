@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter4</title>
+</head>
+<body>
+	<script>
+
+		var light = {
+			on: 1,
+			toggle: function () {
+				return this.on ^= 1;
+			}
+		}
+
+		console.log(light.toggle());
+		console.log(light.toggle());
+		console.log(light.toggle());
+
+	</script>
+</body>
+</html>

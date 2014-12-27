@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter2</title>
+</head>
+<body>
+	<script>
+
+		var sum = function () {
+			var total = 0;
+			while (arguments.length > 0) {
+				total += arguments.pop();
+			}
+			return total;
+		}
+
+		sum(1, 2, 3);
+	</script>
+</body>
+</html>

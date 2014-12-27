@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		
+		var Car = function (wheelCount) {
+			this.wheels = wheelCount || 4;
+		}
+		
+		Car.prototype.odometer = 0;
+
+		Car.prototype.drive = function(miles) {
+			this.odometer += miles;
+			return this.odometer;
+		}
+
+		var tesla = new Car();
+
+		Car.prototype.odometer = 200;
+
+		console.log(tesla.drive(10));
+
+		Car.prototype.odometer = 2000;
+
+		console.log(tesla.drive(10));
+
+	</script>
+</body>
+</html>

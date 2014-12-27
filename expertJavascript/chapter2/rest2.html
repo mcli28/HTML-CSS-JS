@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter2</title>
+</head>
+<body>
+	<script>
+
+		var dispatcher = {
+			join: function (before, after) {
+				return before + ':' + after
+			},
+			sum: function (rest) {
+				return rest.reduce(function (previousValue, currentValue, index, array) {
+					return previousValue + currentValue;
+				});
+			}
+		}
+		var proxy = {
+			relay: function (method, goodies) {
+				return dispatcher[method].apply(dispatcher, goodies);
+			}
+		}
+
+		console.log(proxy.relay('join', 'bar', 'baz'));
+		
+		console.log(proxy.relay('sum', 1, 2, 3, 4, 5, 6, 7));
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+	1http://remysharp.com/2010/10/08/what-is-a-polyfill/
+	2http://www.infoworld.com/d/developer-world/javascript-creator-ponders-past-future-704
+	3http://underscorejs.org/
+	4http://en.wikipedia.org/wiki/Ad_hoc_polymorphism
+	5http://isase.us/wisr3/7.pdf
+	6http://en.wikipedia.org/wiki/Inheritance
+	7http://en.wikipedia.org/wiki/Is-a
+	8http://javascriptweblog.wordpress.com/2010/12/22/delegation-vs-inheritance-in-javascript/
+	9http://en.wikipedia.org/wiki/Coupling_(computer_programming)
+	10https://developer.mozilla.org/en/docs/Differential_inheritance_in_JavaScript

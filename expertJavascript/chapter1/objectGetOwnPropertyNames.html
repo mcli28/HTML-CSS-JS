@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var box = Object.create({}, {
+			openLid: {
+				value: function () {
+					return "nothing";
+				},
+				enumerable: true
+			},
+			openSecretCompartment: {
+				value: function () {
+					return 'treasure';
+				},
+				enumerable: false
+			}
+		});
+		console.log(Object.getOwnPropertyNames(box).sort());
+	</script>
+</body>
+</html>

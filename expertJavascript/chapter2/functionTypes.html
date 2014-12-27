@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter2</title>
+</head>
+<body>
+	<script>
+
+		function isLie(cake) {
+			return cake === true;
+		}
+
+		var isLie = function (cake) {
+			return cake === true;
+		}
+
+		declaration();
+
+		function declaration () {
+			console.log("Hi, I`m a function declaration!");
+		}
+
+		expression();
+
+		var expression = function () {
+			console.log("Hi, I`m a function expression!");
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+</head>
+<body>
+	<script>
+	var car;
+	function carFactory (kind) {
+		var wheelCount, start;
+		wheelCount = 4;
+		start = function () {
+			console.log('started with ' + wheelCount + ' wheels.');
+		}
+		return (function () {
+			return{
+				make: kind,
+				wheels: wheelCount,
+				startEngine: start
+			}
+		}());
+	}
+	car = carFactory('Tesla');
+	console.log(car.make);
+	car.startEngine();
+	</script>
+</body>
+</html>

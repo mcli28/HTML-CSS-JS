@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter4</title>
+</head>
+<body>
+	<script>
+		var ToPrimitive;
+
+		ToPrimitive = function (obj) {
+			var funct, functions, val, _i, _len;
+			functions = ["valueOf", "toString"];
+			if (typeof obj === "object") {
+				if (obj instanceof Date) {
+					functions = ["toString", "valueOf"];
+				}
+				for (_i = 0, _len = functions.length; _i < _len; _i++) {
+					funct = functions[_i];
+					if (typeof obj[funct] === "function") {
+						val = obj[funct]();
+						if (typeof val === "string" || typeof val === "number" || typeof val === "boolean") {
+							return val;
+						}
+					}
+				}
+				throw new Error("DefaultValue is ambigious.");
+			}
+			return obj;
+		}
+		
+		console.log(ToPrimitive([1]));
+		console.log(ToPrimitive(new Date()));
+
+		console.log(typeof [1].valueOf());
+		console.log(typeof [1].toString());
+
+		var noConversions = [{
+			toString: undefined
+		}];
+		console.log(noConversions + '');
+	</script>
+</body>
+</html>

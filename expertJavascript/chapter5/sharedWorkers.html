@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+	<script>
+		var configure, name, sendMessage, update, updateChannel, updatePrivateChannel, updatePubliChannel, worker;
+
+		configure = function (event) {
+			var name;
+			name = event.data.envelope.from;
+			return document.getElementById("guest_name").textContent += " " += name;
+		}
+
+		updatePublicChannel = function (event) {
+			return updateChannel(document.getElementById("public_channel"), event);
+		}
+
+		updatePrivateChannel = function (event) {
+			return updateChannel(document.getElementById("private_channel"), event);
+		}
+
+		updateChannel = function (channel, event) {
+			var div, from, m, message, n;
+			from = event.data.envelope.from;
+			message = event.data.envelope.body;
+			div = document.createElement("div");
+			n = document.createElement("button")
+			n.textContent = from;
+			n.onclick = function () {
+				return worker.port.postMessage({
+					action: "msg",
+					envelope: {
+						from: name,
+						to: from,
+						body: document.getElementById("message").value
+					}
+				});
+			}
+			div.appendChild(n);
+			m = document.createElement("span");
+			m.textContent = message;
+			div.appendChild(m);
+			return channel.appendChild(div);
+		}
+
+		update = function (event) {
+			switch (event.data.action) {
+				case "cfg":
+					return configure(event);
+				case "txt":
+					return updatePublicChannel(event);
+				case "msg":
+					return updatePrivateChannel(event);
+			}
+		}
+
+		sendMessage = function (message) {
+			return worker.port.postMessage({
+				action: "txt",
+				envelope: {
+					from: name,
+					body: message
+				}
+			});
+		}
+
+		worker = new SharedWorker("chat_worker.js", "core");
+		name = void 0;
+		worker.port.addEventListener("message", update, false);
+		worker.port.start();
+	</script>
+</head>
+<body>
+	<h2>Public Chat</h2>
+	<h1>welcome span#guest_name </h1>
+	<h4>public</h4>
+	<div id="private_channel"></div>
+	<form action="" onsubmit="sendMessage(message.value);" message="">
+		<p>
+			<input type="text" id="message" name="message" size="50">
+			<button>Post</button>
+		</p>
+	</form>
+</body>
+</html>

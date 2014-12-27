@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		
+		var Car = function (wheelCount) {
+			this.odometer = 0;
+			this.wheels = wheelCount || 4;
+		}
+		
+		Car.prototype.drive = function(miles) {
+			this.odometer += miles;
+			return this.odometer;
+		}
+
+		var tesla = new Car();
+
+		console.log(Object.getPrototypeOf(tesla) === Car.prototype);
+
+		console.log(tesla.__proto__ === Car.prototype);
+
+		var tesla = new Car();
+
+		console.log(tesla.wheels);
+
+		var isetta = new Car(3);
+
+		console.log(isetta.wheels);
+
+		isetta.drive = function (miles) {
+			this.odometer -= miles;
+			return this.odometer;
+		}
+
+		console.log(isetta.drive(10));
+
+		console.log(tesla.drive(10));
+
+		Car.prototype.drive = function (miles) {
+			this.odometer += miles * 2;
+			return this.odometer;
+		}
+
+		Car.prototype.odometer = 0;
+
+		console.log(isetta.drive(10));
+
+		console.log(tesla.drive(10));
+		
+	</script>
+</body>
+</html>

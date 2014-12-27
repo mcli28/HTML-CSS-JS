@@ -1,0 +1,7 @@
+1http://howtonode.org/what-is-this
+2http://en.wikipedia.org/wiki/Free_variable
+3http://en.wikipedia.org/wiki/Factory_method_pattern
+4https://github.com/jquery/jquery/blob/master/src/core.js#L685
+5http://msdn.microsoft.com/en-us/magazine/ff696765.aspx
+6http://groups.google.com/group/comp.lang.javascript/msg/9f58bd11bd67d937
+7http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript

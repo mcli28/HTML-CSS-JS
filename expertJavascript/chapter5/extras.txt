@@ -1,0 +1,35 @@
+1https://brendaneich.com/2007/02/threads-suck/
+2https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/EventLoop
+3https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/EventLoop
+4http://callbackhell.com/
+5http://en.wikipedia.org/wiki/Goto
+6http://promises-aplus.github.io/promises-spec/
+7https://github.com/kriskowal/q
+8http://en.wikipedia.org/wiki/Control_flow#Structured_non-local_control_flow
+9http://wiki.ecmascript.org/doku.php?id=harmony:generators
+10http://en.wikipedia.org/wiki/Coroutine#Comparison_with_generators
+11http://syzygy.st/javascript-coroutines/
+12https://github.com/creationix/gen-run
+13http://www.whatwg.org/specs/web-apps/current-work/multipage/workers.html#workers
+14https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers
+15http://blog.sethladd.com/2011/09/box2d-and-web-workers-for-javascript.html
+16https://developer.mozilla.org/en-US/docs/Web/JavaScript/Same_origin_policy_for_JavaScript
+17http://caniuse.com/#feat=sharedworkers
+18https://developer.mozilla.org/en-US/docs/Web/API/Blob
+
+Callbacks
+• http://docs.nodejitsu.com/articles/getting-started/control-flow/what-arecallbacks
+• http://matt.might.net/articles/by-example-continuation-passing-style/
+Generators
+• http://devsmash.com/blog/whats-the-big-deal-with-generators
+• http://jlongster.com/A-Study-on-Solving-Callbacks-with-JavaScript-Generators
+Coroutines
+• http://syzygy.st/javascript-coroutines/
+• http://www.dabeaz.com/coroutines/Coroutines.pdf
+• http://calculist.org/blog/2011/12/14/why-coroutines-wont-work-on-the-web/
+Promises
+• http://promises-aplus.github.io/promises-spec/
+• https://github.com/kriskowal/q
+Web Workers
+• http://www.html5rocks.com/en/tutorials/workers/basics/
+• https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapte4</title>
+</head>
+<body>
+	<script>
+
+	var Car = function () {
+		var args = Array.prototype.slice.call(arguments);
+		this.name = args[0] || 'tesla'
+		this.mpg = args[1] || 100
+		this.mph = args[2] || 80
+
+		console.log(this.name);
+		console.log(this.mpg);
+		console.log(this.mph);
+	}
+	
+	new Car('Volt', 90);
+	new Car();
+
+	</script>
+</body>
+</html>

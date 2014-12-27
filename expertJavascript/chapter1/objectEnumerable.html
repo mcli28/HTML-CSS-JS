@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var car = {};
+
+		Object.defineProperty(car, 'doors', {
+			writable: true,
+			configurable: true,
+			enumerable: true,
+			value: 4
+		});
+
+		Object.defineProperty(car, 'wheels', {
+			writable: true,
+			configurable: true,
+			enumerable: true,
+			value: 4
+		});
+
+		Object.defineProperty(car, 'secretTrackingDeviceEnable', {
+			enumerable: false,
+			value: true
+		});
+
+		for (var x in car) {
+			console.log(x);
+		}
+		console.log(Object.keys(car));
+		console.log(Object.getOwnPropertyNames(car));
+		console.log(car.propertyIsEnumerable('secretTrackingDeviceEnable'));
+		console.log(car.secretTrackingDeviceEnable);
+
+	</script>
+</body>
+</html>

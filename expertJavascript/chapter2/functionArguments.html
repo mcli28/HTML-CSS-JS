@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter2</title>
+</head>
+<body>
+	<script>
+		
+		var object = {
+			'foo': 'bar'
+		},
+
+		num = 1;
+
+		;!function (obj) {
+			obj.foo = 'baz';
+		}(object);
+
+		console.log(object);
+
+		;!function (num) {
+			num = 2;
+		}(num);
+
+		console.log(num);
+		
+	</script>
+</body>
+</html>

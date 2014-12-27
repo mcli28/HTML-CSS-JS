@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+</head>
+<body>
+	<div id="carKey">lorem</div>
+	<script>
+		var Car, proxy, tesla;
+		Car = function () {
+			this.start = function () {
+				return console.log("car started");
+			}
+			this.turnKey = function () {
+				var carKey;
+				carKey = document.getElementById('carKey');
+				carKey.onclick = proxy(function (event) {
+					this.start();
+				}, this);
+			}
+			return this;
+		}
+
+		proxy = function (callback, self) {
+			return function () {
+				return callback.apply(self, arguments);
+			}
+		}
+
+		tesla = new Car();
+		tesla.turnKey();
+			
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		
+		var Dog = function () {}
+		Dog.prototype.speak = function () {
+			return "woof";
+		}
+		
+
+		var Cat = function () {}
+		Cat.prototype.speak = function () {
+			return "meow";
+		}
+
+		var Tabby = function () {}
+		Tabby.prototype = new Cat();
+		var tabbyCat = new Tabby();
+		console.log(tabbyCat.speak());
+		console.log(tabbyCat.prototype);
+		tabbyCat.prototype = new Dog();
+		console.log(tabbyCat.prototype);
+		console.log(tabbyCat.speak());
+		
+	</script>
+</body>
+</html>

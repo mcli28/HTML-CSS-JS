@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter4</title>
+</head>
+<body>
+	<script>
+
+		var user = {
+			isAdmin: function () {
+				return !!this.admin;
+			}
+		}
+
+		console.log(user.isAdmin());
+		user.admin = true;
+
+		console.log(user.isAdmin());
+		user.admin = false;
+
+		console.log(user.isAdmin());
+
+	</script>
+</body>
+</html>

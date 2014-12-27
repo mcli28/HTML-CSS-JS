@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+</head>
+<body>
+	<h1>hola</h1>
+	<script type="text/javascript" charset="utf-8">
+		addEventListener("DOMContenLoaded", (function () {
+			var worker = new Worker("pong.js");
+			worker.onmessage = function (e) {
+				console.log(e.data);
+			}
+			console.log('ping');
+
+			worker.postMessage();
+		}), false);
+	</script>
+</body>
+</html>

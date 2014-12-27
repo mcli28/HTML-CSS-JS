@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+	var Car = {
+		drive: function (miles) {
+			return this.odometer += miles;
+		}
+	}
+
+	var tesla = Object.create(Car, {
+		'odometer': {
+			value: 0,
+			enumerable: true
+		}
+	});
+
+	console.log(tesla.drive(10));
+	</script>
+</body>
+</html>

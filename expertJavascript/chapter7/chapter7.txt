@@ -1,0 +1,17 @@
+1http://www.nytimes.com/2009/04/22/books/22elem.html?_r=0
+2https://mail.mozilla.org/pipermail/es-discuss/2011-September/016802.html
+3http://yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/
+4https://github.com/ja/nl/mustache.js/
+
+
+
+more about beautifiers here:
+• JS Beautify: https://github.com/einars/js-beautify
+• Code Painter: https://github.com/fawek/codepainter
+You can find out more on style guides here:
+• “Principles of Writing Consistent, Idiomatic JavaScript:”
+https://github.com/rwldrn/idiomatic.js/
+• Google JavaScript Style Guide:
+http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
+• Airbnb JavaScript Style Guide: https://github.com/airbnb/javascript
+• jQuery Style Guide: http://contribute.jquery.org/style-guide/js/

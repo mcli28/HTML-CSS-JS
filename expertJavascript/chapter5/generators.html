@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+</head>
+<body>
+	<script>
+		var sequence, sq;
+		sq = function * (initialValue) {
+			var current, num, step;
+			num = initialValue || 2;
+			step = 0;
+			while (true) {
+				current = num * step++;
+				yield current;
+			}
+		}
+
+		sequence =  sq(20);
+		console.log(sequence.next().value);
+		console.log(sequence.next().value);
+		console.log(sequence.next().value);
+		console.log(sequence.next().value);
+	</script>
+</body>
+</html>

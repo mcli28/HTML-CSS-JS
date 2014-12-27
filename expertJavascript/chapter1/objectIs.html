@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		Object.is('true', 'true');
+		Object.is('True', 'true');
+		Object.is(!function () {}(), true);
+		Object.is(undefined, Math.prototype);
+		console.log(NaN === 0/0);
+		Object.is(NaN, 0/0);
+	</script>
+</body>
+</html>

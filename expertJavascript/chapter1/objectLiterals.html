@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var foo = {
+			bar: 'baz'
+		}
+
+		var foo2 = Object.create(Object.prototype, {
+			bar: {
+				writable: true,
+				configurable: true,
+				value: 'baz'
+			}
+		});
+
+		console.log(foo.bar);
+		console.log(foo2.bar);
+
+		var foo = new Object();
+		var bar = {}
+		console.log(typeof (foo));
+		console.log(typeof (bar));
+
+		window.Object = function () {
+			arguments.callee.call();
+		}
+
+		var foo = new Object();
+	</script>
+</body>
+</html>

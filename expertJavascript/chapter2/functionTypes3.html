@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter2</title>
+</head>
+<body>
+	<script>
+
+	var sayHo;
+
+	console.log(typeof (sayHey));
+	
+	console.log(typeof (sayHo));
+
+	if (true) {
+		function sayHey () {
+			console.log("hey");
+		}
+
+		sayHo = function () {
+			console.log("ho");
+		}
+	} else {
+		function sayHey () {
+			console.log("no");
+		}
+
+		sayHo = function sayHo() {
+			console.log("no");
+		}
+	}
+	
+	sayHey();
+	sayHo();
+	</script>
+</body>
+</html>

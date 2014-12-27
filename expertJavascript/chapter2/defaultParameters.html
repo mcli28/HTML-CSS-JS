@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter2</title>
+</head>
+<body>
+	<script>
+		var join = function (foo = 'foo', baz = (foo === 'foo') ? join(foo + "!"):'baz') {
+			return foo + ":" + baz;
+		}
+
+		console.log(join("hi", "there"));
+
+		console.log(join("hi"));
+
+		console.log(join(undefined, "there"));
+
+		console.log(join('foo'));
+	</script>
+</body>
+</html>

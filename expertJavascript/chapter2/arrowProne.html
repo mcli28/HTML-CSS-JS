@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter2</title>
+</head>
+<body>
+	<script>
+		var VendingMachine = function (){
+			this.stock = ["Sgt. Pepper", "Choke", "Spite"];
+			var that = this;
+			return {
+				dispense: function (){
+					if (that.stock.length > 0) {
+						return that.stock.pop();
+					}
+				}
+			}
+		}
+
+		var popMachine = new VendingMachine();
+
+		console.log(popMachine.dispense());
+
+		var VendingMachine = function (){
+			this.stock = ["Sgt. Pepper", "Choke", "Spite"];
+			var dispense = function (){
+				if(this.stock.length > 0){
+					return this.stock.pop();
+				}
+			}
+			return {
+				dispense: dispense.bind(this)
+			}
+		}
+
+		var popMachine = new VendingMachine();
+
+		console.log(popMachine.dispense());
+
+	</script>
+</body>
+</html>

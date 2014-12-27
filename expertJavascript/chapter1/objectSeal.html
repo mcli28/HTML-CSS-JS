@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var envelope = {
+			letter: 'To whom it may concern'
+		}
+
+		Object.isSealed(envelope);
+		Object.seal(envelope);
+		envelope.letter = "Oh Hai";
+		envelope.stamped = true;
+
+		console.log(envelope.letter);
+		console.log(envelope.stamped);
+		
+	</script>
+</body>
+</html>

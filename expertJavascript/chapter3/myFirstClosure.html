@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+</head>
+<body>
+	<script>
+		function outer (name) {
+			var hello = "hi",
+			inner;
+			return inner = function () {
+				return hello + " " + name;
+			}
+		}
+
+		var name = outer("mark")();
+
+		console.log(name);
+
+		//
+		var outer (name) => {
+			var hello = "hi",
+			inner;
+			inner => hello + " " + name;
+		}
+
+		var name = outer("mark")();
+		console.log(name);
+
+	</script>
+</body>
+</html>

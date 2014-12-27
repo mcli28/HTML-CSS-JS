@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+</head>
+<body>
+	<script src="jquery.js"></script>
+	<script>
+//		person.funds = (function () {
+//			var end = Date.now() + 4000;
+//			while (Date.now() < end) {
+//
+//			}
+//			return 100;
+//		})();
+
+		var person = {};
+		var bank = {
+			funds: 0,
+			receiveDepositFrom: function (person) {
+				person.funds = 0;
+			}
+		};
+		console.log(person.funds);
+		(function work (person) {
+			$.ajax({
+				url: "work.json",
+				context: document.body
+			}).done(function () {
+				person.funds = 100;
+			});
+		})(person);
+
+		console.log(person.funds);
+		bank.receiveDepositFrom(person);
+		console.log(person.funds);
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var car = {}
+
+		Object.defineProperty(car, 'doors', {
+			writable: true,
+			configurable: true,
+			enumerable: true,
+			value: 4
+		});
+	</script>
+</body>
+</html>

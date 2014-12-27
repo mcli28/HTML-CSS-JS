@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter2</title>
+</head>
+<body>
+	<script>
+
+		;!function () {
+			var triumph = false,
+			cake = false,
+			satisfaction = 0,
+			isLie,
+			note;
+
+			var isLie = function (val) {
+				return val === false;
+			}
+
+			if (isLie(cake)) {
+				triumph = true;
+				makeNote ('Moderate Success');
+				makeNote ('Huge Success');
+				satisfaction += 10;
+			}
+
+			function makeNote (message) {
+				note = message;
+			}
+		}();
+	</script>
+</body>
+</html>

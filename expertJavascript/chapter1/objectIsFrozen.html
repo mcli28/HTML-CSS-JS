@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var bombPop = {
+			wrapping: 'plastic',
+			flavors: ['Cherry', 'Lime', 'Blue Raspberry']
+		}
+		console.log(Object.isFrozen(bombPop));
+
+		delete bombPop.wrapping;
+
+		console.log(bombPop.wrapping);
+
+		Object.freeze(bombPop);
+
+		delete bombPop.flavors;
+
+		console.log(Object.isFrozen(bombPop));
+		
+	</script>
+</body>
+</html>

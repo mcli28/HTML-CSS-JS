@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+</head>
+<body>
+	<script>
+	login ('user', 'password', function () {
+		if (result.ok) {
+			getProfile(function (result) {
+				if (result.ok) {
+					updateProfile(result.user, function (result) {
+						if (result.ok) {
+							callback(user);
+						}
+					});
+				}	
+			});
+		}
+	}, callback);
+	</script>
+</body>
+</html>

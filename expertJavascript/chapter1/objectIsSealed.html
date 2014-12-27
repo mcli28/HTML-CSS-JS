@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+	var ziplockBack = {}
+
+	console.log(Object.isSealed(ziplockBack) === true);
+	console.log(Object.isExtensible(ziplockBack));
+
+	Object.seal(ziplockBack);
+
+	console.log(Object.isSealed(ziplockBack) === true);
+	console.log(Object.isExtensible(ziplockBack));
+	</script>
+</body>
+</html>

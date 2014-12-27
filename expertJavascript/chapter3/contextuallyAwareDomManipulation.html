@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+</head>
+<body>
+	<script>
+		var getUniqueId = (function () {
+			var id = 0;
+			return function (element) {
+				if (!element.id) {
+					element.id = 'generated-uid-' + id++;
+				}
+				return element.id;
+			}
+		})();
+
+		var elementWithId = document.createElement('p');
+		elementWithId.id = 'foo-bar';
+		var elementWithoutId = document.createElement('p');
+		console.log(getUniqueId(elementWithId));
+		console.log(getUniqueId(elementWithoutId));
+			
+	</script>
+</body>
+</html>

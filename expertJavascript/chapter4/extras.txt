@@ -1,0 +1,14 @@
+1http://markdaggett.com/blog/2012/03/23/generate-beautiful-gradients-using-javascript/
+2http://www.jsfuck.com/
+3http://en.wikipedia.org/wiki/Brainfuck
+4https://github.com/aemkei/jsfuck
+
+• http://rocha.la/JavaScript-bitwise-operators-in-practice
+• http://sla.ckers.org/forum/read.php?24,32930
+• http://javascriptissexy.com/12-simple-yet-powerful-javascript-tips/
+• http://codegolf.stackexchange.com/questions/2682/tips-for-golfing-in-javascript
+• http://stackoverflow.com/questions/2350718/are-there-any-short-tricks-injavascript-
+1-8-that-i-can-use-to-reduce-my-golf
+• http://www.benlesh.com/2012/05/javascript-fun-part-6-code-golf.html?m=1
+• http://wtfjs.com/
+• http://jscoercion.qfox.nl/

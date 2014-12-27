@@ -1,0 +1,7 @@
+1http://en.wikipedia.org/wiki/Physical_computing
+2http://en.wikipedia.org/wiki/Internet_of_Things
+3http://voodootikigod.com/nodebots-the-rise-of-js-robotics/
+4http://arduino.cc/en/Main/Software
+5https://developer.apple.com/xcode/
+6http://arduino.cc/en/Main/arduinoBoardUno
+7http://arduino.cc/en/Main/Software

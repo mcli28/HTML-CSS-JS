@@ -1,0 +1,17 @@
+1 http://bob.ippoli.to/archives/2005/06/02/javascript-sucks-volume-1/
+2 http://storify.com/rmurphey/what-s-making-it-hard-to-get-started-with-js-testi
+3 http://en.wikipedia.org/wiki/Pareto_principle#In_software
+4 http://gotwarlost.github.io/istanbul/
+5 http://en.wikipedia.org/wiki/Fuzz_testing
+6 http://resources.infosecinstitute.com/fuzzing-mutation-vs-generation/
+7 http://www.squarefree.com/2007/08/02/introducing-jsfunfuzz/
+8 https://bugzilla.mozilla.org/show_bug.cgi?id=jsfunfuzz
+9 http://lcamtuf.blogspot.com/2011/01/announcing-crossfuzz-potential-0-day-in.html
+10 https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final73.pdf
+11 http://www.jscheck.org/
+12 http://en.wikipedia.org/wiki/QuickCheck
+13 https://github.com/hugs/tapsterbot
+14 http://www.wired.com/insights/2012/12/robots-at-the-intersection-of-cool-and-useful/
+
+
+https://github.com/douglascrockford/JSCheck/archive/master.zip

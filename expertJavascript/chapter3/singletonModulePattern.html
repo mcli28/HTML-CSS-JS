@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+</head>
+<body>
+	<script>
+
+		var SecretStore = (function () {
+			var data, secret, newSecret;
+			data = 'secret';
+			secret = function () {
+				return data;
+			}
+			newSecret = function (newValue) {
+				data = newValue;
+				return secret();
+			}
+			return {
+				getSecret: secret,
+				setSecret: newSecret,
+			} 
+		})();
+
+		var secret = SecretStore;
+
+		console.log(secret.getSecret());
+		console.log(secret.setSecret("foo"));
+		console.log(secret.getSecret());
+
+		var secret2 = SecretStore;
+
+		console.log(secret2.getSecret());
+
+	</script>
+</body>
+</html>

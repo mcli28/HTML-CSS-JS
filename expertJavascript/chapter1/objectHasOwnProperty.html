@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var foo = {
+			foo: 'foo'
+		};
+		var bar = Object.create(foo, {
+			bar: {
+				enumerable: true,
+				value: 'bar'
+			}
+		});
+
+		for (var x in bar) {
+			console.log(x);
+		}
+
+		var myProps = Object.getOwnPropertyNames(bar).map(function (i) {
+			return bar.hasOwnProperty(i) ? i : undefined;
+		});
+
+		console.log(myProps);
+
+	</script>
+</body>
+</html>

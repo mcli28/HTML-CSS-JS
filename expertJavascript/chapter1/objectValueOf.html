@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var Car = function (name) {
+			this.name = name;
+		}
+
+		var tesla = Object.create(Car.prototype, {
+			name: {
+				value: 'tesla'
+			}
+		});
+
+		console.log(tesla.valueOf());
+
+		Car.prototype.valueOf = function () {
+			return this.name;
+		}
+
+		console.log(tesla.valueOf());
+	</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+var V = N * (Math.log(n) /Math.log(2));

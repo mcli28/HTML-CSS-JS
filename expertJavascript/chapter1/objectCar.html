@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+	var Car = function () {
+		var name = 'Tesla';
+		var wheelCount = '4';
+
+		this.getName = function () {
+			return name;
+		}
+		this.getWheelCount = function () {
+			return wheelCount;
+		}
+		this.setName = function (newName) {
+			name = newName;
+		}
+		this.setWheelCount = function (newCount) {
+			wheelCount = newCount;
+		}
+	}
+
+	var myCar = new Car();
+
+	console.log(myCar.name);
+	myCar.name = "Corvette";
+	console.log(myCar.name);
+	console.log(myCar.getName());
+	myCar.setName('Corvette');
+	console.log(myCar.getName());
+	</script>
+	
+</body>
+</html>

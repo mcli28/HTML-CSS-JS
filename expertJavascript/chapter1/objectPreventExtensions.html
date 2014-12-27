@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1</title>
+</head>
+<body>
+	<script>
+		var car = {
+			doors: 4
+		}
+
+		console.log(Object.isExtensible(car) === true);
+		Object.preventExtensions(car);
+		console.log(Object.isExtensible(car) === true);
+		console.log(car.doors);
+		delete car.doors;
+		console.log(car.doors);
+		car.tires = 4;
+		console.log(car.tires);
+	</script>
+</body>
+</html>
