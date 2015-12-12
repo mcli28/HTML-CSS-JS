@@ -1,0 +1,37 @@
+// input, textarea, select {
+// 	display : inline-block;
+// 	width : 100%;
+// 	padding : 4px;
+// 	margin-bottom : $baselineheight / 4;
+// 	background-color : $inputbackground;
+// 	border : $inputborderwidth $inputborderstyle $inputborder;
+// 	color : $textcolor;
+// 	&:hover {
+// 		border-color : $inputhover;
+// 	}
+// }
+
+$inputborder : lighten($basecolor, 40%);
+$inputborder : $lightgrey;
+$inputhover : $grey;
+
+input,
+textarea,
+select {
+	display : inline-block;
+	width : 100%;
+	padding : 4px;
+	margin-bottom : $baselineheight / 4;
+	background-color : $inputbackground;
+	border : $inputborderwidth $inputborderstyle $inputborder;
+	color : $textcolor;
+	@include rounded(6px); //this is the new bit
+	&:hover {
+		border-color : $inputhover;
+	}
+}
+padding: 10px;
+.row {
+	max-width: 992px;
+	margin: 0 auto;
+}

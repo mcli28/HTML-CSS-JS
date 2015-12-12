@@ -1,0 +1,16 @@
+@import "compass/css3";
+.slider {
+	text-align: center;
+	position: relative;
+	.container {
+		@include background-image(linear-gradient(left top, #383234, #231f20));
+		position: relative;
+		.slide {
+			position: relative;
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+	}
+}

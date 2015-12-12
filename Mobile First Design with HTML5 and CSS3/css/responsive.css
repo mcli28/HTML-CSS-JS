@@ -1,0 +1,99 @@
+/*
+Error: Invalid CSS after "none": expected expression (e.g. 1px, bold), was ";"
+        on line 23 of _768.sass
+        from line 15 of responsive.scss
+
+18: // 7. VENDOR-SPECIFIC 		==============================
+19: // 8. MODERNIZR 			==============================
+20: // 9. TEMPLATE SPECIFICS 	==============================
+21: *\/
+22: .menu-button{
+23: 	display: none;
+24: }
+25: .navbar {
+26: 	position: fixed;
+27: 	width: 100%;
+28: 	.logo {
+
+Backtrace:
+_768.sass:23
+responsive.scss:15
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1162:in `expected'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/script/lexer.rb:221:in `expected!'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/script/parser.rb:602:in `assert_done'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/script/parser.rb:63:in `parse'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/script/parser.rb:183:in `parse'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/script.rb:27:in `parse'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:1130:in `parse_script'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:720:in `parse_property'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:691:in `parse_property_or_rule'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:657:in `parse_line'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:535:in `build_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:554:in `block in append_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:553:in `each'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:553:in `append_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:544:in `block in build_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:537:in `each'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:537:in `build_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:554:in `block in append_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:553:in `each'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:553:in `append_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:406:in `_to_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:309:in `to_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:512:in `visit_media'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:295:in `render_with_sourcemap'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:328:in `block in watch'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/vendor/listen/lib/listen/listener.rb:252:in `call'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.16/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"none\": expected expression (e.g. 1px, bold), was \";\"\A         on line 23 of _768.sass\A         from line 15 of responsive.scss\A \A 18: // 7. VENDOR-SPECIFIC 		==============================\A 19: // 8. MODERNIZR 			==============================\A 20: // 9. TEMPLATE SPECIFICS 	==============================\A 21: */\A 22: .menu-button{\A 23: 	display: none;\A 24: }\A 25: .navbar {\A 26: 	position: fixed;\A 27: 	width: 100%;\A 28: 	.logo {"; }

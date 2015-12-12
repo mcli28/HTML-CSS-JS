@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Form</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/polyfiller.js"></script>
+</head>
+<body>
+	<!--hero markup -->
+	<div class="hero subhead">
+		<div class="container">
+			<h1>Say Hello!</h1>
+			<p>I just met you and this is crazy. Leave your number, I'd love
+			to work with you.</p>
+		</div>
+	</div> 
+	<!--end hero markup -->
+
+	<!--form -->
+	<div class="full row clearfix">
+		<h2 class="h2">Hello! Is it me you're looking for?</h2>
+		<p>Reach out to me for your new projects.</p>
+		<form method="post" action="#" class="contact">
+			<p>
+				<label for="name">Name</label>
+				<input id="name" name="name" placeholder="Firstname Lastname" type="text" required/>
+			</p>
+			<p>
+				<label for="company">Company</label>
+				<input id="company" name="company" placeholder="Widgets Inc." type="text"/>
+			</p>
+			<p>
+				<label for="email">Email</label>
+				<input id="email" name="email" placeholder="firstname@somename.com" type="email"required/>
+			</p>
+			<p>
+				<label for="phone">Phone</label>
+				<input id="phone" name="phone" placeholder="123-456-7890" type="tel"/>
+			</p>
+			<p>
+				<label for="message">Message</label>
+				<textarea id="message" name="message"></textarea>
+			</p>
+			<p>
+				<input type="submit" class="btn btn-primary btn-extlarge" value="Send It!" />
+			</p>
+		</form>
+	</div>
+<!--end form -->
+</body>
+</html>

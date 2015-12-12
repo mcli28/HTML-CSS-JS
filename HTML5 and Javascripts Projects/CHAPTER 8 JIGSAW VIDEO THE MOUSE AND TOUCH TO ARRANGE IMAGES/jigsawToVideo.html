@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+	<title>jigsaw</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jigsaw.js"></script>
+	
+</head>
+<body id="body" onload="init()">
+	<h2>In the tent</h2>
+	<form action="" id="questionform" name="questionform" onsubmit="return endjigsaw();">
+		<input type="submit" name="submitbut" value="" size="30"/>
+		Feedback: <input name="feedback" value="  " size="11">
+	</form>
+	<video id="dance" loop="loop" preload="auto" controls="controls" autoplay>
+		<source src="vidaud/SIMONSTER STRENGTH 2.0.webm" type="video/webm" codec="vp8, vorbis">
+		<source src="vidaud/SIMONSTER STRENGTH 2.0.mp4">
+		<source src="vidaud/SIMONSTER STRENGTH 2.0.ogg" type="video/ogg" codec="theora, vorbis">
+		Your browser does not accept the video tag.
+	</video>
+</body>
+</html>

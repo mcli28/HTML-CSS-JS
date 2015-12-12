@@ -1,0 +1,24 @@
+@import "compass";
+@import "compass/css3";
+
+.hero {
+	text-align: center;
+	padding: 40px 20px;
+	text-shadow: -1px 1px 0px #e0b78a;
+	// @include horizontal-linear(#feb900, #cb790f);
+	@include background-image(linear-gradient(left top, #feb900, #cb790f));
+	h1{
+		margin: 10px 0;
+		font-size: 45px;
+		font-weight: bold;
+	}
+	p {
+		font-size: 18px;
+		margin: 0 0 30px 0;
+		font-weight: 200;
+		line-height: 1.25;
+	}
+	.btn {
+		text-shadow: 1px 1px 0px #000000;
+	}
+}
