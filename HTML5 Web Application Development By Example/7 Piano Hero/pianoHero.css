@@ -1,0 +1,6 @@
+#splash h1{
+    font-size: 6em;
+    color: #003;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #fff, 5px 5px 0px #003;
+}

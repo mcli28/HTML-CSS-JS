@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="piano.css">
+</head>
+<body>
+    <div id="keyboard">
+        <div id="backboard"></div>
+        <div class="keys">
+            <div class="piano-key white" data-note="2C" data-keycode="Q" title="C2"></div>
+            <div class="piano-key black" data-note="2C#"></div>
+            <div class="piano-key white" data-note="2D"></div>
+            <div class="piano-key black" data-note="2D"></div>
+            <div class="piano-key white" data-note="2E"></div>
+            <div class="piano-key white" data-note="2F"></div>
+            <div class="piano-key black" data-note="2F#"></div>
+            <div class="piano-key white" data-note="2G"></div>
+            <div class="piano-key black" data-note="2G#"></div>
+            <div class="piano-key white" data-note="2A"></div>
+            <div class="piano-key black" data-note="2A#"></div>
+            <div class="piano-key white" data-note="2B"></div>
+            <!-- third octave not shown -->
+            <div class="piano-key white" data-note="2C"></div>
+            <div class="piano-key white" data-note="4C" data-keycode="COMMA" title="C4"></div>
+        </div>
+    </div>
+    <div id="main">
+        <!-- keyboard not shown... -->
+        <div class="controls">
+            <label for="sustain">Sustain: </label>
+            <input type="checkbox" id="sustain" cheched="">
+            <label for="volume">Volume: </label>
+            <input type="range" id="volume" min="1" max="100" value="100" step="1">
+        </div>
+    </div>
+</body>
+</html>
