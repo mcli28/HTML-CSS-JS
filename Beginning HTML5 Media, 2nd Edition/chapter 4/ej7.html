@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example of
+        <track> Markup with a Track of Each @kind</title>
+</head>
+
+<body>
+    <video controls poster="img/ElephantDreams.png">
+        <source src="video/ElephantDreams.mp4" type="video/mp4">
+        <source src="video/ElephantDreams.webm" type="video/webm">
+        <track src="tracks/ElephantDreams_zh.vtt" srclang="zh" kind="subtitles">
+        <track src="tracks/ElephantDreams_jp.vtt" srclang="ja" kind="captions">
+        <track src="tracks/ElephantDreams_en.vtt" srclang="en" kind="metadata" label="Metadata">
+        <track src="tracks/ElephantDreams_chapters_en.vtt" srclang="en" kind="chapters" label="Chapters">
+        <track src="tracks/ElephantDreams_audesc_en.vtt" srclang="en" kind="descriptions" label="Descriptions">
+    </video>
+</body>
+
+</html>

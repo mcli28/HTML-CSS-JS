@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        article, div {
+            position:relative;
+        }
+        section {
+            display:block;
+            position:absolute;
+            top:10px;
+            left:0;
+            background:#333;
+            color:#fff;
+            width:100%;
+            min-height:400px;
+        }
+        section:target {
+            z-index:2;
+        }
+        section:target,
+        section:first-of-type {
+            z-index:2;
+        }
+        a:target {
+            background:#f5f5f5;
+            font-weight:bold;
+        }
+
+        #one:target ~ div > section#s-one,
+        #two:target ~ div > section#s-two,
+        #three:target ~ div > section#s-three,
+        #four:target ~ div > section#s-four,
+        section:first-of-type {
+            z-index:2;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Features</h1>
+        <a href="#s-one">One</a> | <a href="#s-two">Two</a> | <a href="#s-three">Three</a> | <a href="#s-four">Four</a>
+        <div>
+            <section id="s-one">
+                <h1>Section One</h1>
+                <p>Lorem ipsum dolor set amet.</p>
+            </section>
+            <section id="s-two">
+                <h1>Section Two</h1>
+                <p>Lorem ipsum dolor set amet.</p>
+            </section>
+            <section id="s-three">
+                <h1>Section Three</h1>
+                <p>Lorem ipsum dolor set amet.</p>
+            </section>
+            <section id="s-four">
+                <h1>Section Four</h1>
+                <p>Lorem ipsum dolor set amet.</p>
+            </section>
+        </div>
+    </article>
+</body>
+</html>

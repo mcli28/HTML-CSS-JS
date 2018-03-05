@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introducing a Gradient Transparency Mark into the Ambient Video</title>
+</head>
+
+<body>
+    <style type="text/css">
+        #ambience {
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+            width: 420px;
+            height: 300px;
+            outline: black solid 10px;
+        }
+
+        #canvas {
+            position: relative;
+            left: 30px;
+            top: 30px;
+        }
+    </style>
+    <div id="ambience">
+        <canvas id="canvas" width="360" height="240"></canvas>
+    </div>
+    <video autoplay style="display: none;">
+        <source src="ANDREA LAROSA.mp4" type="video/mp4">
+        <source src="video/HelloWorld.webm" type="video/webm">
+    </video>
+    <canvas id="scratch" width="360" height="240" style="display: none;">
+    </canvas>
+    <script>
+        var context, sctxt, video, ambience;
+        ambience = document.getElementById("ambience");
+        video = document.getElementsByTagName("video")[0];
+        canvas = document.getElementsByTagName("canvas")[0];
+        context = canvas.getContext("2d");
+        context.globalCompositeOperation = "destination-in";
+        scratch = document.getElementById("scratch");
+        sctxt = scratch.getContext("2d");
+        gradient = context.createRadialGradient(180, 120, 0, 180, 120, 180);
+        gradient.addColorStop(0, "rgba( 255, 255, 255, 1)");
+        gradient.addColorStop(0.7, "rgba( 125, 125, 125, 0.8)");
+        gradient.addColorStop(1, "rgba( 0, 0, 0, 0)");
+        video.addEventListener("play", paintAmbience, false);
+        function paintAmbience() {
+            // set up scratch frame
+            sctxt.drawImage(video, 0, 0, 360, 240);
+            // get average color for frame and transition to it
+            frame = sctxt.getImageData(0, 0, 360, 240);
+            color = getColorAvg(frame);
+            ambience.style.backgroundColor =
+                'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',0.8)';
+            // paint video image
+            context.putImageData(frame, 0, 0);
+            // throw gradient onto canvas
+            context.fillStyle = gradient;
+            context.fillRect(0, 0, 360, 240);
+            if (video.paused || video.ended) {
+                return;
+            }
+            requestAnimationFrame(paintAmbience);
+        }
+    </script>
+</body>
+
+</html>

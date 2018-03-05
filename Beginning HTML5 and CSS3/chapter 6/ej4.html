@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Percent Downloaded:
+        <progress id="p" max="100" value="0"><span id="completed">0</span>%</progress>
+    </p>
+    <p>Your profile is <span id="completed">40</span>% complete.</p>
+    <meter min="0" max="100" value="40"></meter>
+    <details>
+        <summary>Name & Extension:</summary>
+        <p><input type="text" name="fn" value="Space Cadet Handbook.pdf">
+        <p><label><input type="checkbox" name="ext" checked> Hide extension</label>
+    </details>
+    <menu type="toolbar">
+        <command type="command" disabled label="Save" icon="icons/save.png" onclick="save()">
+        <command type="command" disabled label="Publish" icon="icons/pub.png" onclick="publish()">
+    </menu>
+    <script>
+        var progress = document.getElementById('p');
+        function updateProg(newValue) {
+            progress.value = newValue;
+            progress.getElementById('completed')[0].textContent = newValue;
+        }
+
+    </script>
+</body>
+</html>

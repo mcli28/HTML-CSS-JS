@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Frequency Automation for an Oscillator</title>
+</head>
+<body>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var oscillator = audioCtx.createOscillator();
+        var freqArray = new Float32Array(5);
+        freqArray[0] = 4000;
+        freqArray[1] = 3000;
+        freqArray[2] = 1500;
+        freqArray[3] = 3000;
+        freqArray[4] = 1500;
+        oscillator.type = 'square';
+        oscillator.frequency.value = 100; // value in hertz
+        oscillator.connect(audioCtx.destination);
+        oscillator.start(0);
+        oscillator.frequency.cancelScheduledValues(audioCtx.currentTime);
+        oscillator.frequency.setValueAtTime(500, audioCtx.currentTime + 1);
+        oscillator.frequency.exponentialRampToValueAtTime(4000,
+        audioCtx.currentTime + 4);
+        oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime + 5);
+        oscillator.frequency.linearRampToValueAtTime(1000,
+        audioCtx.currentTime + 8);
+        oscillator.frequency.setTargetAtTime(4000, audioCtx.currentTime + 10, 1);
+        oscillator.frequency.setValueAtTime(1000, audioCtx.currentTime + 12);
+        oscillator.frequency.setValueCurveAtTime(freqArray,
+        audioCtx.currentTime + 14, 4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        article > p {
+            font-size:125%;
+        }
+        h2 + p {
+            font-weight:bold;
+        }
+        h3 ~ ul {
+            list-style-type:binary;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Article Title</h1>
+        <p>...</p>
+        <!-- Child combinator targets this paragraph -->
+        <section>
+            <h2>Section Title</h2>
+            <p>...</p>
+            <!-- Adjacent sibling combinator targets this paragraph -->
+            <p>...</p>
+        </section>
+        <p>...</p>
+        <!-- Child combinator targets this paragraph -->
+    </article>
+    <article>
+        <h1>Article Title</h1>
+        <p>...</p>
+        <!-- Child combinator targets this paragraph -->
+        <section>
+            <h2>Section Title</h2>
+            <p>...</p>
+            <!-- Adjacent sibling combinator targets this paragraph -->
+            <p>...</p>
+            <ul>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+            </ul>
+            <section>
+                <h3>Section Title</h3>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <!-- General sibling combinator targets this list -->
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </section>
+        </section>
+        <p>...</p>
+        <!-- Child combinator targets this paragraph -->
+    </article>
+</body>
+</html>

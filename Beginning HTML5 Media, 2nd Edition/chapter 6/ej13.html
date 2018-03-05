@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Applying a Waveshaper to an Input Signal</title>
+</head>
+
+<body>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var mediaElement = document.getElementsByTagName('audio')[0];
+        var source = audioCtx.createMediaElementSource(mediaElement);
+        function makeDistortionCurve() {
+            var n_samples = audioCtx.sampleRate;
+            var curve = new Float32Array(n_samples);
+            var x;
+            for (var i = 0; i < n_samples; ++i) {
+                x = i * 2 / n_samples - 1;
+                curve[i] = 0.5 * Math.pow(x, 3);
+            }
+            return curve;
+        };
+        var distortion = audioCtx.createWaveShaper();
+        distortion.curve = makeDistortionCurve();
+        distortion.oversample = '4x';
+        mediaElement.addEventListener('play', function () {
+            // create filter graph
+            source.connect(distortion);
+            distortion.connect(audioCtx.destination);
+        });
+    </script>
+</body>
+
+</html>

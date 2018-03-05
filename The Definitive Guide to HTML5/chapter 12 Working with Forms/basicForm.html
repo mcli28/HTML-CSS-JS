@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>A Simple HTML Form</title>
+	<meta name="author" content="mc_li28" />
+	<meta name="description" content="A simple example"/ >
+	<meta charset="UTF-8" />
+	<!-- <meta http-equiv="refresh" content="5"> -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<!-- <base href="http://localhost:8080"/> -->
+</head>
+<body>
+	<!-- <form action="/form" method="post"> -->
+	<!-- <form target="_blank" autocomplete="off" action="http://localhost:8080/form" method="post">
+		<input autocomplete="on" type="text" name="fave">
+		<input type="text" name="name">
+		<button>Submit Vote</button>
+	</form> -->
+	<!-- <form name="fruitvote" id="fruitvote" action="http://localhost:8080/form" method="post">
+		<p><label for="fave">Fruit: <input disabled type="text" name="fave"></label></p>
+		<p><label for="name">Name: <input autofocus type="text" name="name"></label></p>
+		<button>Submit Vote</button>
+	</form> -->
+
+	<form method="post" action="http://titan:8080/form">
+		<fieldset>
+			<legend>Enter Your Details</legend>
+			<p><label for="name">Name: <input id="name" name="name"/></label></p>
+			<p><label for="name">City: <input id="city" name="city"/></label></p>
+		</fieldset>
+		<fieldset disabled>
+			<legend>Vote For Your Three Favorite Fruits</legend>
+			<p><label for="fave1">#1: <input id="fave1" name="fave1"/></label></p>
+			<p><label for="fave2">#2: <input id="fave2" name="fave2"/></label></p>
+			<p><label for="fave3">#3: <input id="fave3" name="fave3"/></label></p>
+		</fieldset>
+		<button>Submit Vote</button>
+	</form>
+	<form>
+		<p>
+			<label for="fave">Fruit: <input autofocus id="fave" name="fave"/></label>
+		</p>
+		<p>
+			<label for="name">Name: <input id="name" name="name"/></label>
+		</p>
+		<button type="submit" formaction="http://localhost:8080/form" formmethod="post">Submit Vote</button>
+		<button type="reset">Reset</button>
+		<button type="button">Do <strong>NOT</strong> press this button</button>
+	</form>
+
+	<form id="voteform" method="post" action="http://localhost:8080/form">
+		<p>
+			<label for="fave">Fruit: <input autofocus id="fave" name="fave"/></label>
+		</p>
+	</form>
+	<p>
+		<label for="name">Name: <input form="voteform" id="name" name="name"/></label>
+	</p>
+	<button form="voteform" type="submit">Submit Vote</button>
+	<button form="voteform" type="reset">Reset</button>
+</body>
+</html>

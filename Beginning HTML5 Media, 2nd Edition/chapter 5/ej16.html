@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Video Spiral Using Canvas</title>
+</head>
+
+<body>
+	<div style="padding: 50px; background-color: #090909;">
+		<video autoplay style="vertical-align: bottom;" width="360">
+			<source src="ANDREA LAROSA.mp4" type="video/mp4">
+			<source src="video/HelloWorld.webm" type="video/webm">
+		</video>
+		<br/>
+		<canvas id="reflection" width="360" height="55" style="vertical-align: top;"></canvas>
+	</div>
+	<script>
+		var context, canvas, video;
+		var i = 0;
+		video = document.getElementsByTagName("video")[0];
+		canvas = document.getElementsByTagName("canvas")[0];
+		context = canvas.getContext("2d");
+		// provide a shadow
+		context.shadowOffsetX = 5;
+		context.shadowOffsetY = 5;
+		context.shadowBlur = 4;
+		context.shadowColor = "rgba(0, 0, 0, 0.5)";
+		video.addEventListener("play", paintFrame, false);
+		function paintFrame() {
+			context.drawImage(video, 0, 0, 120, 80);
+			context.setTransform(1, 0,
+				0, 1,
+				0, 0);
+			i += 1;
+			context.translate(3 * i, 1.5 * i);
+			context.rotate(0.2 * i);
+			if (video.paused || video.ended) {
+				alert(i);
+				return;
+			}
+			requestAnimationFrame(paintFrame);
+		}
+	</script>
+</body>
+
+</html>

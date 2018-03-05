@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Example</title>
+</head>
+<body>
+	<p id="paratext">
+		There are lots of different kinds of fruit - there are over 500 varieties
+		of banana alone. By the time we add the countless types of apples, oranges,
+		and other well-known fruit, we are faced with thousands of choices.
+		<img src="apple.png" alt="apple"/>
+	</p>
+	<script>
+		var images;
+		if (document.querySelectorAll) {
+			images = document.querySelectorAll("#paratext > img");
+		} else {
+			images = document.getElementById("paratext").getElementsByTagName("img");
+		}
+		for (var i = 0; i < images.length; i++) {
+			images[i].style.border = "thick solid black";
+			images[i].style.padding = "4px";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adding Random Noise to an Audio File in a ScriptProcessorNode</title>
+</head>
+
+<body>
+    <audio autoplay controls src="audio/ticking.wav"></audio>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var mediaElement = document.getElementsByTagName('audio')[0];
+        var source = audioCtx.createMediaElementSource(mediaElement);
+        var noiser = audioCtx.createScriptProcessor();
+        source.connect(noiser);
+        noiser.connect(audioCtx.destination);
+        noiser.onaudioprocess = function (event) {
+            var inputBuffer = event.inputBuffer;
+            var outputBuffer = event.outputBuffer;
+            for (var channel = 0; channel < inputBuffer.numberOfChannels; channel++) {
+                var inputData = inputBuffer.getChannelData(channel);
+                var outputData = outputBuffer.getChannelData(channel);
+                for (var sample = 0; sample < inputBuffer.length; sample++) {
+                    outputData[sample] = inputData[sample] + (Math.random() * 0.01);
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

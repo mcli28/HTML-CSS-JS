@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tables</title>
+	<!--<base href="http://titan/listings/"/>-->
+	<meta name="author" content="mc_li28" />
+	<meta name="description" content="A simple example"/ >
+	<meta charset="UTF-8" />
+	<meta http-equiv="refresh" content="5">
+	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<style>
+		thead th, tfoot th {
+			text-align: left;
+			background: grey;
+			color: white;
+		}
+		tbody th {
+			text-align: right;
+			background: lightgrey;
+			color: grey;
+		}
+		thead [colspan], tfoot [colspan] {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th id="rank">Rank</th>
+				<th id="name">Name</th>
+				<th id="color">Color</th>
+				<th id="sizeAndVotes" colspan="2">Size & votes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th id="first" headers="rank">Favorite:</th>
+				<th headers="name first">Apples</th>
+				<th headers="color first">Green</th>
+				<th headers="sizeAndVote first">Medium</th>
+				<th headers="sizeAndVote first">500</th>
+			</tr>
+			<tr>
+				<th id="second" headers="rank">2nd Favorite:</th>
+				<th headers="name second">Oranges</th>
+				<th headers="color second">Orange</th>
+				<th headers="sizeAndVote second">Large</th>
+				<th headers="sizeAndVote second">450</th>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th colspan="5">
+					&copy; 2015 mc_li28 Fruit Data Enterprises
+				</th>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

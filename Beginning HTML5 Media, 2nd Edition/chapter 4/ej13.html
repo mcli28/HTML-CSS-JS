@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List and Access All the Text Tracks of a Video Element</title>
+</head>
+
+<body>
+    <video poster="img/Monty.jpg" controls width="50%">
+        <source src="video/Monty.mp4" type="video/mp4">
+        <source src="video/Monty.webm" type="video/webm">
+        <track id="track1" label="English" src="tracks/Monty_subs_en.vtt" kind="subtitles" srclang="en" default>
+    </video>
+    <h3>TextTrack object:</h3>
+    <p id="values"></p>
+    <script>
+        var video = document.getElementsByTagName('video')[0];
+        var values = document.getElementById('values');
+        var new_track = video.addTextTrack("chapters", "English Chapters", "en");
+        var cue;
+        cue = new VTTCue(0.00, 7.298, "Opening Credits");
+        new_track.addCue(cue);
+        cue = new VTTCue(7.298, 204.142, "Introduction");
+        new_track.addCue(cue);
+        function loaded() {
+            values.innerHTML += "Number of text tracks: "
+                + video.textTracks.length + "</br>";
+            for (var i = 0; i < video.textTracks.length; i++) {
+                values.innerHTML += "<b>Track[" + i + "]:</b></br>";
+                values.innerHTML += "Number of cues: "
+                    + video.textTracks[i].cues.length + "<br/>";
+                values.innerHTML += "First cue: "
+                    + video.textTracks[i].cues[0].text + "<br/>";
+            }
+        }
+        video.addEventListener("loadedmetadata", loaded, false);
+    </script>
+</body>
+
+</html>

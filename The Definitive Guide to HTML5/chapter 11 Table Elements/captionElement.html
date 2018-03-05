@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tables</title>
+	<!--<base href="http://titan/listings/"/>-->
+	<meta name="author" content="mc_li28" />
+	<meta name="description" content="A simple example"/ >
+	<meta charset="UTF-8" />
+	<meta http-equiv="refresh" content="5">
+	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<style>
+		thead th, tfoot th {
+			text-align: left;
+			background: grey;
+			color: white;
+		}
+		tbody th {
+			text-align: right;
+			background: lightgrey;
+			color: grey;
+		}
+		[colspan], [rowspan] {
+			font-weight: bold;
+			border: medium solid black;
+		}
+		thead [colspan], tfoot [colspan] {
+			text-align: center;
+		}
+		caption {
+			font-weight: bold;
+			font-size: large;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption>Results of the 2011 Fruit Survey</caption>
+		<thead>
+			<tr>
+				<th id="rank">Rank</th>
+				<th id="name">Name</th>
+				<th id="color">Color</th>
+				<th colspan="2">Size & votes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Favorite:</th>
+				<th>Apples</th>
+				<th>Green</th>
+				<th>Medium</th>
+				<th>500</th>
+			</tr>
+			<tr>
+				<th>2nd Favorite:</th>
+				<th>Oranges</th>
+				<th>Orange</th>
+				<th>Large</th>
+				<th>450</th>
+			</tr>
+			<tr>
+				<th>3rd Favorite:</th>
+				<th>Pomegranate</th>
+				<th colspan="2" rowspan="2">
+					Pomegranates and cherries can both come in a range of colors and sizes.
+				</th>
+				<th>203</th>
+			</tr>
+			<tr>
+				<th rowspan="2">Joint 4th:</th>
+				<th>Cherries</th>
+				<th rowspan="2">75</th>
+			</tr>
+			<tr>
+				<th>Pineapple</th>
+				<th>Brown</th>
+				<th>Very Large</th>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th colspan="5">
+					&copy; 2015 mc_li28 Fruit Data Enterprises
+				</th>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

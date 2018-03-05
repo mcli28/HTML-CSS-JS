@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var myData = {
+			name: "Adam",
+			weather: "sunny",
+		}
+		document.writeln("Prop: "+myData.doesntexist);
+	</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var myData = {
+			name: "Adam",
+			city: null
+		}
+		if (!myData.name) {
+			document.writeln("name IS null or undefined");
+		} else {
+			document.writeln("name is NOT null or undefined");
+		}
+
+		if (!myData.city) {
+			document.writeln("city IS null or undefined");
+		} else {
+			document.writeln("city is NOT null or undefined");
+		}
+
+	</script>
+</body>
+</html>

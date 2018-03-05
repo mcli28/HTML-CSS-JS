@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function to Change the Mouse Cursor When over the Top of the White Box</title>
+</head>
+
+<body>
+    <div style="padding: 50px; background-color: #090909;">
+        <video autoplay style="vertical-align: bottom;" width="360">
+            <source src="ANDREA LAROSA.mp4" type="video/mp4">
+            <source src="video/HelloWorld.webm" type="video/webm">
+        </video>
+        <br/>
+        <canvas id="reflection" width="360" height="55" style="vertical-align: top;"></canvas>
+    </div>
+    <script>
+        function canvasPosition(e) {
+            // from http://www.naslu.com/resource.aspx?id=460
+            // and http://diveintohtml5.org/canvas.html
+            if (e.pageX || e.pageY) {
+                x = e.pageX;
+                y = e.pageY;
+            } else {
+                x = e.clientX + document.body.scrollLeft +
+                    document.documentElement.scrollLeft;
+                y = e.clientY + document.body.scrollTop +
+                    document.documentElement.scrollTop;
+            }
+            // make coordinates relative to canvas
+            x -= canvas.offsetLeft;
+            y -= canvas.offsetTop;
+            return [x, y];
+        }
+        function procMove(e) {
+            var pos = canvasPosition(e);
+            var x = pos[0], y = pos[1];
+            if (x > (w / 16) && x < (w * 15 / 16) && y > (h / 4) && y < (h * 3 / 4)) {
+                document.body.style.cursor = "pointer";
+            } else {
+                document.body.style.cursor = "default";
+            }
+        }
+    </script>
+</body>
+
+</html>

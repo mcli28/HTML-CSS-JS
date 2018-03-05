@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label> Product Number:
+        <input pattern="[0-9][A-Z]{3}" name="product" type="text" title="Single digit followed by three uppercase letters."/>
+    </label>
+    <br>
+    <label>Your favorite fruit:
+    <datalist id="fruits">
+    <option value="Blackberry">Blackberry</option>
+    <option value="Blackcurrant">Blackcurrant</option>
+    <option value="Blueberry">Blueberry</option>
+    <!-- … -->
+    </datalist>
+    If other, please specify:
+    <input type="text" name="fruit" list="fruits">
+    </label>
+    <br>
+    <label>Your favorite fruit:
+    <datalist id="fruits">
+    <select name="fruits">
+    <option value="Blackberry">Blackberry</option>
+    <option value="Blackcurrant">Blackcurrant</option>
+    <option value="Blueberry">Blueberry</option>
+    <!-- … -->
+    </select>
+    If other, please specify:
+    </datalist>
+    <input type="text" name="fruit" list="fruits">
+    </label>
+    <br>
+    <label>Your favorite fruit:
+    <datalist id="fruits">
+    <select name="fruits">
+    <option value="Blackberry">Blackberry</option>
+    <option value="Blackcurrant">Blackcurrant</option>
+    <option value="Blueberry">Blueberry</option>
+    <!-- … -->
+    </select>
+    If other, please specify:
+    </datalist>
+    <input type="text" name="fruit" list="fruits" multiple>
+    </label>
+    <br>
+    <input id="expiry" name="expiry" type="date" required>
+    <input id="expiry" name="expiry" type="month" required>
+    <input id="vacation" name="vacation" type="week">
+    <br>
+    <input id="exit-time" name="exit-time" type="time">
+    <input id="entry-day-time" name="entry-day-time" type="datetime">
+    <input id="arrival-time" name="arrival-time " type="datetime-local">
+    <br>
+    <input id="color" name="color" type="color">
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #animals ul {
+        list-style-type:none;
+    }
+    #animals li {
+        float:left;
+        width:200px;
+        text-align:center;
+        margin-right:2em;
+        margin-bottom:2em;
+    }
+    #animals li:nth-of-type(3n) {
+        margin-right:0;
+    }
+    #animals li:nth-last-of-type(1) {
+        margin-left:232px;
+    }
+    article img:only-of-type {
+        width:100%;
+    }
+    a[href="#top"]::after {
+        content:" \2191";
+    }
+</style>
+<body>
+    <section id="animals">
+        <h1>Animals in Space</h1>
+        <ul>
+            <li><img src="img/fly.png" alt="Fruit Flies" /></li>
+            <li><img src="img/albert.png" alt="Albert II" /></li>
+            <li><img src="img/mouse.png" alt="Mouse" /></li>
+            <li><img src="img/tsygan.png" alt="Tsygan" /></li>
+            <li><img src="img/laika.png" alt="Laika" /></li>
+            <li><img src="img/gordo.png" alt="Gordo" /></li>
+            <li><img src="img/baker.png" alt="Miss Baker" /></li>
+            <li><img src="img/belka.png" alt="Belka & Strelka" /></li>
+            <li><img src="img/enos.png" alt="Enos" /></li>
+            <li><img src="img/felix.png" alt="Felix" /></li>
+        </ul>
+        <p><a href="#top">Back to top</a></p>
+    </section>
+</body>
+</html>

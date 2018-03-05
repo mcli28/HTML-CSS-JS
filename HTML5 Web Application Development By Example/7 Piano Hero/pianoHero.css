@@ -4,3 +4,18 @@
     text-transform: uppercase;
     text-shadow: 3px 3px 0px #fff, 5px 5px 0px #003;
 }
+#notes-panel .note{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 20px;
+    background-color: cyan;
+    /* browser specific gradients not shown*/
+    background: linear-gradient(left, white, cyan);
+    box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.7);
+}
+#notes-panel .note .black{
+    background-color: magenta;
+    /* browser specific gradients not shown */
+    background: linear-gradient(left, white, magenta);
+}

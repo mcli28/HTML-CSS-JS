@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        blockquote { quotes: "+" ";" "<" ">"; }
+        blockquote::before,
+        q::before { content: open-quote; }
+        blockquote::after,
+        q::after { content: close-quote; }
+    </style>
+</head>
+<body>
+    <blockquote><p>Imagine a puddle waking up one morning and thinking, <q>This is an interesting
+    world I find myself in — an interesting hole I find myself in — fits me rather neatly, doesn't
+    it?</q></p></blockquote>
+
+</body>
+</html>
