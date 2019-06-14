@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            // drawing canvas and context
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            // draw spade
+            var spadeX = canvas.width / 2;
+            var spadeY = 20;
+            var spadeWidth = 140;
+            var spadeHeight = 200;
+            // draw spade in center of canvas
+            drawSpade(context, spadeX, spadeY, spadeWidth, spadeHeight);
+            context.drawImage(
+                canvas,
+                spadeX, // source x
+                spadeY, // source y
+                spadeWidth / 2, // source width
+                spadeHeight, // source height
+                spadeX - spadeWidth, // dest x
+                spadeY, // dest y
+                spadeWidth / 2, // dest width
+                spadeHeight // dest height
+            );
+            context.drawImage(
+                canvas,
+                spadeX - spadeWidth / 2, // source x
+                spadeY, // source y
+                spadeWidth / 2, // source width
+                spadeHeight, // source height
+                spadeX + spadeWidth / 2, // dest x
+                spadeY, // dest y
+                spadeWidth / 2, // dest width
+                spadeHeight // dest height
+            );
+        };
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="250" style="border:1px solid black;">
+    </canvas>
+</body>
+</html>

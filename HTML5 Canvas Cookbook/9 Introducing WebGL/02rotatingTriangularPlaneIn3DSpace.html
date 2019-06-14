@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="gl-matrix.js"></script>
+    <script type="text/javascript" src="webgl.js"></script>
+    <script>
+        function initBuffers(gl) {
+            var triangleBuffers = {};
+            triangleBuffers.positionBuffer = gl.createArrayBuffer([
+                0, 1, 0,
+                -1, -1, 0,
+                1, -1, 0
+            ]);
+            return triangleBuffers;
+        }
+        function stage(gl, triangleBuffers, angle) {
+            // set field of view at 45 degrees
+            // set viewing range between 0.1 and 100.0 units away.
+            gl.perspective(45, 0.1, 100.0);
+            gl.identity();
+            // translate model-view matrix
+            gl.translate(0, 0, -5);
+            // rotate model-view matrix about y-axis
+            gl.rotate(angle, 0, 1, 0);
+            gl.pushPositionBuffer(triangleBuffers);
+            gl.drawArrays(triangleBuffers);
+        }
+        window.onload = function () {
+            var gl = new WebGL("myCanvas", "experimental-webgl");
+            gl.setShaderProgram("BLUE_COLOR");
+            var triangleBuffers = initBuffers(gl);
+            var angle = 0;
+            gl.setStage(function () {
+                // update angle
+                var angularVelocity = Math.PI / 2; // radians / second
+                var angleEachFrame = angularVelocity * gl.getTimeInterval() / 1000;
+                angle += angleEachFrame;
+                this.clear();
+                stage(gl, triangleBuffers, angle);
+            });
+            gl.start();
+        };
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="250" style="border:1px solid black;"></canvas>
+</body>
+</html>

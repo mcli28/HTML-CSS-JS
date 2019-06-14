@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .col-container{
+        background: #000;
+        color: #fff;
+        }
+        .col-container:after{
+        content: ' ';
+        clear: both;
+        display: block;
+        }
+        .col{
+        float: left;
+        width: 50%;
+        }
+        .col.main{
+        background: #999;
+        } */
+        /* .col-container{
+        background: linear-gradient(to right, #000000 0%,#000000 33%,#a0a0a0 33%,#a0a0a0 66%,#a0a0a0
+        66%,#707070 66%);
+        color: #fff;
+        }
+        .col-container:after{
+        content: ' ';
+        clear: both;
+        display: block;
+        }
+        .col{
+        float: left;
+        width: 33.3%;
+        } */
+        .col-container{
+        color: #fff;
+        }
+        .col-container:after{
+        content: ' ';
+        clear: both;
+        display: block;
+        }
+        .col{
+        float: left;
+        width: 33.3%;
+        }
+        .col.nav{
+        background: #aaa;
+        }
+        .col.main{
+        background: #000;
+        }
+        .col.related{
+        background: #999;
+        }
+    </style>
+    <script>
+        /* var columns = document.getElementsByClassName('col'),
+            height = 0;
+        //Loop through columns and find the tallest columns
+        for (var i = 0; i < columns.length; i++) {
+            if (height < columns[i].clientHeight) {
+                height = columns[i].clientHeight;
+            }
+        }
+        //Apply the max height to all columns
+        for (var i = 0; i < columns.length; i++) {
+            columns[i].style.height = height + "px";
+        } */
+                var equalColumns = function(){
+                var columns = document.getElementsByClassName('col'), height = 0;
+                                //Reset the height of all the columns so that we can recalculate max height
+                for (var i = 0; i < columns.length; i++) {
+                                    columns[i].style.height = "auto";
+                                }
+                                //Loop through columns and find max height
+                for (var i = 0; i < columns.length; i++) {
+                if(height < columns[i].clientHeight){
+                                    height = columns[i].clientHeight;
+                                }
+                                }
+                                //Apply the max height to all columns
+                for (var i = 0; i < columns.length; i++) {
+                                    columns[i].style.height = height + "px";
+                }
+                }
+                //Initially set the column heights
+                equalColumns();
+                //Update column heights on browser resize
+                window.addEventListener("resize", equalColumns, true);
+    </script>
+</head>
+<body>
+    <!-- <div class="col-container">
+        <aside class="col">
+            Sidebar
+        </aside>
+        <div class="col main">
+            Main Content Area
+        </div>
+    </div> -->
+
+    <!-- <div class="col-container">
+        <aside class="col">
+            Sidebar
+        </aside>
+        <div class="col main">
+            Main content area with our main body content
+        </div>
+        <div class="col">
+            Related content
+        </aside>
+        </div>
+    </div> -->
+    <div class="col-container">
+        <aside class="col nav">
+            Sidebar
+        </aside>
+        <div class="col main">
+            Main content area with our main body content
+        </div>
+        <div class="col related">
+            Related content
+        </div>
+    </div>
+
+</body>
+</html>
