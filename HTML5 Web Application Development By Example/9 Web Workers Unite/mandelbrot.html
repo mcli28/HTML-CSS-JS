@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mandelbrot</title>
+</head>
+<body>
+    <canvas width="640" height="480"></canvas>
+    <button class="draw" data-settings="[-2,-2,2,2]">Draw Full</button>
+    <button class="draw" data-settings="[-0.225,-0.816,-0.197,-0.788]">Preset 1</button>
+    <button class="draw" data-settings="[-1.18788,-0.304,-1.18728,-0.302]">Preset 2</button>
+    <input type="checkbox" checked="" id="use-worker">
+    <label for="use-worker">Use web worker</label>
+    <button id="stop">Stop Drawing</button>
+</body>
+</html>

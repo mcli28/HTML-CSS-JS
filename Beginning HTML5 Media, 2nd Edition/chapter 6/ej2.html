@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Parameters of the AudioContext</title>
+</head>
+
+<body>
+    <div id="display"></div>
+    <script type="text/javascript">
+        var display = document.getElementById("display");
+        var context = new (window.AudioContext || window.webkitAudioContext)();
+        display.innerHTML = context.sampleRate + " sampling rate<br/>";
+        display.innerHTML += context.destination.numberOfChannels + " output channels<br/>";
+        display.innerHTML += context.currentTime + " currentTime<br/>";
+    </script>
+</body>
+
+</html>

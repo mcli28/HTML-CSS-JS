@@ -1,0 +1,38 @@
+/* .navbar{
+	background: #1b1b1b;
+	.navbar-inner {
+		.logo {
+			display: block;
+			padding: 9px 15px;
+			font-weight: bold;
+			color: #999999;
+			margin-bottom: 4px;
+		}
+		.nav {
+			a {
+				@extend .logo;
+			}
+		}
+	}
+} */
+.navbar {
+  background: #1b1b1b;
+  overflow: hidden;
+  max-height: 44px;
+  -moz-transition: max-height 0.5;
+  -o-transition: max-height 0.5;
+  -webkit-transition: max-height 0.5;
+  transition: max-height 0.5; }
+  .navbar.open {
+    max-height: 220px; }
+  .navbar .navbar-inner .logo, .navbar .navbar-inner .nav a {
+    display: block;
+    padding: 9px 15px;
+    font-weight: bold;
+    color: #999999;
+    margin-bottom: 4px; }
+  .navbar .navbar-inner .nav {
+    margin-bottom: 0;
+    list-style: none; }
+
+/*# sourceMappingURL=basics.css.map */

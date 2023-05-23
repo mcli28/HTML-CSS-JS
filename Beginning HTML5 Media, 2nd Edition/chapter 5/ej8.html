@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Making Certain Colors in a Video Transparent Through a Canvas Manipulation</title>
+</head>
+
+<body>
+    <video controls autoplay height="240" width="360">
+        <source src="ANDREA LAROSA.mp4" type="video/mp4">
+        <source src="video/HelloWorld.webm" type="video/webm">
+    </video>
+    <canvas width="400" height="300" style="border: 1px solid black;">
+    </canvas>
+    <canvas id="scratch" width="360" height="240" style="display: none;"></canvas>
+    <script>
+        var context, sctxt, video;
+        video = document.getElementsByTagName("video")[0];
+        canvases = document.getElementsByTagName("canvas");
+        canvas = canvases[0];
+        scratch = canvases[1];
+        context = canvas.getContext("2d");
+        sctxt = scratch.getContext("2d");
+        video.addEventListener("play", paintFrame, false);
+        function paintFrame() {
+            w = 360; h = 240;
+            context.drawImage(video, 0, 0, w, h);
+            frame = context.getImageData(0, 0, w, h);
+            context.clearRect(0, 0, w, h);
+            output = context.createImageData(w, h);
+            // Loop over each pixel of output file
+            for (x = 0; x < w; x++) {
+                for (y = 0; y < h; y++) {
+                    // index in output image
+                    i = x + w * y;
+                    for (c = 0; c < 4; c++) {
+                        output.data[4 * i + c] = frame.data[4 * i + c];
+                    }
+                    // make pixels transparent
+                    r = frame.data[i * 4 + 0];
+                    g = frame.data[i * 4 + 1];
+                    b = frame.data[i * 4 + 2];
+                    if (!(r > 180 && g > 180 && b > 180))
+                        output.data[4 * i + 3] = 0;
+                }
+            }
+            context.putImageData(output, 0, 0);
+            if (video.paused || video.ended) {
+                return;
+            }
+            requestAnimationFrame(paintFrame);
+        }
+    </script>
+</body>
+
+</html>

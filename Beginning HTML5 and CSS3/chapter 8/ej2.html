@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input:disabled {
+            background:#999;
+            border:1px solid #666;
+        }
+        input[type="checkbox"]:checked + label {
+            display:inline;
+            background: #F9FDA2;
+        }
+        input[type="text"]:enabled, input[type="password"]:enabled {
+            border:1px solid #75aadb;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Login</legend>
+            <label for="uname">Username
+                <input type="text" id="uname" placeholder="e.g. hello@webevolved.com" disabled />
+            </label>
+            <label for="password">Password
+                <input type="password" id="password" disabled />
+            </label>
+            <input type="checkbox" id="rememberme" checked disabled />
+            <label for="rememberme">Remember me</label>
+            <input type="submit" value="Login" id="login" disabled />
+        </fieldset>
+    </form>
+    <article>
+        <hgroup>
+            <h1>Miss Baker</h1>
+            <h2>First Lady of Space</h2>
+        </hgroup>
+        <nav>
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#flight">Flight</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#retirement">Retirement</a></li>
+            </ol>
+        </nav>
+        <div id="introduction">
+            <p>...</p>
+        </div>
+        <section id="flight">
+            <h1>Miss Baker's Historic Flight</h1>
+            ...
+        </section>
+        <section id="mission">
+            <h1>The Mission</h1>
+            ...
+        </section>
+        <aside>
+            <h1>The US Space Program</h1>
+            ...
+        </aside>
+        <section id="retirement">
+            <h1>Life in Retirement</h1>
+            ...
+        </section>
+        <footer>
+            ...
+        </footer>
+    </article>
+    
+</body>
+</html>

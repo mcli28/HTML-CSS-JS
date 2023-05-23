@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en_UK">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<script>
+    var canvas = document.getElementById('outerspace');
+    if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        //set the size and shape (x, y, width, height)
+        ctx.fillRect(180, 180, 240, 120);
+    }
+
+</script>
+
+<body>
+    <canvas width="640" height="480" id="outerspace"></canvas>
+</body>
+
+</html>

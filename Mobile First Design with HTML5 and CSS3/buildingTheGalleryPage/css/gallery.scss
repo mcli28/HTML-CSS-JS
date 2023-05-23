@@ -1,0 +1,122 @@
+// .hero {
+// 	.slimmer {
+// 		h1{
+// 			// line-height: 1em;
+// 			font-size: 60px;
+// 			text-align: left;
+// 		}
+// 	}
+// }
+// .hero {
+// 	h1{font-size: 108px;}
+// 	p{font-size: 40px;}
+// }
+// .jumbo {
+// 	h1{font-size: 108px;}
+// 	p{font-size: 40px;}
+// }
+
+// @media only screen and (min-width: 768px) {
+// 	.jumbo {
+// 		h1 {font-size: 108px;}
+// 		p{font-size: 40px;}
+// 	}
+// }
+
+// @media only screen and (min-width: 480px) {
+// 	.subhead {
+// 		h1 {font-size: 48px;}
+// 		p{font-size: 24px;}
+// 	}
+// }
+// @media only screen and (max-width: 600px) {
+// 	.subhead {
+// 		text-align: left;
+// 		h1 {font-size: 60px;}
+// 	}
+// }
+
+
+$basecolor: red;
+.page-header {
+	text-align: center;
+	margin: 12px 0;
+	h1 {
+		font-size: 30px;
+		margin: 0;
+	}
+	h2{
+		font-size: 18px;
+	}
+}
+
+.gallery-image-area {
+	.featured-image-item {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+	.thumbnail {
+	float: left;
+	margin: 0 20px 20px 0;
+	&.active {
+		border: 3px solid $basecolor;
+		margin: 0 14px 14px 0;
+	}
+}
+}
+
+ul {
+	list-style: none;
+}
+.thumbnail {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+.gallery-description {
+	clear: left;
+}
+.gallery-showcase, .gallery-description {
+	width: 90%;
+	margin: 0 auto;
+	clear: both;
+}
+
+@media only screen and (min-width: 768) {
+	.gallery-showcase {
+		width: 45%;
+		float: left;
+		margin: 0 2.5%;
+	}
+	.gallery-description {
+		clear: none;
+		width: 45%;
+		float: left;
+		margin: 0 2.5%
+	}
+	.page-header {
+		margin: 66px 0 12px 0;
+	}
+}
+
+.back {
+	float: left;
+}
+
+.page-header {
+	text-align: center;
+	margin: 12px 0;
+	h1 {
+		font-size: 30px;
+		margin: 0;
+	}
+	h2{
+		font-size: 18px;
+	}
+	.back {
+		float: left;
+		margin: 20px;
+	}
+}
+

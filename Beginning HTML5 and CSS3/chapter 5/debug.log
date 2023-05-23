@@ -1,0 +1,4 @@
+[0612/131131.915:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Se está cerrando la canalización. (0xE8)
+[0612/132041.476:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Se está cerrando la canalización. (0xE8)
+[0614/125524.392:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Se está cerrando la canalización. (0xE8)
+[0614/130155.377:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Changing the Listener’s Position and Orientation</title>
+</head>
+
+<body>
+    <p>Position:
+        <input type="range" min="-1" max="1" step="0.1" value="0" name="pos0" />
+        <input type="range" min="-1" max="1" step="0.1" value="0" name="pos1" />
+        <input type="range" min="-1" max="1" step="0.1" value="0" name="pos2" />
+    </p>
+    <p>Orientation:
+        <input type="range" min="-1" max="1" step="0.1" value="0" name="dir0" />
+        <input type="range" min="-1" max="1" step="0.1" value="0" name="dir1" />
+        <input type="range" min="-1" max="1" step="0.1" value="-1" name="dir2" />
+    </p>
+    <p>Elevation:
+        <input type="range" min="-1" max="1" step="0.1" value="0" name="hei0" />
+        <input type="range" min="-1" max="1" step="0.1" value="1" name="hei1" />
+        <input type="range" min="-1" max="1" step="0.1" value="0" name="hei2" />
+    </p>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var source = audioCtx.createBufferSource();
+        var request = new XMLHttpRequest();
+        var url = 'audio/ticking.wav';
+        request.addEventListener('load', receivedData, false);
+        requestData(url);
+        var inputs = document.getElementsByTagName('input');
+        var pos = [0, 0, 0]; // position
+        var ori = [0, 0, -1]; // orientation
+        var ele = [0, 1, 0]; // elevation
+        for (i = 0; i < inputs.length; i++) {
+            var elem = inputs[i];
+            elem.addEventListener('change', function () {
+                var type = this.name.substr(0, 3);
+                var index = this.name.slice(3);
+                var value = parseFloat(this.value);
+                switch (type) {
+                    case 'pos':
+                        pos[index] = value;
+                        audioCtx.listener.setPosition(pos[0], pos[1], pos[2]);
+                        break;
+                    case 'ori':
+                        ori[index] = value;
+                        audioCtx.listener.setOrientation(ori[0], ori[1], ori[2],
+                            ele[0], ele[1], ele[2]);
+                        break;
+                    case 'ele':
+                        ele[index] = value;
+                        audioCtx.listener.setOrientation(ori[0], ori[1], ori[2],
+                            ele[0], ele[1], ele[2]);
+                        break;
+                    default:
+                        console.log('no match');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Different Biquad Filter Types Applied to an Audio Source</title>
+</head>
+
+<body>
+    <canvas width="600" height="200"></canvas>
+    <canvas width="600" height="200" style="display: none;"></canvas>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var canvas = document.getElementsByTagName('canvas')[0];
+        var ctxt = canvas.getContext('2d');
+        var scratch = document.getElementsByTagName('canvas')[1];
+        var sctxt = scratch.getContext('2d');
+        var dbScale = 60;
+        var width = 512;
+        var height = 200;
+        var pixelsPerDb = (0.5 * height) / dbScale;
+        var nrOctaves = 10;
+        var nyquist = 0.5 * audioCtx.sampleRate;
+        function dbToY(db) {
+            var y = (0.5 * height) - pixelsPerDb * db;
+            return y;
+        }
+        function drawAxes() {
+            ctxt.textAlign = "center";
+            // Draw frequency scale (x-axis).
+            for (var octave = 0; octave <= nrOctaves; octave++) {
+                var x = octave * width / nrOctaves;
+                var f = nyquist * Math.pow(2.0, octave - nrOctaves);
+                var value = f.toFixed(0);
+                var unit = 'Hz';
+                if (f > 1000) {
+                    unit = 'KHz';
+                    value = (f / 1000).toFixed(1);
+                }
+                ctxt.strokeStyle = "black";
+                ctxt.strokeText(value + unit, x, 20);
+                ctxt.beginPath();
+                ctxt.strokeStyle = "gray";
+                ctxt.lineWidth = 1;
+                ctxt.moveTo(x, 30);
+                ctxt.lineTo(x, height);
+                ctxt.stroke();
+            }
+            // Draw decibel scale (y-axis).
+            for (var db = -dbScale; db < dbScale - 10; db += 10) {
+                var y = dbToY(db);
+                ctxt.strokeStyle = "black";
+                ctxt.strokeText(db.toFixed(0) + "dB", width + 40, y);
+                ctxt.beginPath();
+                ctxt.strokeStyle = "gray";
+                ctxt.moveTo(0, y);
+                ctxt.lineTo(width, y);
+                ctxt.stroke();
+            }
+            // save this drawing to the scratch canvas.
+            sctxt.drawImage(canvas, 0, 0);
+        }
+        function drawGraph() {
+            // grab the axis and grid from scratch canvas.
+            ctxt.clearRect(0, 0, 600, height);
+            ctxt.drawImage(scratch, 0, 0);
+            // grab the frequency response data.
+            var frequencyHz = new Float32Array(width);
+            var magResponse = new Float32Array(width);
+            var phaseResponse = new Float32Array(width);
+            for (var i = 0; i < width; ++i) {
+                var f = i / width;
+                // Convert to log frequency scale (octaves).
+                f = nyquist * Math.pow(2.0, nrOctaves * (f - 1.0));
+                frequencyHz[i] = f;
+            }
+            bass.getFrequencyResponse(frequencyHz, magResponse, phaseResponse);
+            // draw the frequency response.
+            ctxt.beginPath();
+            ctxt.strokeStyle = "red";
+            ctxt.lineWidth = 3;
+            for (var i = 0; i < width; ++i) {
+                var response = magResponse[i];
+                var dbResponse = 20.0 * Math.log(response) / Math.LN10;
+                var x = i;
+                var y = dbToY(dbResponse);
+                if (i == 0) {
+                    ctxt.moveTo(x, y);
+                } else {
+                    ctxt.lineTo(x, y);
+                }
+            }
+            ctxt.stroke();
+        }
+    </script>
+</body>
+
+</html>

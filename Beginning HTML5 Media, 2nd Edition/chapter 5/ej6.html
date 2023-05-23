@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reimplementation of Video Tiling into a Canvas with createImageData</title>
+</head>
+
+<body>
+    <video controls autoplay height="240" width="360">
+        <source src="ANDREA LAROSA.mp4" type="video/mp4">
+        <source src="video/HelloWorld.webm" type="video/webm">
+    </video>
+    <canvas width="400" height="300" style="border: 1px solid black;">
+    </canvas>
+    <script>
+        var video, canvas, context;
+        video = document.getElementsByTagName("video")[0];
+        canvas = document.getElementsByTagName("canvas")[0];
+        context = canvas.getContext("2d");
+        video.addEventListener("play", paintFrame, false);
+        var x = 0, xpos = 10;
+        var y = 0, ypos = 10;
+        var count = 0;
+
+        function paintFrame() {
+            w = 360; h = 240;
+            context.drawImage(video, 0, 0, w, h);
+            frame = context.getImageData(0, 0, w, h);
+            context.clearRect(0, 0, w, h);
+            // create 15x15 tiling
+            tiles = 15;
+            gap = 2;
+            nw = w / tiles;
+            nh = h / tiles;
+            // Loop over the tiles
+            for (tx = 0; tx < tiles; tx++) {
+                for (ty = 0; ty < tiles; ty++) {
+                    output = context.createImageData(nw, nh);
+                    // Loop over each pixel of output file
+                    for (x = 0; x < nw; x++) {
+                        for (y = 0; y < nh; y++) {
+                            // index in output image
+                            i = x + nw * y;
+                            // index in frame image
+                            j = x + w * y + tx * nw + w * nh * ty;
+                            // copy all the colours
+                            for (c = 0; c < 4; c++) {
+                                output.data[4 * i + c] = frame.data[4 * j + c];
+                            }
+                        }
+                    }
+                    // Draw the ImageData object.
+                    context.putImageData(output, tx * (nw + gap), ty * (nh + gap));
+                }
+            }
+            if (video.paused || video.ended) {
+                return;
+            }
+            requestAnimationFrame(paintFrame);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VALIDACION DE USUARIO DE TWITTER MEDIANTE SU CUENTA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form action="" class="contactForm">
+                <div class="form-group">
+                    <label for="email">Twitter:</label>
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <button type="submit" class="btn btn-default">Validar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            var contactForm = document.getElementById('contactForm');
+            contactForm.onsubmit = function (e) {
+                e.preventDefault();
+                //console.log('El boton ha sido pulsado');
+                console.log('¿El URL es valida?', isValidUrl());
+            }
+            /**
+             * URL/Direccion web valida
+             */
+            var isValidUrl = function () {
+                var url = document.getElementById('url');
+                return /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \?=.-]*)*\/?$/.test(url.value)
+            }
+            /**
+             * Contraseña segura
+             * Contraseñas con al menos una letra mayuscula.
+             * Contraseñas con al menos una letra minuscula.
+             * Contraseñas con al menos un numero o caracter especial.
+             * Contraseñas con minimo 8 caracteres.
+             **/
+            var isValidPass = function () {
+                var pass = document.getElementById('pass');
+                return /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?=.*[A-Z])(?=.*[a-z]).*$/.test(pass.value)
+            }
+
+            /**
+             * Telefonos en el mundo
+             * https//en.wikipedia.org/wiki/List_of_country_calling_codes
+             */
+
+            var isValidPhone = function () {
+                var phone = document.getElementById('phone');
+                /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(phone.value)
+            }
+
+            /**
+             * Tarjetas de credito
+             */
+
+            /**var isValidCreditCard = function () {
+                var phone = document.getElementById('phone');
+                return /^((67/d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))(-?\s?\d{4}){3}|(3[4,7])\ d{2}-?\s?\d{6}-?\s
+            }*/
+            
+            /**
+             * Codigo postal
+             */
+
+            var isValidPostalCode = function () {
+                var postalCode = document.getElementById('postalCode');
+                return /^([1-9]{2}|[0-9][1-9][1-9][0-9])[0-9]{3}$/.test(postalCode.value);
+            }
+
+            var isValidUserName = function () {
+                var validUser = document.getElementById('validUser');
+                return /^[a-z\d_]{6,30}$/i.test(validUser.value);
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>

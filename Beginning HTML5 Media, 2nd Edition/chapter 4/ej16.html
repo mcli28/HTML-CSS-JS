@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slaving a Main Video and a Sign Language Video Together</title>
+</head>
+
+<body>
+    <video poster="img/ElephantDreams.png" controls width="50%" mediagroup="sync">
+        <source src="video/ElephantDreams.webm" type="video/webm">
+        <source src="video/ElephantDreams.mp4" type="video/mp4">
+    </video>
+    <video poster="img/ElephantDreams.sasl.png" width="35%" mediagroup="sync">
+        <source src="video/ElephantDreams.sasl.webm" type="video/webm">
+        <source src="video/ElephantDreams.sasl.mp4" type="video/mp4">
+    </video>
+    <h3>Attribute values:</h3>
+    <p id="values"></p>
+    <script>
+        var video1 = document.getElementsByTagName("video")[0];
+        var video2 = document.getElementsByTagName("video")[1];
+        var values = document.getElementById('values');
+        function start() {
+            setTimeout(function () {
+                video1.controller.pause();
+                values.innerHTML += "Video1: duration=" + video1.duration + "<br/>";
+                values.innerHTML += "Video2: duration=" + video2.duration + "<br/>";
+                values.innerHTML += "MediaGroup: " + video1.mediaGroup + "<br/>";
+                values.innerHTML += "MediaController: duration="
+                    + video1.controller.duration + "<br/>";
+                values.innerHTML += "MediaController: paused="
+                    + video1.controller.muted + "<br/>";
+                values.innerHTML += "MediaController: currentTime="
+                    + video1.controller.currentTime;
+            }, 10000);
+        }
+        video1.addEventListener("play", start, false);
+        video1.controller.play();
+    </script>
+</body>
+
+</html>

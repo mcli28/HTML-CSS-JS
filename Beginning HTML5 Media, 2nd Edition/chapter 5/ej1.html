@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introducing the Video Pixel Data into a Canvas</title>
+</head>
+
+<body>
+    <video controls autoplay height="240" width="360">
+        <source src="video/HelloWorld.mp4" type="video/mp4">
+        <source src="video/HelloWorld.webm" type="video/webm">
+    </video>
+    <canvas width="400" height="300" style="border: 1px solid black;">
+    </canvas>
+    <script>
+        var video, canvas, context;
+        video = document.getElementsByTagName("video")[0];
+        canvas = document.getElementsByTagName("canvas")[0];
+        context = canvas.getContext("2d");
+        video.addEventListener("timeupdate", paintFrame, false);
+        function paintFrame() {
+            context.drawImage(video, 0, 0, 160, 120);
+        }
+    </script>
+</body>
+
+</html>

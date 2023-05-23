@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filling a Rectangular Canvas Region with a Video Pattern</title>
+</head>
+
+<body>
+    <video autoplay style="display: none;">
+        <source src="ANDREA LAROSA.mp4" type="video/mp4">
+        <source src="video/HelloWorld.webm" type="video/webm">
+    </video>
+    <canvas width="720" height="480" style="border: 1px solid black;">
+    </canvas>
+    <canvas id="scratch" width="180" height="120" style="display:none;">
+    </canvas>
+    <script>
+        var context, sctxt, video;
+        video = document.getElementsByTagName("video")[0];
+        canvas = document.getElementsByTagName("canvas")[0];
+        context = canvas.getContext("2d");
+        scratch = document.getElementById("scratch");
+        sctxt = scratch.getContext("2d");
+        video.addEventListener("play", paintFrame, false);
+        function paintFrame() {
+            sctxt.drawImage(video, 0, 0, 180, 120);
+            pattern = context.createPattern(scratch, 'repeat');
+            context.fillStyle = pattern;
+            context.fillRect(0, 0, 720, 480);
+            if (video.paused || video.ended) {
+                return;
+            }
+            requestAnimationFrame(paintFrame);
+        }
+    </script>
+</body>
+
+</html>

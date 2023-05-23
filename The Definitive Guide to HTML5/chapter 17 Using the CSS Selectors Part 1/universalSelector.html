@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Example</title>
+		<style type="text/css">
+			/** {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*a {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*.class2 {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+		 /*span.class2 {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*#w3canchor {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*[href] {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*[class~="class2"] {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*[lang|="en"] {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*a, [lang|="en"] {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*p span {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*#mytable td {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*body > * > span, tr > th {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*p + a {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*p ~ a {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+		 /*::first-line {
+				background-color:grey;
+				color:white;
+			}*/
+			/*::first-letter {
+				background-color:grey;
+				color:white;
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*a:before {
+				content: "Click here to "
+			}
+			a:after {
+				content: "!"
+			}*/
+			body {
+				counter-reset: paracount;
+			}
+			p:before {
+				content: counter(paracount) ".-- ";
+				counter-increment: paracount;
+				counter-reset: paracount 5;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="http://apress.com">Visit the Apress website</a>
+		<p>I like <span>apples</span> and oranges.</p>
+		<a href="http://w3c.org">Visit the W3C website</a>
+		<a class="class1 class2" href="http://apress.com">Visit the Apress website</a>
+		<p>I like <span class="class2">apples</span> and oranges.</p>
+		<a href="http://w3c.org">Visit the W3C website</a>
+		<a id="apressanchor" class="class1 class2" href="http://apress.com">
+			Visit the Apress website
+		</a>
+		<p>I like <span class="class2">apples</span> and oranges.</p>
+		<a id="w3canchor" href="http://w3c.org">Visit the W3C website</a>
+		<a lang="en-us" id="apressanchor" class="class1 class2" href="http://apress.com">
+			Visit the Apress website
+		</a>
+		<p>I like <span lang="en-gb" class="class2">apples</span> and oranges.</p>
+		<a lang="en" id="w3canchor" href="http://w3c.org">Visit the W3C website</a>
+		<table id="mytable">
+			<tr><th>Name</th><th>City</th></tr>
+			<tr><td>Adam Freeman</td><td>London</td></tr>
+			<tr><td>Joe Smith</td><td>New York</td></tr>
+			<tr><td>Anne Jones</td><td>Paris</td></tr>
+		</table>
+		<p>I like <span lang="en-uk" class="class2">apples</span> and oranges.</p>
+		<table id="othertable">
+			<tr><th>Name</th><th>City</th></tr>
+			<tr><td>Peter Pererson</td><td>Boston</td></tr>
+			<tr><td>Chuck Fellows</td><td>Paris</td></tr>
+			<tr><td>Jane Firth</td><td>Paris</td></tr>
+		</table>
+		<p>Fourscore and seven years ago our fathers brought forth
+		on this continent a new nation, conceived in liberty, and
+		dedicated to the proposition that all men are created equal.</p>
+		<p>I like <span lang="en-uk" class="class2">apples</span> and oranges.</p>
+		<a href="http://w3c.org">Visit the W3C website</a>
+	</body>
+</html>

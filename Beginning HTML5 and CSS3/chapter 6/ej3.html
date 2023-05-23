@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Your favorite fruit:
+        <datalist id="fruits">
+        <select name="fruits">
+        <option value="Blackberry">Blackberry</option>
+        <option value="Blackcurrant">Blackcurrant</option>
+        <option value="Blueberry">Blueberry</option>
+        <!-- … -->
+        </select>
+        If other, please specify:
+        </datalist>
+        <input type="text" name="fruit" list="fruits">
+    </label>
+    <form action="process.php" method="post" enctype="multipart/form-data">
+        <keygen name="key">
+        <input type=submit value="Submit">
+    </form>
+    <form onsubmit="return false" oninput="o.value = a.valueAsNumber + b.valueAsNumber">
+        <input name="a" id="a" type="number" step="any"> +
+        <input name="b" id="b" type="number" step="any"> =
+        <output name="o" for="a b"></output>
+    </form>
+</body>
+</html>

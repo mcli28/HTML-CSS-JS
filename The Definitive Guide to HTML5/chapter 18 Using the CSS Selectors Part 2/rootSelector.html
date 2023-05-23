@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Example</title>
+		<style type="text/css">
+			/*:root {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:first-child {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*p > span:first-child {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:last-child {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:only-child {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:only-of-type {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*body > :nth-child(2) {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:enabled {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:checked + span {
+				background-color: red;
+				color: white;
+				padding: 5px;
+				border: medium solid black;
+			}*/
+			/*:default {
+				outline: medium solid red;
+			}*/
+			/*:invalid {
+				outline: medium solid red;
+			}
+			:valid {
+				outline: medium solid green;
+			}*/
+			/*:in-range {
+				outline: medium solid green;
+			}
+			:out-of-range: {
+				outline: medium solid red;
+			}*/
+			/*:required {
+				outline: medium solid green;
+			}
+			:optional {
+				outline: medium solid red;
+			}*/
+			/*:link {
+				border: thin black solid;
+				background-color: lightgrey;
+				padding: 4px;
+				color:red;
+			}
+			:visited {
+				background-color: grey;
+				color:white;
+			}*/
+			/*:hover {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:active {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:focus{
+				border: thin cyan solid;
+				padding: 4px;
+			}*/
+			/*a:not([href*="apress"]) {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			/*:lang(en) {
+				border: thin black solid;
+				padding: 4px;
+			}*/
+			:target {
+				border: thin black solid;
+				padding: 4px;
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="http://apress.com">Visit the Apress website</a>
+		<p>I like <span lang="en-uk" class="class2">apples</span> and oranges.</p>
+		<a href="http://w3c.org">Visit the W3C website</a>
+		<textarea> This is an enabled textarea</textarea>
+		<textarea disabled> This is a disabled textarea</textarea>
+		<form method="post" action="http://localhost:8080/form">
+			<p>
+				<label for="apples">Do you like apples:</label>
+				<input type="checkbox" id="apples" name="apples"/>
+				<span>This will go red when checked</span>
+			</p>
+			<input type="submit" value="Submit"/>
+		</form>
+		<form method="post" action="http://localhost:8080/form">
+			<p>
+				<label for="name">Name: <input id="name" name="name"/></label>
+			</p>
+			<button type="submit">Submit Vote</button>
+			<button type="reset">Reset</button>
+		</form>
+		<form method="post" action="http://localhost:8080/form">
+			<p>
+				<label for="name">Name: <input required id="name" name="name"/></label>
+			</p>
+			<p>
+				<label for="name">City: <input required id="city" name="city"/></label>
+			</p>
+			<button type="submit">Submit</button>
+		</form>
+		<form method="post" action="http://localhost:8080/form">
+			<p>
+				<label for="price">
+					$ per unit in your area:
+					<input type="number" min="0" max="100" value="1" id="price" name="price"/>
+				</label>
+			</p>
+			<input type="submit" value="Submit"/>
+		</form>
+		<form method="post" action="http://localhost:8080/form">
+			<p>
+				<label for="price1">
+				$ per unit in your area:
+				<input type="number" min="0" max="100" required	value="1" id="price1" name="price1"/>
+				</label>
+				<label for="price2">
+				$ per unit in your area:
+				<input type="number" min="0" max="100" value="1" id="price2" name="price2"/>
+				</label>
+			</p>
+			<input type="submit" value="Submit"/>
+		</form>
+		<a href="http://apress.com">Visit the Apress website</a>
+		<p>I like <span>apples</span> and oranges.</p>
+		<button>Hello</button>
+		<a lang="en-us" id="apressanchor" class="class1 class2" href="http://apress.com">
+		Visit the Apress website
+		</a>
+		<p>I like <span lang="en-uk" class="class2">apples</span> and oranges.</p>
+		<a lang="en" id="w3canchor" href="http://w3c.org">Visit the W3C website</a>
+	</body>
+</html>

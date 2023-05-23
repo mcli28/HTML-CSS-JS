@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="canvasPad.css">
+    <script src="canvasPad.js"></script>
+</head>
+<body>
+    <div id="toolbar">
+        <div class="dropdown-menu">
+            <button data-action="menu">Fill</button>
+            <ul class="menu" data-action="fillShapes">
+                <li class="selected" data-value="true">Yes</li>
+                <li data-value="false">No</li>
+            </ul>
+        </div>
+        <div class="dropdown-menu">
+            <button data-action="menu">Tool</button>
+            <ul class="menu" data-option="drawingTool">
+                <li data-value="pen" class="selected">Pen</li>
+                <li data-value="line">Line</li>
+                <li data-value="rect">Rectangle</li>
+                <li data-value="circle">Circle</li>
+                <li data-value="text">Text</li>
+                <li data-value="ellipse">Ellipse</li>
+            </ul>
+        </div>
+        <div class="dropdown-menu">
+            <button data-action="menu">Color</button>
+            <ul id="color-menu" data-option="penColor" class="menu">
+                <li data-value="red"></li>
+                <li data-value="orange"></li>
+                <li data-value="yellow"></li>
+                <li data-value="green"></li>
+                <li data-value="blue"></li>
+                <li data-value="purple"></li>
+                <li data-value="black" class="selected"></li>
+                <li data-value="white"></li>
+            </ul>
+        </div>
+        <div class="dropdown-menu">
+            <button data-action="menu">Opacity</button>
+            <ul data-option="penOpacity" class="menu">
+                <li data-value=".1">10%</li>
+                <li data-value=".2">20%</li>
+                <li data-value=".3">30%</li>
+                <li data-value=".4">40%</li>
+                <li data-value=".5">50%</li>
+                <li data-value=".6">60%</li>
+                <li data-value=".7">70%</li>
+                <li data-value=".8">80%</li>
+                <li data-value=".9">90%</li>
+                <li data-value="1" class="selected">100%</li>
+            </ul>
+        </div>
+        <div class="dropdown-menu">
+            <button data-option="menu">Width</button>
+            <ul id="width-menu" data-option="penWidth" class="menu">
+                <li data-value="1">1</li>
+                <li data-value="2">2</li>
+                <li data-value="4">4</li>
+                <li data-value="6">6</li>
+                <li data-value="8">8</li>
+                <li data-value="10">10</li>
+                <li data-value="12">12</li>
+                <li data-value="14">14</li>
+                <li data-value="16">16</li>
+            </ul>
+        </div>
+        <button data-action="undo">Undo</button>
+        <button data-action="clear">Clear</button>
+        <button data-action="save">Save</button>
+    </div>
+    <div id="main">
+        <canvas width="600" height="400">
+            Sorry, your browser doesn`t support canvas.
+        </canvas>
+    </div>
+    <footer>
+        <span id="coords">0, 0</span>
+    </footer>
+    <div id="text-input">
+        <input type="text">
+    </div>
+</body>
+</html>

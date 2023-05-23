@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tables</title>
+	<!--<base href="http://titan/listings/"/>-->
+	<meta name="author" content="mc_li28" />
+	<meta name="description" content="A simple example"/ >
+	<meta charset="UTF-8" />
+	<meta http-equiv="refresh" content="5">
+	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<style>
+		tr > th {
+			text-align: left;
+			background: grey;
+			color: white;
+		}
+		tr > th:only-of-type {
+			text-align: right;
+			background: lightgrey;
+			color: grey;
+		}
+		thead th, tfoot th{
+			text-align: left;
+			background: grey;
+			color: white;
+		}
+		tbody th {
+			text-align: right;
+			background: lightgrey;
+			color: grey;
+		}
+		[colspan], [rowspan] {
+			font-weight: bold;
+			border: medium solid black;
+		}
+		thead [colspan], tfoot [colspan] {
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Rank</th>
+				<th>name</th>
+				<th>Color</th>
+				<!-- <th>size</th> -->
+				<th colspan="2">Size & Votes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Favorite:</th>
+				<td>Apples</td>
+				<td>Green</td>
+				<td>Medium</td>
+				<td>500</td>
+			</tr>
+			<tr>
+				<th>2nd Favorite:</th>
+				<td>Oranges</td>
+				<td>Orange</td>
+				<td>Large</td>
+				<td>400</td>
+			</tr>
+			<tr>
+				<th>3rd Favorite:</th>
+				<td colspan="2" rowspan="2">
+					Ponegranates and cherries can both come in a range of colors and sizes.
+				</td>
+				<td></td>
+				<td>203</td>
+			</tr>
+			<tr>
+				<th rowspan="2">Joint 4th:</th>
+				<td>Cherries</td>
+				<td rowspan="2">75</td>
+			</tr>
+			<tr>
+				<td>Pineapple</td>
+				<td>Brown</td>
+				<td>Very Large</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th colspan="5">&copy; 2015 Mc_li28 Fruit Data Enterprises</th>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
+		<!-- <tfoot>
+			<tr>
+				<th>Rank</th>
+				<th>Name</th>
+				<th>Color</th>
+				<th>Size</th>
+			</tr>
+		</tfoot> -->

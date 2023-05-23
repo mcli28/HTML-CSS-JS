@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        * PieChart constructor
+        */
+        function PieChart(canvasId, data) {
+            // user defined properties
+            this.canvas = document.getElementById(canvasId);
+            this.data = data;
+            // constants
+            this.padding = 10;
+            this.legendBorder = 2;
+            this.pieBorder = 5;
+            this.colorLabelSize = 20;
+            this.borderColor = "#555";
+            this.shadowColor = "#777";
+            this.shadowBlur = 10;
+            this.shadowX = 2;
+            this.shadowY = 2;
+            this.font = "16pt Calibri";
+            // relationships
+            this.context = this.canvas.getContext("2d");
+            this.legendWidth = this.getLegendWidth();
+            this.legendX = this.canvas.width - this.legendWidth;
+            this.legendY = this.padding;
+            this.pieAreaWidth = (this.canvas.width - this.legendWidth);
+            this.pieAreaHeight = this.canvas.height;
+            this.pieX = this.pieAreaWidth / 2;
+            this.pieY = this.pieAreaHeight / 2;
+            this.pieRadius = (Math.min(this.pieAreaWidth,
+                this.pieAreaHeight) / 2) - (this.padding);
+            // draw pie chart
+            this.drawPieBorder();
+            this.drawSlices();
+            this.drawLegend();
+        }
+        /*
+        * gets the legend width based on the size
+        * of the label text
+        */
+        PieChart.prototype.getLegendWidth = function () {
+            /*
+            * loop through all labels and determine which
+            * label is the longest. Use this information
+            * to determine the label width
+            */
+            this.context.font = this.font;
+            var labelWidth = 0;
+            for (var n = 0; n < this.data.length; n++) {
+                var label = this.data[n].label;
+                labelWidth = Math.max(labelWidth, this.context.measureText(label).width);
+            }
+            return labelWidth + (this.padding * 2) + this.legendBorder + this.colorLabelSize;
+        };
+        PieChart.prototype.drawPieBorder = function () {
+            var context = this.context;
+            context.save();
+            context.fillStyle = "white";
+            context.shadowColor = this.shadowColor;
+            context.shadowBlur = this.shadowBlur;
+            context.shadowOffsetX = this.shadowX;
+            context.shadowOffsetY = this.shadowY;
+            context.beginPath();
+            context.arc(this.pieX, this.pieY, this.pieRadius + this.pieBorder, 0, Math.PI * 2, false);
+            context.fill();
+            context.closePath();
+            context.restore();
+        };
+        /*
+        * draws the slices for the pie chart
+        */
+        PieChart.prototype.drawSlices = function () {
+            var context = this.context;
+            context.save();
+            var total = this.getTotalValue();
+            var startAngle = 0;
+            for (var n = 0; n < this.data.length; n++) {
+                var slice = this.data[n];
+                // draw slice
+                var sliceAngle = 2 * Math.PI * slice.value / total;
+                var endAngle = startAngle + sliceAngle;
+                context.beginPath();
+                context.moveTo(this.pieX, this.pieY);
+                context.arc(this.pieX, this.pieY, this.pieRadius, startAngle, endAngle, false);
+                context.fillStyle = slice.color;
+                context.fill();
+                context.closePath();
+                startAngle = endAngle;
+            }
+            context.restore();
+        };
+        /*
+        * gets the total value of the labels by looping through
+        * the data and adding up each value
+        */
+        PieChart.prototype.getTotalValue = function () {
+            var data = this.data;
+            var total = 0;
+            for (var n = 0; n < data.length; n++) {
+                total += data[n].value;
+            }
+            return total;
+        };
+        /*
+        * draws the legend
+        */
+        PieChart.prototype.drawLegend = function () {
+            var context = this.context;
+            context.save();
+            var labelX = this.legendX;
+            var labelY = this.legendY;
+            context.strokeStyle = "black";
+            context.lineWidth = this.legendBorder;
+            context.font = this.font;
+            context.textBaseline = "middle";
+            for (var n = 0; n < this.data.length; n++) {
+                var slice = this.data[n];
+                // draw legend label
+                context.beginPath();
+                context.rect(labelX, labelY, this.colorLabelSize, this.colorLabelSize);
+                context.closePath();
+                context.fillStyle = slice.color;
+                context.fill();
+                context.stroke();
+                context.fillStyle = "black";
+                context.fillText(slice.label, labelX + this.colorLabelSize + this.padding, labelY + this.colorLabelSize / 2);
+                labelY += this.colorLabelSize + this.padding;
+            }
+            context.restore();
+        };
+        window.onload = function () {
+            var data = [{
+                label: "Eating",
+                value: 2,
+                color: "red"
+            }, {
+                label: "Working",
+                value: 8,
+                color: "blue"
+            }, {
+                label: "Sleeping",
+                value: 8,
+                color: "green"
+            }, {
+                label: "Errands",
+                value: 2,
+                color: "yellow"
+            }, {
+                label: "Entertainment",
+                value: 4,
+                color: "violet"
+            }];
+            new PieChart("myCanvas", data);
+        };
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="300" style="border:1px solid black;">
+    </canvas>
+</body>
+</html>

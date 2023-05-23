@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic Compression of an Audio Signal</title>
+</head>
+
+<body>
+    <audio autoplay controls src="audio/Shivervein_Razorpalm.wav"></audio>
+    <p>Toggle Compression:
+        <button value="0">Off</button>
+    </p>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var mediaElement = document.getElementsByTagName('audio')[0];
+        var source = audioCtx.createMediaElementSource(mediaElement);
+        // Create a compressor node
+        var compressor = audioCtx.createDynamicsCompressor();
+        compressor.threshold.value = -50;
+        compressor.knee.value = 20;
+        compressor.ratio.value = 12;
+        compressor.reduction.value = -40;
+        mediaElement.addEventListener('play', function () {
+            source.connect(audioCtx.destination);
+        });
+        var button = document.getElementsByTagName('button')[0];
+        button.addEventListener('click', function () {
+            if (this.value == 1) {
+                this.value = 0;
+                this.innerHTML = "Off";
+                source.disconnect(audioCtx.destination);
+                source.connect(compressor);
+                compressor.connect(audioCtx.destination);
+            } else {
+                this.value = 1;
+                this.innerHTML = "On";
+                source.disconnect(compressor);
+                compressor.disconnect(audioCtx.destination);
+                source.connect(audioCtx.destination);
+            }
+        });
+    </script>
+</body>
+
+</html>

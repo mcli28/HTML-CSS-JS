@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>An Oscillator’s Gain Is Manipulated by Another Oscillator</title>
+</head>
+
+<body>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var oscillator = audioCtx.createOscillator();
+        // second oscillator that will be used as an LFO
+        var lfo = audioCtx.createOscillator();
+        lfo.type = 'sine';
+        lfo.frequency.value = 2.0; // 2Hz: low-frequency oscillation
+        // create a gain whose gain AudioParam will be controlled by the LFO
+        var gain = audioCtx.createGain();
+        lfo.connect(gain.gain);
+        // set up the filter graph and start the nodes
+        oscillator.connect(gain);
+        gain.connect(audioCtx.destination);
+        oscillator.start(0);
+        lfo.start(0);
+    </script>
+</body>
+
+</html>

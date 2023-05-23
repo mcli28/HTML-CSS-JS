@@ -1,0 +1,44 @@
+/* .navbar{
+	background: #1b1b1b;
+	.navbar-inner {
+		.logo {
+			display: block;
+			padding: 9px 15px;
+			font-weight: bold;
+			color: #999999;
+			margin-bottom: 4px;
+		}
+		.nav {
+			a {
+				@extend .logo;
+			}
+		}
+	}
+} */
+
+@import "compass/css3";
+.navbar {
+	background: #1b1b1b;
+	overflow: hidden;
+	max-height: 44px;
+	@include transition(max-height .5);
+	&.open {
+		max-height: 220px;
+	}
+	.navbar-inner {
+		.logo {
+			display: block;
+			padding: 9px 15px;
+			font-weight: bold;
+			color: #999999;
+			margin-bottom: 4px;
+		}
+		.nav {
+			margin-bottom: 0;
+			list-style: none;
+			a{
+				@extend .logo;
+			}
+		}
+	}
+}

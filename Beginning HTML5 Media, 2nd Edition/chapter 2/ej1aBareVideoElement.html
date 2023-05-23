@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Bare Video Element</title>
+    <style>
+        video{
+            width: 80%;
+            padding: 15px;
+            margin: 0px;
+            border: 5px solid black;
+            border-radius: 15px;
+            box-shadow: 10px 10px 5px gray;
+            box-sizing: border-box;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Beginning HTML5 Media</h1>
+        <h2>The basic code:</h2>
+        <p>Here is an example of the Video element:</p>
+        <video></video>
+        <video src = "Vultures.mp4">
+            Your browser doesn’t support the HTML5 video element.
+        </video>
+        <video src="video/Vultures.mp4"></video>
+        <video src="video/Vultures.webm" autoplay></video>
+        <video src="video/Vultures.webm" muted autoplay></video>
+        <video src="video/Vultures.webm" autoplay loop></video>
+        <video src="video/Vultures.mp4" poster="img/BabyVulture.jpg"></video>
+        <video src="video/HK_Traffic.mp4" width="50%" height="50%"></video>
+        <video src="video/HK_Traffic.mp4" width="533px" height="300px"></video>
+        <video src="video/HK_Traffic.mp4" width="533" height="300"></video>
+        <video src="video/HK_Traffic.mp4" controls></video>
+        <video src="video/HK_Traffic.ogv" poster="img/Traffic.jpg" preload="none" controls></video>
+        <video src="video/HK_Traffic.mp4" poster="img/Traffic.jpg" preload="metadata" controls>
+        </video>
+        <video src="video/HK_Traffic.webm" poster="img/Traffic.jpg" preload="auto" controls></video>
+        <video poster="img/BabyVulture.png" controls>
+            <source src="video/Vultures.mp4"/>
+            <source src="video/Vultures.webm"/>
+            <source src="video/Vultures.ogv"/>
+        </video>
+        <video poster="img/BabyVulture.png" controls>
+            <source src="video/Vultures.mp4" type='video/mp4'/>
+            <source src="video/Vultures.webm" type='video/webm; codecs="vp8, vorbis"'/>
+            <source src="video/Vultures.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+        </video>
+        <p>Video supports the following MIME types:
+            <ul>
+                <script type="text/javascript">
+                var types = new Array();
+                types[0] = "video/ogg";
+                types[1] = 'video/ogg; codecs="theora, vorbis"';
+                types[2] = "video/webm";
+                types[3] = 'video/webm; codecs="vp8, vorbis"';
+                types[4] = "video/webm";
+                types[5] = 'video/webm; codecs="vp9, opus"';
+                types[6] = "video/mp4";
+                types[7] = 'video/mp4; codecs="avc1.42E01E, mp3"';
+                types[8] = "video/mp4";
+                types[9] = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+                // create a video element
+                var video = document.createElement('video');
+                // test types
+                for (i=0; i<types.length; i++) {
+                    var support = video.canPlayType(types[i]);
+                    if (support == "") support="no";
+                    document.write("<li><b>"+types[i]+"</b> : "+support+"</li>");
+                }
+                </script>
+            </ul>
+        </p>
+    </div>
+    <video poster="img/BabyVulture.png" controls>
+        <source src="video/Vultures.mp4" media="screen and (min-width:800px)" type='video/mp4' />
+        <source src="video/Vultures-small.mp4" media="screen and (max-width:799px)" type='video/mp4' />
+        <source src="video/Vultures.webm" media="screen and (min-width:800px)" type='video/webm' />
+        <source src="video/Vultures-small.webm" media="screen and (max-width:799px)" type='video/webm' />
+    </video>
+
+</body>
+</html>

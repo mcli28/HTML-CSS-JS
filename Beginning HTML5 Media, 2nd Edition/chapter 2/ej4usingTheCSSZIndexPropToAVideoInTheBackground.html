@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Using the CSS z-index Property to Position a Video in the Background</title>
+    <style>
+        #video_bkgrnd{
+            position: absolute;
+            bottom:0px;
+            right:0px;
+            min-width:100%;
+            min-height:100%;
+            width:auto;
+            height:auto;
+            z-index: -1000;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+    <video id="video_bkgrnd" poster ="img/BabyVultures.jpg" muted autoplay loop >
+        <source src="video/HK_Traffic.mp4" type="video/mp4">
+        <source src="video/HK_Traffic.webm" type="video/webm">
+        <source src="video/HK_Traffic.ogv" type="video/ogg">
+        <p>This browser can't show HTML5 video.</p>
+    </video>
+</body>
+</html>

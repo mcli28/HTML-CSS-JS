@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Example</title>
+		<meta name="author" content="Adam Freeman"/>
+		<meta name="description" content="A simple example"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<style type="text/css">
+			/*p {
+				border: 10px double black;
+				background-color: lightgray;
+				background-clip: content-box;
+				padding-top: 0.5em;
+				padding-bottom: 0.3em;
+				padding-right: 0.8em;
+				padding-left: 0.6em;
+			}*/
+			/*p {
+				border: 10px solid black;
+				background: lightgray;
+				border-radius: 1em 4em 1em 4em;
+				padding: 5px 25px 5px 40px;
+			}*/
+			/*img {
+				border: 4px solid black;
+				background: lightgray;
+				padding: 4px;
+				margin:4px 20px;
+			}*/
+			/*div {
+				width: 75%;
+				height: 100px;
+				border: thin solid black;
+			}
+			img {
+				background: lightgray;
+				border: 4px solid black;
+				margin: 2px;
+				height: 50%;
+			}
+			#first {
+				box-sizing: border-box;
+				width: 50%;
+			}
+			#second {
+				box-sizing: content-box;
+			}*/
+			/*img {
+				background: lightgray;
+				border: 4px solid black;
+				margin: 2px;
+				box-sizing: border-box;
+				min-width: 100px;
+				width:50%;
+				max-width: 200px;
+			}*/
+			/*p {
+				width: 200px;
+				height: 100px;
+				border: medium double black;
+			}*/
+			#first {overflow: hidden;}
+			#second {overflow: scroll;}
+			tr > th { text-align:left; background:gray; color:white}
+			tr > th:only-of-type {text-align:right; background: lightgray; color:gray}
+
+			/*p {border: medium solid black}
+			span {
+				display: block;
+				border: medium double black;
+				margin: 2px;
+			}*/
+			/*p {
+				display: inline;
+			}
+			span {
+				display: inline-block;
+				border: medium double black;
+				margin: 2em;
+				width: 10em;
+				height: 2em;
+			}*/
+			/*p {
+				display: inline;
+			}
+			span {
+				display: run-in;
+				border: medium double black;
+			}*/
+			p.toggle {
+				float:left;
+				border: medium double black;
+				width: 40%;
+				margin: 2px;
+				padding: 2px;
+			}
+			p.cleared {
+				clear:left;
+			}
+
+		</style>
+	</head>
+	<body>
+		<!-- <p id="first">
+		There are lots of different kinds of fruit - there are over 500 varieties
+		of banana alone. By the time we add the countless types of apples, oranges,
+		and other well-known fruit, we are faced with thousands of choices.
+		</p> -->
+		<!-- <img src="banana.png" alt="small banana">
+		<img src="banana.png" alt="small banana">
+		<div>
+			<img id="first" src="banana.png" alt="small banana">
+			<img id="second" src="banana.png" alt="small banana">
+		</div> -->
+		<!-- <p id="second">
+			There are lots of different kinds of fruit - there are over 500 varieties
+			of banana alone. By the time we add the countless types of apples, oranges,
+			and other well-known fruit, we are faced with thousands of choices.
+		</p>
+		<table>
+			<tr>
+				<th>Rank</th><th>Name</th><th>Color</th><th>Size</th>
+			</tr>
+			<tr id="firstchoice">
+				<th>Favorite:</th><td>Apples</td><td>Green</td><td>Medium</td>
+			</tr>
+			<tr>
+				<th>2nd Favorite:</th><td>Oranges</td><td>Orange</td><td>Large</td>
+			</tr>
+		</table>
+		<p>
+			<button>Visible</button>
+			<button>Collapse</button>
+			<button>Hidden</button>
+		</p>
+
+		<p>
+		There are lots of different kinds of fruit - there are over 500 varieties
+		of banana alone. By the time we add the countless types of apples, oranges,
+		and other well-known fruit, we are faced with thousands of choices.
+		</p>
+		<p>
+		One of the most interesting aspects of fruit is the variety available in
+		each country. <span>I live near London</span>, in an area which is known for
+		its apples. When travelling in Asia, I was struck by how many different
+		kinds of banana were available - many of which had unique flavours and
+		which were only avaiable within a small region.
+		</p>
+
+		<span>
+		There are lots of different kinds of fruit - there are over 500 varieties
+		of banana alone.
+		</span>
+
+		<p>
+		By the time we add the countless types of apples, oranges,
+		and other well-known fruit, we are faced with thousands of choices.
+		</p> -->
+
+		<!-- <p id="toggle">
+		There are lots of different kinds of fruit - there are over 500 varieties
+		of banana alone. By the time we add the countless types of apples, oranges,
+		and other well-known fruit, we are faced with thousands of choices.
+		</p>
+		<p>
+		One of the most interesting aspects of fruit is the variety available in
+		each country. <span>I live near London</span>, in an area which is known for
+		its apples. When travelling in Asia, I was struck by how many different
+		kinds of banana were available - many of which had unique flavours and
+		which were only avaiable within a small region.
+		</p>
+		<p>
+			<button>Block</button>
+			<button>None</button>
+		</p> -->
+
+		<p class="toggle">
+			There are lots of different kinds of fruit - there are over 500 varieties
+			of banana alone. By the time we add the countless types of apples, oranges,
+			and other well-known fruit, we are faced with thousands of choices.
+		</p>
+		<p class="toggle cleared">
+			One of the most interesting aspects of fruit is the variety available in
+			each country. I live near London, in an area which is known for
+			its apples.
+		</p>
+		<p>
+			When travelling in Asia, I was struck by how many different
+			kinds of banana were available - many of which had unique flavours and
+			which were only avaiable within a small region.
+		</p>
+		<p>
+			<button>Left</button>
+			<button>Right</button>
+			<button>None</button>
+		</p>
+
+		<script>
+			/*var buttons = document.getElementsByTagName("BUTTON");
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].onclick = function(e) {
+					document.getElementById("firstchoice").style.visibility = e.target.innerHTML;
+				}
+			}*/
+			/*var buttons = document.getElementsByTagName("BUTTON");
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].onclick = function(e) {
+					document.getElementById("toggle").style.display=e.target.innerHTML;
+				}
+			}*/
+
+			var buttons = document.getElementsByTagName("BUTTON");
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].onclick = function(e) {
+					var elements = document.getElementsByClassName("toggle");
+					for (var j = 0; j < elements.length; j++) {
+						elements[j].style.cssFloat = e.target.innerHTML;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

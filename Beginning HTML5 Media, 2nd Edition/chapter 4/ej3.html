@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The HTML Provides the Timing and the Transcript</title>
+</head>
+
+<body>
+    <div id="videoBox">
+        <video poster="img/ElephantDreams.png" controls>
+            <source src="video/ElephantDreams.mp4" type="video/mp4">
+            <source src="video/ElephantDreams.webm" type="video/webm">
+        </video>
+    </div>
+    <div id="speaking" aria-live="rude">
+    </div>
+    <div id="transcriptBox">
+        <h4>Interactive Transcript</h4>
+        <p style="font:small;">Click on text to play video from there.</p>
+        <div id="transcriptText">
+            <p id="c1" class="cue" data-time="0.0" aria-live="rude" tabindex="1">
+                [Screen text: "The orange open movie project presents"]
+            </p>
+            <p id="c2" class="cue" data-time="5.0" aria-live="rude" tabindex="1">
+                [Introductory titles are showing on the background of a water pool with fishes swimming and mechanical objects lying on a
+                stone floor.]
+            </p>
+            <p id="c3" class="cue" data-time="12.0" aria-live="rude" tabindex="1">
+                [Screen text: "Elephant's Dream"]
+            </p>
+            <p id="c4" class="cue" data-time="15.0" tabindex="1">
+                Proog: At the left we can see... At the right we can see the... the head-snarlers. Everything is safe. Perfectly safe. Emo?
+                Emo!
+            </p>
+            ...
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            // get video element
+            var video = document.getElementsByTagName("video")[0];
+            var transcript = document.getElementById("transcriptBox");
+            var trans_text = document.getElementById("transcriptText");
+            var speaking = document.getElementById("speaking");
+            var current = -1;
+            // register events for the clicks on the text
+            var cues = document.getElementsByClassName("cue");
+            for (var i = 0; i < cues.length; i++) {
+                cues[i].addEventListener("click", function (evt) {
+                    var start = parseFloat(this.getAttribute("data-time"));
+                    video.currentTime = start;
+                    video.play();
+                }, false);
+            }
+            // pause video as you mouse over transcript
+            transcript.addEventListener("mouseover", function (evt) {
+                video.pause();
+            }, false);
+            // scroll to text as video time changes
+            video.addEventListener("timeupdate", function (evt) {
+                if (video.paused || video.ended) {
+                    return;
+                }
+                // scroll to currently playing time offset
+                for (var i = 0; i < cues.length; i++) {
+                    var cueTime = cues[i].getAttribute("data-time");
+                    if (cues[i].className.indexOf("current") == -1 &&
+                        video.currentTime >= parseFloat(cueTime) &&
+                        video.currentTime < parseFloat(cueTime)) {
+                        trans_text.scrollTop =
+                            cues[i].offsetTop - trans_text.offsetTop;
+                        if (current >= 0) {
+                            cues[current].classList.remove("current");
+                        }
+                        cues[i].className += " current";
+                        current = i;
+                        if (cues[i].getAttribute("aria-live") == "rude") {
+                            speaking.innerHTML = cues[i].innerHTML;
+                        }
+                    }
+                }
+            }, false);
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reimplementation of Video Tiling into a Canvas Using a Scratch Canvas</title>
+</head>
+
+<body>
+    <video controls autoplay height="240" width="360">
+        <source src="ANDREA LAROSA.mp4" type="video/mp4">
+        <source src="video/HelloWorld.webm" type="video/webm">
+    </video>
+    <canvas width="400" height="300" style="border: 1px solid black;">
+    </canvas>
+    <canvas id="scratch" width="360" height="240" style="display: none;"></canvas>
+    <script>
+        var context, sctxt, video;
+        video = document.getElementsByTagName("video")[0];
+        canvases = document.getElementsByTagName("canvas");
+        canvas = canvases[0];
+        scratch = canvases[1];
+        context = canvas.getContext("2d");
+        sctxt = scratch.getContext("2d");
+        video.addEventListener("play", paintFrame, false);
+        function paintFrame() {
+            // set up scratch frames
+            w = 360; h = 240;
+            sctxt.drawImage(video, 0, 0, w, h);
+            // create 4x4 tiling
+            tiles = 4;
+            gap = 5;
+            tw = w / tiles; th = h / tiles;
+            for (x = 0; x < tiles; x++) {
+                for (y = 0; y < tiles; y++) {
+                    context.drawImage(scratch, x * tw, y * th, tw, th,
+                        x * (tw + gap), y * (th + gap), tw, th);
+                }
+            }
+            if (video.paused || video.ended) {
+                return;
+            }
+            requestAnimationFrame(paintFrame);
+        }
+    </script>
+</body>
+
+</html>

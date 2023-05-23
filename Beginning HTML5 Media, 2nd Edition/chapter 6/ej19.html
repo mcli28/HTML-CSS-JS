@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introducing a Position and Sound Cone for the Sound Source</title>
+</head>
+
+<body>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var source = audioCtx.createBufferSource();
+        var panner = audioCtx.createPanner();
+        panner.coneOuterGain = 0.5;
+        panner.coneOuterAngle = 180;
+        panner.coneInnerAngle = 90;
+        source.connect(panner);
+        panner.connect(audioCtx.destination);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="splash">
+        <h1>Piano Hero</h1>
+        <section class="loading">
+            Loading audio... <br>
+        </section>
+        <progress max="100" value="0"></progress>
+        <section class="error">
+            There was an error loading the audio
+        </section>
+        <section class="loaded hidden">
+            <label for="">Choose a song</label>
+            <select id="select-song">
+                <option value="rowBoat">Row Your Boat</option>
+                <option value="littleStar">
+                    Twinkle, Twinkle, Little Star
+                </option>
+                <option value="londonBridge">London Bridge</option>
+                <option value="furElise">Fur Elise</option>
+            </select>
+            <br>
+            <select id="select-rate">
+                <option value="0.5">Slow (60bpm)</option>
+                <option value="1">Normal (120bpm)</option>
+                <option value="1.5">Fast (180bpm)</option>
+            </select>
+            <p>
+                <button id="start-game">Start Game</button>
+                <button id="start">Play Song</button>
+            </p>
+        </section>
+    </div>
+    <div id="game">
+        <div id="notes-panel">
+            <div class="title">PIANO HERO</div>
+        </div>
+        <div id="results-panel">
+            <h1>Score:<span class="score"></span></h1>
+            <p>
+                You got <span class="correct"></span>
+                out of <span class="count"></span> notes correct.
+            </p>
+            <p>
+                Note accuracy: <span class="note-accuracy"></span>%<br>
+                Timing accuracy: <span class="timing-accuracy"></span>% 
+            </p>
+        </div>
+        <div class="keyboard">
+            <div class="keys">
+                <!--code not shown....-->
+            </div>
+            <div class="controls">
+                <button id="stop-button">Stop</button>
+                <button id="restart-button">Restart</button>
+                <button id="quit-button">Quit</button>
+                <label for="sustain">Sustain: </label>
+                <input type="checkbox" id="sustaing" checked=""><br>
+                <label for="volume">Volume:</label>
+                <input type="range" id="volume" min="1" max="100" step="1">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Typical Function to Gain the x and y Coordinates of the Click in a Canvas</title>
+</head>
+
+<body>
+    <div style="padding: 50px; background-color: #090909;">
+        <video autoplay style="vertical-align: bottom;" width="360">
+            <source src="ANDREA LAROSA.mp4" type="video/mp4">
+            <source src="video/HelloWorld.webm" type="video/webm">
+        </video>
+        <br/>
+        <canvas id="reflection" width="360" height="55" style="vertical-align: top;"></canvas>
+    </div>
+    <script>
+        function canvasPosition(e) {
+            // from http://www.naslu.com/resource.aspx?id=460
+            // and http://diveintohtml5.org/canvas.html
+            if (e.pageX || e.pageY) {
+                x = e.pageX;
+                y = e.pageY;
+            } else {
+                x = e.clientX + document.body.scrollLeft +
+                    document.documentElement.scrollLeft;
+                y = e.clientY + document.body.scrollTop +
+                    document.documentElement.scrollTop;
+            }
+            // make coordinates relative to canvas
+            x -= canvas.offsetLeft;
+            y -= canvas.offsetTop;
+            return [x, y];
+        }
+    </script>
+</body>
+
+</html>

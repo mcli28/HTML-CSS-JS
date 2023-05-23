@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Video Bounce Trajectory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+        #canvas {
+            position: absolute;
+            z-index: 10;
+            top: 0px;
+            left: 0px;
+        }
+
+        #revbtn {
+            position: absolute;
+            z-index: 20;
+        }
+    </style>
+    <script>
+        var ctx;
+        var cwidth;
+        var cheight;
+        var ballrad = 50;
+        var ballx = 50;
+        var bally = 60;
+        var ballvx = 2;
+        var ballvy = 4;
+
+
+        function init() {
+            canvas1 = document.getElementById('canvas');
+            ctx = canvas1.getContext('2d');
+            canvas1.width = window.innerWidth;
+            cwidth = canvas1.width;
+            canvas1.height = window.innerHeight;
+            cheight = canvas1.height;
+
+            videow = Math.min(106,.5*cwidth);
+            videoh = Math.min(80,.5*cheight);
+            
+            ballrad = Math.min(50, .5 * videow, .5 * videoh);
+            maskrad = .4 * Math.min(videow, videoh);
+            ctx.lineWidth = ballrad;
+            ctx.fillStyle = "white";
+            ctx.strokeStyle = "rgb(200, 0, 50)";
+            ctx.strokeRect(0,0,cwidth,cheight);
+
+            setInterval(drawscene, 50);
+        }
+
+        function drawscene() {
+            moveandcheck();
+
+            ctx.beginPath();
+            ctx.moveTo(ballx+.5*videow+maskrad, bally+.5*videoh);
+            ctx.arc(ballx + .5 * videow, bally + .5 * videoh, maskrad, 0, 2*Math.PI, true);
+            ctx.lineWidth = 1;
+
+            ctx.fill();
+            ctx.stroke();
+            ctx.lineWidth = ballrad;
+            ctx.strokeRect(0, 0, cwidth, cheight);
+        }
+
+        function moveandcheck() {
+            var nballx = ballx + ballvx+.5*videow;
+            var nbally = bally + ballvy+.5*videoh;
+
+            if (nballx > cwidth) {
+                ballvx = -ballvx;
+                nballx = cwidth;
+            }
+            if (nballx < 0) {
+                nballx = 0;
+                ballvx = -ballvx;
+            }
+            if (nbally > cheight) {
+                nbally = cheight;
+                ballvy = -ballvy;
+            }
+            if (nbally < 0) {
+                nbally = 0;
+                ballvy = -ballvy;
+            }
+            ballx = nballx-.5*videow;
+            bally = nbally-.5*videoh;
+        }
+
+        function reverse() {
+            ballvx = -ballvx;
+            ballvy = -ballvy;
+        }
+    </script>
+</head>
+
+<body onload="init();">
+    <video id="vid" loop="loop" preload="auto">
+        <source src="Ariana Grande - Side To Side ft. Nicki Minaj.mp4" type='video/mp4;'>
+        <source src="joshuahomerun.webmvp8.webm" type='video/webm; codec="vp8, vorbis"'>
+        <source src="joshuahomerun.theora.ogv" type='video/ogg; codecs="theora, vorbis"'> Your browser does not accept the video tag.
+    </video>
+    <button id="revbtn" onClick="reverse();">Reverse </button>
+    <br/>
+    <canvas id="canvas">
+        This browser doesn't support the HTML5 canvas element.
+    </canvas>
+</body>
+
+</html>

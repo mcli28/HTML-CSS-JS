@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Different Biquad Filter Types Applied to an Audio Source</title>
+</head>
+
+<body>
+    <audio autoplay controls src="ANDREA LAROSA.wav"></audio>
+    <select class="type">
+        <option>lowpass</option>
+        <option>highpass</option>
+        <option>bandpass</option>
+        <option>lowshelf</option>
+        <option>highshelf</option>
+        <option>peaking</option>
+        <option>notch</option>
+        <option>allpass</option>
+    </select>
+    <script>
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var mediaElement = document.getElementsByTagName('audio')[0];
+        var source = audioCtx.createMediaElementSource(mediaElement);
+        var bass = audioCtx.createBiquadFilter();
+        // Set up the biquad filter node with a low-pass filter type
+        bass.type = "lowpass";
+        bass.frequency.value = 6000;
+        bass.Q.value = 1;
+        bass.gain.value = 10;
+        mediaElement.addEventListener('play', function () {
+            // create filter graph
+            source.connect(bass);
+            bass.connect(audioCtx.destination);
+        });
+        // Update the biquad filter type
+        var type = document.getElementsByClassName('type')[0];
+        type.addEventListener('change', function () {
+            bass.type = type.value;
+        });
+    </script>
+</body>
+
+</html>

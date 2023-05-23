@@ -1,0 +1,13 @@
+CACHE MANIFEST
+example.html
+banana100.png
+
+FALLBACK:
+*.png offline.png
+* offline.html
+
+NETWORK:
+cherries100.png
+
+CACHE:
+apple100.png

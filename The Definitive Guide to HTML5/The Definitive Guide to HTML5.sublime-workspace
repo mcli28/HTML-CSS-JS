@@ -1,0 +1,1003 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"c",
+				"cl	console.log"
+			],
+			[
+				"style",
+				"styleSheets"
+			],
+			[
+				"ul",
+				"url"
+			],
+			[
+				"move",
+				"move"
+			],
+			[
+				"out",
+				"outset"
+			],
+			[
+				"body",
+				"body"
+			],
+			[
+				"con",
+				"Content-Type"
+			],
+			[
+				"write",
+				"writeHead"
+			],
+			[
+				"bod",
+				"body"
+			],
+			[
+				"tr",
+				"tr"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"pad",
+				"pad	padding"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"count",
+				"counter-increment"
+			],
+			[
+				"ci",
+				"city"
+			],
+			[
+				"myda",
+				"myData2"
+			],
+			[
+				"tes",
+				"test1"
+			],
+			[
+				"mda",
+				"myData1"
+			],
+			[
+				"has",
+				"hasDate"
+			],
+			[
+				"del",
+				"delete"
+			],
+			[
+				"modl",
+				"Model"
+			],
+			[
+				"model",
+				"Model"
+			],
+			[
+				"mode",
+				"Model"
+			],
+			[
+				"clas",
+				"class	Attr"
+			],
+			[
+				"log",
+				"LOGOUT_URL"
+			],
+			[
+				"render",
+				"render_to_response"
+			],
+			[
+				"vie",
+				"views"
+			],
+			[
+				"pag",
+				"paginator"
+			],
+			[
+				"perm",
+				"permute2"
+			],
+			[
+				"permut",
+				"permute2"
+			],
+			[
+				"permute",
+				"permute1"
+			],
+			[
+				"per",
+				"permute2"
+			],
+			[
+				"scram",
+				"scramble"
+			],
+			[
+				"row",
+				"row2"
+			],
+			[
+				"spam",
+				"SPAM"
+			],
+			[
+				"funct",
+				"functools"
+			],
+			[
+				"__",
+				"__annotations__"
+			],
+			[
+				"fil",
+				"file"
+			],
+			[
+				"pro",
+				"printout	printout"
+			],
+			[
+				"call",
+				"__call__"
+			],
+			[
+				"glo",
+				"glob2"
+			],
+			[
+				"key",
+				"keys"
+			],
+			[
+				"b",
+				"bs3-table:hover	bs3-table-hover"
+			],
+			[
+				"pirn",
+				"print"
+			],
+			[
+				"prin",
+				"print"
+			],
+			[
+				"pi",
+				"print"
+			],
+			[
+				"sy",
+				"system"
+			],
+			[
+				"system",
+				"systeminfo"
+			],
+			[
+				"segmen",
+				"segment"
+			],
+			[
+				"segme",
+				"segment"
+			],
+			[
+				"segm",
+				"segment1"
+			],
+			[
+				"seg",
+				"segment0"
+			],
+			[
+				"setg",
+				"segment1"
+			],
+			[
+				"segem",
+				"segment"
+			],
+			[
+				"thig",
+				"thighRangeSlider"
+			],
+			[
+				"vl",
+				"value"
+			],
+			[
+				"onmou",
+				"onMouseMove"
+			],
+			[
+				"onMouse",
+				"onMouseUp"
+			],
+			[
+				"handle",
+				"handleRange"
+			],
+			[
+				"stro",
+				"stroke	canvasCtxStroke"
+			],
+			[
+				"lin",
+				"lineTo	canvasCtxLineTo"
+			],
+			[
+				"rot",
+				"rotate	canvasCtxRotate"
+			],
+			[
+				"particl",
+				"particle"
+			],
+			[
+				"mats",
+				"mathsqrt	JsMathSqrt"
+			],
+			[
+				"bacc",
+				"background-color"
+			],
+			[
+				"math",
+				"mathrandom	JsMathRandom"
+			],
+			[
+				"mas",
+				"mathsqrt	JsMathSqrt"
+			],
+			[
+				"partic",
+				"particles"
+			],
+			[
+				"partilc",
+				"particle"
+			],
+			[
+				"position",
+				"positions"
+			],
+			[
+				"abs",
+				"absV"
+			],
+			[
+				"maa",
+				"mathabs	JsMathAbs"
+			],
+			[
+				"maata",
+				"mathatan2	JsMathATan2"
+			],
+			[
+				"line",
+				"lineTo	canvasCtxLineTo"
+			],
+			[
+				"sto",
+				"stroke	canvasCtxStroke"
+			],
+			[
+				"por",
+				"prototype"
+			],
+			[
+				"sca",
+				"scaleY"
+			],
+			[
+				"rota",
+				"rotation"
+			],
+			[
+				"center",
+				"centerX"
+			],
+			[
+				"min_",
+				"min_dist"
+			],
+			[
+				"mathat",
+				"mathatan2	JsMathATan2"
+			],
+			[
+				"mart",
+				"mathsqrt	JsMathSqrt"
+			],
+			[
+				"ge",
+				"get	Get Elements"
+			],
+			[
+				"actibe",
+				"actibeBox"
+			],
+			[
+				"rect",
+				"rectB"
+			],
+			[
+				"ball0_",
+				"ball0_dragging"
+			],
+			[
+				"handl",
+				"handles"
+			],
+			[
+				"bal",
+				"balls"
+			],
+			[
+				"matat",
+				"mathatan2	JsMathATan2"
+			],
+			[
+				"brush_",
+				"brush_color"
+			],
+			[
+				"addEve",
+				"addEventListener	JsAddEventListener"
+			],
+			[
+				"imga",
+				"imagedata"
+			],
+			[
+				"pixel",
+				"pixels"
+			],
+			[
+				"draw",
+				"drawImage	canvasCtxDrawImage"
+			],
+			[
+				"raia",
+				"createRadialGradient"
+			],
+			[
+				"ctrl",
+				"ctrlPoint1"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"ar",
+				"arcto	canvasCtxArcTo"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"x",
+				"xspeed"
+			],
+			[
+				"strok",
+				"stroke	canvasCtxStroke"
+			],
+			[
+				"tra",
+				"translate	canvasCtxTranslate"
+			],
+			[
+				"sa",
+				"save	canvasCtxSave"
+			],
+			[
+				"map",
+				"mathpi	JsMathPi"
+			],
+			[
+				"keycoed",
+				"keycode"
+			],
+			[
+				"scr",
+				"src	Attr"
+			],
+			[
+				"touch",
+				"touchstart"
+			],
+			[
+				"addev",
+				"addEventListener	JsAddEventListener"
+			],
+			[
+				"asteroi",
+				"Asteroid"
+			],
+			[
+				"fill",
+				"fill	canvasCtxFill"
+			],
+			[
+				"arow",
+				"arrowRight"
+			],
+			[
+				"anima",
+				"animate"
+			],
+			[
+				"aste",
+				"Asteroid"
+			],
+			[
+				"cavna",
+				"canvasWidth"
+			],
+			[
+				"v",
+				"vX"
+			],
+			[
+				"ur",
+				"uiRemaining"
+			],
+			[
+				"mo",
+				"mousemove"
+			],
+			[
+				"dead",
+				"deadAsteroids"
+			],
+			[
+				"tmpa",
+				"tmpAsteroid"
+			],
+			[
+				"plao",
+				"platformOuterRadius"
+			],
+			[
+				"dy",
+				"dYp"
+			],
+			[
+				"platof",
+				"platformX"
+			],
+			[
+				"cnav",
+				"canvasHeight"
+			],
+			[
+				"playo",
+				"playerOriginalX"
+			],
+			[
+				"playero",
+				"playerOriginalX"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/python.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"bs3-inlin",
+				"Snippet: bs3-form-inline"
+			],
+			[
+				"bs3",
+				"Snippet: bs3-form-horizontal"
+			],
+			[
+				"bs3-ta",
+				"Snippet: bs3-table-hover"
+			],
+			[
+				"bs3-na",
+				"Snippet: bs3-navbar-responsive"
+			],
+			[
+				"pag",
+				"Snippet: bs3-pagination"
+			],
+			[
+				"dj",
+				"Set Syntax: HTML (Django)"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packe",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"getima",
+				"Snippet: canvasCtxGetImageData"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"Snippet:",
+				"Snippet: html"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"Snippet: encha",
+				"Snippet: enchant"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/The Definitive Guide to HTML5/chapter 40 Creating Offline Web Applications/associatingAManifestFileWithAnHtmlDocument.html",
+		"/C/The Definitive Guide to HTML5/chapter 40 Creating Offline Web Applications/fruit.appcache",
+		"/C/The Definitive Guide to HTML5/chapter 40 Creating Offline Web Applications/workingDirectlyWithTheApplicationCache.html",
+		"/C/The Definitive Guide to HTML5/chapter 40 Creating Offline Web Applications/detectingTheStateOfTheBrowser.html",
+		"/C/The Definitive Guide to HTML5/chapter 40 Creating Offline Web Applications/aSimpleManifest.appcache",
+		"/C/The Definitive Guide to HTML5/chapter 40 Creating Offline Web Applications/offline.html",
+		"/C/The Definitive Guide to HTML5/chapter 40 Creating Offline Web Applications/addingALinkToAnotherFile.html",
+		"/C/The Definitive Guide to HTML5/chapter 40 Creating Offline Web Applications/aSimpleWebApplication.html",
+		"/C/The Definitive Guide to HTML5/chapter 39 Using Web Storage/workingWithLocalStorage.html",
+		"/C/The Definitive Guide to HTML5/chapter 39 Using Web Storage/usingSessionStorage.html",
+		"/C/The Definitive Guide to HTML5/chapter 39 Using Web Storage/usingStorageEventsWithSessionStorage.html",
+		"/C/The Definitive Guide to HTML5/chapter 39 Using Web Storage/cataloguingLocalStorageEvents.html",
+		"/C/The Definitive Guide to HTML5/chapter 38 Using Geolocation/usingTheWatchPositionMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 38 Using Geolocation/specifyingOptionsWhenRequestingLocationData.html",
+		"/C/The Definitive Guide to HTML5/chapter 38 Using Geolocation/handlingErrorsWithThePositionErrorObject.html",
+		"/C/The Definitive Guide to HTML5/chapter 38 Using Geolocation/obtainingTheCurrentPosition.html",
+		"/C/The Definitive Guide to HTML5/chapter 37 Using Drag & drop/combiningDragAndDropTheFileApiAndTheFormDataObject.html",
+		"/C/The Definitive Guide to HTML5/chapter 37 Using Drag & drop/dealingWithFiles.html",
+		"/C/The Definitive Guide to HTML5/chapter 37 Using Drag & drop/usingTheDataTransferObjectToFilterDraggedElements.html",
+		"/C/The Definitive Guide to HTML5/chapter 37 Using Drag & drop/usingTheDatatransferObjectToTransferData.html",
+		"/C/The Definitive Guide to HTML5/chapter 37 Using Drag & drop/handlingTheDropEvent.html",
+		"/C/The Definitive Guide to HTML5/chapter 37 Using Drag & drop/creatingADropZoneByHandlongTheDragenterAndDragoverEvents.html",
+		"/C/The Definitive Guide to HTML5/chapter 37 Using Drag & drop/usingTheEventsTargetedAtDraggedElement.html",
+		"/C/The Definitive Guide to HTML5/chapter 37 Using Drag & drop/definingTheDraggableItems.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/usingTransformations.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/usingTheGlobalCompositeOperationProperty.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/usingTheGlobalAlphaProperty.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/applyingShadowsToShapesAndText.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/drawingTextOnTheCanvas.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/usingAClippingRegion.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/drawingAQuadraticBezierCurve.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/drawingCubicBezierCurves.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/usingTheArcMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/drawingArcsInResponseToMouseMovements.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/usingTheArcToMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/drawingARectangleWithTheRectMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/settingTheLineCapProperty.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/creatingAPathFromStraightLines.html",
+		"/C/The Definitive Guide to HTML5/chapter 36 Using the Canvas Element - Part 2/walking.py",
+		"/C/Users/mc_li28/Documents/bipedo.txt",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingACanvasAsTheSourceForTheDrawImageMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingTheCanvasToDisplayAndDrawOnVideo.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingVideoAsTheSourceForTheDrawImageElement.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingTheDrawImageMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/savingAndRestoringState.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingSmallerShapesWithAnImagePattern.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingAnImagePattern.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingARadialGradient.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingSmallerShapesWithARadialGradient.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/matchingTheShapeToTheGradient.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/makingTheGradientLineMatchADesiredShape.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingAGradientWithAShapeThatDoesntFillTheCanvas.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/creatingALinearGradient.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/settingColorsUsingThefillStyleAndStrokestyleProperties.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/settingTheLinejoinProperty.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/settingTheDrawingStateBeforePerformingAnOperation.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingTheClearRectMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingTheFillRectAndStrokeRectMethods.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/obtainingATwoDimensionalContextObjectForACanvas.html",
+		"/C/The Definitive Guide to HTML5/chapter 35 Using the Canvas Element - Part 1/usingTheCanvasElementWithBasicFallbackContent.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/replacingTheDefaultMediaControls.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/usingHTMLMediaElementProperties.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/usingTheCantPlayTypeMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/gettingBasicInformationAboutAMediaElement.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/usingTheAudioElement.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/theSourceElementToProvideMultipleAudioFormats.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/poster.jpg",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/preloadingTheVideo.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/typeAttributeOnTheSourceElement.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/usingTheSourceElement.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/usingTheVideoElement.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/specifyingTheVideoSourceAndFormat.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/settingTheVideoSize.html",
+		"/C/The Definitive Guide to HTML5/chapter 34 Working With Multimedia/displayingAPlaceholderImage.html",
+		"/C/The Definitive Guide to HTML5/chapter 33 Using Ajax - Part 2/trackingUploadProgress.html",
+		"/C/The Definitive Guide to HTML5/chapter 33 Using Ajax - Part 2/fruitcalc.js",
+		"/C/Users/mc_li28/Documents/leds1.py",
+		"/C/Users/mc_li28/Documents/leds1.html",
+		"/C/The Definitive Guide to HTML5/chapter 33 Using Ajax - Part 2/sendingJsonData.html",
+		"/C/The Definitive Guide to HTML5/chapter 33 Using Ajax - Part 2/sendingFile.html",
+		"/C/The Definitive Guide to HTML5/chapter 33 Using Ajax - Part 2/modifyingAFormDataObject.html",
+		"/C/The Definitive Guide to HTML5/chapter 33 Using Ajax - Part 2/sendingFormData.py",
+		"/C/The Definitive Guide to HTML5/chapter 33 Using Ajax - Part 2/aBasicForm.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/fruitSelector.js",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/fruitSelector2.js",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/delayFruitSelector.js",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/abortingRequest.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/aScriptThatWantsToMakeACrossOriginRequest.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/readingResponseHeaders.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/settingARequestHeader.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/dealingWithAjaxErrors.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/usingTheOneOffEventsDefinedByXMLHttpRequest.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/modifyingTheExampleToSupportOpera.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/cherries.html",
+		"/C/The Definitive Guide to HTML5/chapter 32 Using Ajax - Part 1/usingTheXMLHttpRequestObject.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/usingTheKeyboardEvents.html",
+		"/C/Users/mc_li28/Downloads/Telegram Desktop/settings (2).py",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/usingTheFocusEvents.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/usingTheMouseEventObjectToRespondToMouseEvents.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/cancellingADefaultAction.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/eventBubbling.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/capturingEvents.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/usingTheTypeProperty.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/usingTheAddEventListenerAndRemoveEventListenerMethods.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/usingTheDomToSetUpEventHandling.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/usingAFunctionToHandleAnEvent.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/handlingTheMouseOutEvent.html",
+		"/C/The Definitive Guide to HTML5/chapter 30 Working with Events/handlingAnEventWithInlineJavascript.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/exploringCSSProperties.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/gettingTheImportanceOfAProperty.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/usingTheCSSPrimitiveValueObject.html",
+		"/C/Users/mc_li28/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/workingWithTheComputedStyleForAnElement.html",
+		"/C/Users/mc_li28/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/usingTheRegularPropertiesOfTheCssStyleDeclarationObject.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/workingWithCssStyleDeclarationObjectConvenienceProperties.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/obtainningACssStyleDeclarationObjectFromAnHtmlElement.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/workingWithTheCssRuleListAndCssStyleRuleObjects.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/enablingAndDisablingAStylesheet.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/usingTheMediaListObject.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements/gettingBasicInformationAboutTheStylesheetsInADocument.html",
+		"/C/The Definitive Guide to HTML5/chapter 29 Styling DOM Elements",
+		"/C/The Definitive Guide to HTML5/chapter 28 Working with DOM Elements.html/insertingAnElementIntoATextBlock.html",
+		"/C/The Definitive Guide to HTML5/chapter 28 Working with DOM Elements.html/usingTheInsertAdjacentHtmlMethod.html",
+		"/C/The Definitive Guide to HTML5/chapter 28 Working with DOM Elements.html/modifyingTheDocumentModel.html",
+		"/C/The Definitive Guide to HTML5/chapter 28 Working with DOM Elements.html/innerAndOuterHtmlProperties.html",
+		"/C/The Definitive Guide to HTML5/urls.html",
+		"/C/The Definitive Guide to HTML5/chapter 28 Working with DOM Elements.html/workingWithEqualElements.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"reindent",
+			"t",
+			"transition",
+			"%;\n",
+			"-small",
+			"groove",
+			"titan",
+			"padding",
+			"span",
+			"size",
+			":\n",
+			"left",
+			">');\n",
+			"fullBody",
+			"fullDody",
+			"fullbody",
+			"colgruop",
+			"first",
+			"td",
+			"d",
+			"th",
+			"section",
+			"nav",
+			"3",
+			"section",
+			"ol",
+			"blockquoter",
+			"code",
+			"p",
+			"name",
+			"string",
+			"String",
+			"2",
+			"usuario",
+			"Usuario",
+			"sm",
+			"sm4",
+			"main",
+			"register",
+			"h4",
+			"main",
+			"n",
+			"N",
+			"M",
+			"))",
+			"args",
+			"a",
+			"f",
+			"start",
+			"1",
+			"')",
+			")",
+			"line",
+			"x",
+			"sum",
+			"x",
+			"mouse",
+			"x",
+			"segment0",
+			"x",
+			"segment",
+			"Segment",
+			"segment",
+			"x",
+			"30",
+			"segment1",
+			"segment0",
+			"cycle",
+			"0",
+			"x",
+			"segment0",
+			"x",
+			"max",
+			"min",
+			"x",
+			"y1final",
+			"x1Final",
+			"x1final",
+			"x",
+			"i",
+			"ball",
+			"radius",
+			"numparticles",
+			"balls",
+			"Balls",
+			"balls",
+			"Balls",
+			"balls",
+			"Balls",
+			"balls",
+			"i",
+			"x",
+			"1",
+			"x",
+			"					\n",
+			"0",
+			"x",
+			"min",
+			"2",
+			"x",
+			"i",
+			"x",
+			"ballA",
+			"x",
+			"ball",
+			"ballB",
+			"actibeBox",
+			"ball1",
+			"ball0",
+			"ball1",
+			"ball1_dragging",
+			"handle",
+			"X",
+			"x",
+			"X",
+			"x",
+			"move",
+			"ball0",
+			"mouse",
+			"x",
+			"X",
+			"x",
+			"X",
+			"x",
+			"X",
+			"x",
+			"X",
+			"x"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 122.0
+	},
+	"output.stino_log":
+	{
+		"height": 100.0
+	},
+	"project": "The Definitive Guide to HTML5.sublime-project",
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 311.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
