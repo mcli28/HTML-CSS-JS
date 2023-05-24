@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shape caching</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.7.2.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 500
+		});
+
+		var layer = new Kinetic.Layer();
+
+		var star = new Kinetic.Star({
+			innerRadius: 20,
+			outerRadius: 50,
+			fill: 'red',
+			stroke: 'black',
+			strokeWidth: 5,
+			numPoints: 5,
+			x: 60,
+			y: 60,
+			draggable: true,
+			shadowOffset: 5,
+			shadowColor: 'black',
+			shadowBlur: 5,
+			shadowOpacity: 0.5
+		});
+
+
+		layer.add(star);
+		stage.add(layer);
+
+		star.toImage({
+			width: 120,
+			height: 120,
+			callback: function (img) {
+				for (var n = 0; n < 10; n++) {
+					var image = new Kinetic.Image({
+						image: img,
+						x: Math.random() * stage.getWidth(),
+						y: Math.random() * stage.getHeight(),
+						offset: 60,
+						draggable: true
+					});
+					layer.add(image);
+				}
+				layer.draw();
+			}
+		});
+
+
+	</script>
+</body>
+</html>

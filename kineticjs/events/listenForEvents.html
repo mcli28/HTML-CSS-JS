@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>listen for events</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		#buttons{
+			position: absolute;
+			left: 10px;
+			top: 0px;
+		}
+		button{
+			margin-top: 10px;
+			display: block;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<div id="buttons">
+		<button id="listen">
+			listen
+		</button>
+		<button id="dontListen">
+			dont listen
+		</button>
+	</div>
+	<script defer="defer">
+
+		function writeMessage (messageLayer, message) {
+			var context = messageLayer.getContext();
+			messageLayer.clear();
+			context.font = '18pt Calibri';
+			context.fillStyle = 'black';
+			context.fillText(message, 100, 25);
+		}
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var shapesLayer = new Kinetic.Layer();
+		var messageLayer = new Kinetic.Layer();
+
+		var oval = new Kinetic.Circle({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2,
+			radius: 50,
+			scaleX: 2,
+			fill: 'red',
+			stroke: 'black',
+			strokeWidth: 4,
+			strokeScaleEnable: false,
+			listening: false
+		});
+
+		oval.on('mouseover', function () {
+			writeMessage(messageLayer, 'Mouseover oval');
+		});
+
+		oval.on('mouseout', function () {
+			writeMessage(messageLayer, '');
+		});
+
+		shapesLayer.add(oval);
+
+		stage.add(shapesLayer);
+		stage.add(messageLayer);
+
+		document.getElementById('listen').addEventListener('click', function () {
+			oval.setListening(true);
+			shapesLayer.drawHit();
+		}, false);
+
+		document.getElementById('dontListen').addEventListener('click', function () {
+			oval.setListening(false);
+			shapesLayer.draw();
+		}, false);		
+
+	</script>
+</body>
+</html>

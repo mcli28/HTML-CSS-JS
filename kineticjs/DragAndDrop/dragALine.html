@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>drag a line</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var layer = new Kinetic.Layer();
+		
+		var blueLine = new Kinetic.Line({
+			y: 50,
+			points: [73, 70, 340, 23, 450, 60, 500, 20],
+			stroke: 'blue',
+			strokeWidth: 10,
+			lineCap: 'round',
+			lineJoin: 'round',
+			dashArray: [29, 20, 0.001, 20],
+			draggable: true
+		});
+
+		blueLine.on('mouseover', function () {
+			document.body.style.cursor = 'pointer';
+		});
+
+		blueLine.on('mouseout', function () {
+			document.body.style.cursor = 'default';
+		});
+
+		layer.add(blueLine);
+
+		stage.add(layer);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>custom</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.1.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		var layer = new Kinetic.Layer();
+		/*
+		*create a triangle shape by defining a
+		*drawing function which draws a triangle
+		*/
+		var triangle = new Kinetic.Shape({
+			drawFunc: function (canvas) {
+				var context = canvas.getContext();
+				context.beginPath();
+				context.moveTo(200, 50);
+				context.lineTo(420, 80);
+				context.quadraticCurveTo(300, 100, 260, 170);
+				context.closePath();
+				canvas.fillStroke(this);
+			},
+			fill: '#00d2ff',
+			stroke: 'black',
+			strokeWidth: 4
+		});
+
+		layer.add(triangle);
+		stage.add(layer);
+	</script>
+</body>
+</html>

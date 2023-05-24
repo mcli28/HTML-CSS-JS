@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>star</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		var layer = new Kinetic.Layer();
+
+		//tooltip
+		var star = new Kinetic.Star({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2,
+			numPoints: 10,
+			innerRadius: 100,
+			outerRadius: 70,
+			fill: 'yellow',
+			stroke: 'black',
+			strokeWidth: 3
+		});
+
+		layer.add(star);
+		
+		stage.add(layer);
+	</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>all easings</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		#buttons{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		#buttons > input{
+			padding: 10px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<div id="buttons">
+		<input type="button" id="play" value="Play">
+		<input type="button" id="pause" value="Pause">
+		<input type="button" id="reverse" value="Reverse">
+	</div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 480
+		});
+
+		var layer = new Kinetic.Layer();
+
+		var easings = [
+			{name: 'linear', color: 'blue'},
+			{name: 'EaseIn', color: 'green'},
+			{name: 'EaseOut', color: 'green'},
+			{name: 'EaseInOut', color: 'green'},
+			{name: 'BackEaseIn', color: 'blue'},
+			{name: 'BackEaseOut', color: 'blue'},
+			{name: 'BackEaseInOut', color: 'blue'},
+			{name: 'ElasticEaseIn', color: 'green'},
+			{name: 'ElasticEaseOut', color: 'green'},
+			{name: 'ElasticEaseInOut', color: 'green'},
+			{name: 'BounceEaseIn', color: 'blue'},
+			{name: 'BounceEaseOut', color: 'blue'},
+			{name: 'BounceEaseInOut', color: 'blue'},
+			{name: 'StrongEaseIn', color: 'green'},
+			{name: 'StrongEaseOut', color: 'green'},
+			{name: 'StrongEaseInOut', color: 'green'}
+		];
+
+		var tweens = [];
+
+		for (var n = 0; n < easings.length; n++) {
+
+			var num = n + 1;
+			var ease = easings[n];
+
+			var text = new Kinetic.Text({
+				x: 10,
+				y: 60 + (n * 400 / easings.length),
+				padding: 4,
+				text: num + ')' + ease.name,
+				fontSize: 18,
+				fontFamily: 'Calibri',
+				fill: ease.color
+			});
+
+			layer.add(text);
+
+			var tween = new Kinetic.Tween({
+				node: text,
+				x: 420,
+				easing: Kinetic.Easings[ease.name],
+				duration: 2
+			});
+
+			tweens.push(tween);
+		}
+
+		stage.add(layer);
+
+		document.getElementById('play').addEventListener('click', function () {
+			for(var n = 0; n<tweens.length; n++){
+				tweens[n].play();
+			}
+		}, false);
+
+		document.getElementById('pause').addEventListener('click', function () {
+			for(var n = 0; n<tweens.length; n++){
+				tweens[n].pause();
+			}
+		}, false);
+
+		document.getElementById('reverse').addEventListener('click', function () {
+			for(var n = 0; n<tweens.length; n++){
+				tweens[n].reverse();
+			}
+		}, false);
+
+	</script>
+</body>
+</html>

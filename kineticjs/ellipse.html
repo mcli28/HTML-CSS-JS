@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ellipse</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.1.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		var layer = new Kinetic.Layer();
+		var ellipse = new Kinetic.Ellipse({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2,
+			radius: {
+				x: 100,
+				y: 50
+			},
+			fill: 'blue',
+			stroke: 'black',
+			strokeWidth: 4
+		});
+		layer.add(ellipse);
+		stage.add(layer);
+	</script>
+</body>
+</html>

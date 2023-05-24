@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>image</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.1.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		var layer = new Kinetic.Layer();
+		var imageObj = new Image();
+		imageObj.onload = function () {
+			var img = new Kinetic.Image({
+				x: 200,
+				y: 50,
+				image: imageObj,
+				width: 400,
+				height: 200
+			});
+			layer.add(img);
+			stage.add(layer);
+		}
+		
+		imageObj.src = 'imgres1.jpg';
+	</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>simple drag bounds</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var layer = new Kinetic.Layer();
+		var rectHeight = 50;
+		var rectWidth = 100;
+		var rectY = (stage.getHeight() - rectHeight) / 2;
+		
+		var hbox = new Kinetic.Text({
+			x: 120,
+			y: 70,
+			fontSize: 24,
+			fontFamily: 'Calibri',
+			text: 'horizontal',
+			fill: 'black',
+			draggable: true,
+			dragBoundFunc: function (pos) {
+				return {
+					x: pos.x,
+					y: this.getAbsolutePosition().y
+				}
+			}
+		});
+
+		var vbox = new Kinetic.Text({
+			x: 350,
+			y: 70,
+			draggable: true,
+			fontSize: 24,
+			fontFamily: 'Calibri',
+			text: 'vertical',
+			fill: 'black',
+			padding: 15,
+			draggable: true,
+			dragBoundFunc: function (pos) {
+				return {
+					x: this.getAbsolutePosition().x,
+					y: pos.y
+				}
+			}
+		});
+
+		layer.add(hbox);
+		layer.add(vbox);
+
+		stage.add(layer);
+
+	</script>
+</body>
+</html>

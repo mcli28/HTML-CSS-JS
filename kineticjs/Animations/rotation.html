@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rotation</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		canvas{
+			border: 1px solid #9c9898;
+		}
+	</style>
+	<script src="kineticv4.5.5.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		window.onload = function () {
+			var stage = new Kinetic.Stage({
+				container: 'container',
+				width: 578,
+				height: 200
+			});
+
+			var layer = new Kinetic.Layer();
+
+			var blueRect = new Kinetic.Rect({
+				x: 50,
+				y: 75,
+				width: 100,
+				height: 50,
+				fill: '#00d2ff',
+				stroke: 'black',
+				strokeWidth: 4
+			});
+
+			var yellowRect = new Kinetic.Rect({
+				x: 250,
+				y: 75,
+				width: 100,
+				height: 50,
+				fill: 'yellow',
+				stroke: 'black',
+				strokeWidth: 4,
+				offset: [50, 25]
+			});
+
+			var redRect = new Kinetic.Rect({
+				x: 400,
+				y: 75,
+				width: 100,
+				height: 50,
+				fill: 'red',
+				stroke: 'black',
+				strokeWidth: 4,
+				offset: [-100, 0]
+			});
+
+			layer.add(blueRect);
+			layer.add(yellowRect);
+			layer.add(redRect);
+			stage.add(layer);
+
+			var angularSpeed = Math.PI / 2;
+			var anim = new Kinetic.Animation(function (frame) {
+				var angleDiff = frame.timeDiff * angularSpeed / 1000;
+				blueRect.rotate(angleDiff);
+				yellowRect.rotate(angleDiff);
+				redRect.rotate(angleDiff);
+			}, layer);
+
+			anim.start();
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>batch draw</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.7.2.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+
+		var layer = new Kinetic.Layer();
+
+		var rect = new Kinetic.Rect({
+			x: 289,
+			y: 100,
+			width: 200,
+			height: 20,
+			offset: [100, 10],
+			fill: 'green',
+			stroke: 'black',
+			strokeWidth: 4,
+		});
+
+
+		layer.add(rect);
+		stage.add(layer);
+
+		stage.on('contentMousemove', function () {
+			rect.rotate(0.2);
+			layer.batchDraw();
+		});
+
+
+	</script>
+</body>
+</html>

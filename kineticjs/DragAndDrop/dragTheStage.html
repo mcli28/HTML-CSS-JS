@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>drag the stage</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200,
+			draggable: true
+		});
+		
+		var layer = new Kinetic.Layer();
+		
+		var circle = new Kinetic.Circle({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2,
+			radius: 70,			
+			fill: 'red',
+			stroke: 'black',
+			strokeWidth: 4,
+		});
+
+		layer.add(circle);
+
+		stage.add(layer);
+
+	</script>
+</body>
+</html>

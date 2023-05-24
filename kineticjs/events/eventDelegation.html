@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event delegation</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var layer = new Kinetic.Layer();
+
+		var star = new Kinetic.Star({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2,
+			numPoints: 15,
+			innerRadius: 40,
+			outerRadius: 70,
+			fill: 'blue',
+			scale: {
+				x: 2,
+				y: 0.5
+			},
+			name: 'mystar'
+		});
+
+		layer.on('click', function (evt) {
+			var shape = evt.targetNode;
+			alert('you clicked on \"' + shape.getName() + '\"');
+		});
+
+		layer.add(star);
+
+		stage.add(layer);	
+
+	</script>
+</body>
+</html>

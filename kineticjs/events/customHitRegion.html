@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>custom by region</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		function writeMessage (messageLayer, message) {
+			var context = messageLayer.getContext();
+			messageLayer.clear();
+			context.font = '18pt Calibri';
+			context.fillStyle = 'black';
+			context.fillText(message, 10, 25);
+		}
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var shapesLayer = new Kinetic.Layer();
+		var messageLayer = new Kinetic.Layer();
+
+		var star = new Kinetic.Star({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2,
+			numPoints: 7,
+			innerRadius: 50,
+			outerRadius: 70,
+			fill: 'red',
+			stroke: 'black',
+			strokeWidth: 4,
+			drawHitFunc: function (canvas) {
+				var context = canvas.getContext();
+				context.beginPath();
+				context.arc(0, 0, this.getOuterRadius() + 10, 0, Math.PI * 2, true);
+				context.closePath();
+				canvas.fillStroke(this);
+			}
+		});
+
+		star.on('mouseover', function () {
+			writeMessage(messageLayer, 'Mouseover star');
+		});
+
+		star.on('mouseout', function () {
+			writeMessage(messageLayer, 'Mouseout star');
+		});
+
+		star.on('mousedown', function () {
+			writeMessage(messageLayer, 'Mouseodown star');
+		});
+
+		star.on('mouseup', function () {
+			writeMessage(messageLayer, 'Mouseup star');
+		});
+
+		shapesLayer.add(star);
+
+		stage.add(shapesLayer);
+		stage.add(messageLayer);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>groups</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var shapesLayer = new Kinetic.Layer();
+		
+		var group = new Kinetic.Group({
+			x: 200,
+			y: 40,
+			draggable: true,
+			rotationDeg: 20
+		});
+
+		var colors = ['red', 'orange', 'yellow'];
+		
+		for (var n = 0; n < 3; n++) {
+			(function () {
+				var i = n;
+				var box = new Kinetic.Rect({
+					x: i * 30,
+					y: i * 80,
+					width: 100,
+					height: 50,
+					name: colors[i],
+					fill: colors[i],
+					stroke: 'black',
+					strokeWidth: 4
+				});
+				group.add(box);
+			})();
+		}
+
+		shapesLayer.add(group);
+		stage.add(shapesLayer);
+
+	</script>
+</body>
+</html>

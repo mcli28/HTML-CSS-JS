@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>line</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.1.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		var layer = new Kinetic.Layer();
+		var redLine = new Kinetic.Line({
+			points: [73, 70, 340, 23, 450, 60, 500, 20],
+			stroke: 'red',
+			strokeWidth: 15,
+			lineCap: 'round',
+			lineJoin: 'round'
+		});
+		var greenLine = new Kinetic.Line({
+			points: [73, 70, 340, 23, 450, 60, 500, 20],
+			stroke: 'green',
+			strokeWidth: 2,
+			lineJoin: 'round',
+			dashArray:[33, 10]
+		});
+		var blueLine = new Kinetic.Line({
+			points: [73, 70, 340, 23, 450, 60, 500, 20],
+			stroke: 'blue',
+			strokeWidth: 10,
+			lineCap: 'round',
+			lineJoin: 'round',
+			dashArray:[29, 20, 0.001, 20]
+		});
+		redLine.move(0, 5);
+		greenLine.move(0, 55);
+		blueLine.move(0, 100);
+		layer.add(redLine);
+		layer.add(greenLine);
+		layer.add(blueLine);
+		stage.add(layer);
+	</script>
+</body>
+</html>

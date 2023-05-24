@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>serialize stage</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.7.2.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var json = '{"attrs":{"width": 578, "height": 200},	"className": "Stage", "children": [{"attrs": {}, "className": "Layer", "children": [{"attrs": {"x": 289, "y": 100, "sides": 6, "radius": 70, "fill": "red", "stroke": "black", "strokeWidth": 4}, "className": "RegularPolygon"}]}]}';
+
+		var stage = Kinetic.Node.create(json, 'container');
+
+	</script>
+</body>
+</html>

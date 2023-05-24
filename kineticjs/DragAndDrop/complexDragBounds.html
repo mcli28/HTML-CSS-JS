@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>complex drag bounds</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var layer = new Kinetic.Layer();
+		
+		var blueGroup = new Kinetic.Group({
+			x: 100,
+			y: 70,
+			draggable: true,
+			dragBoundFunc: function (pos) {
+				var newY = pos.y < 50 ? 50 : pos.y;
+				return {
+					x: pos.x,
+					y: newY
+				}
+			}
+		});
+
+		var yellowGroup = new Kinetic.Group({
+			x: stage.getWidth() / 2,
+			y: 70,
+			draggable: true,
+			dragBoundFunc: function (pos) {
+				var x = stage.getWidth() / 2;
+				var y = 70;
+				var radius = 50;
+				var scale = radius / Math.sqrt(Math.pow(pos.x - x, 2) + Math.pow(pos.y - y, 2));
+				if(scale < 1)	
+					return {
+						y: Math.round((pos.y - y) * scale + y),
+						x: Math.round((pos.x - x) * scale + x)
+					}
+				else
+					return pos;
+			}
+		});
+
+		var blueText = new Kinetic.Text({
+			fontSize: 26,
+			fontFamily: 'Calibri',
+			text: 'bound below',
+			fill: 'black',
+			padding: 10
+		});
+
+		var blueRect = new Kinetic.Rect({
+			width: blueText.getWidth(),
+			height: blueText.getHeight(),
+			fill: '#aaf',
+			stroke: 'black',
+			strokeWidth: 4
+		});
+
+		var yellowText = new Kinetic.Text({
+			fontSize: 26,
+			fontFamily: 'Calibri',
+			text: 'bound in circle',
+			fill: 'black',
+			padding: 10
+		});
+
+		var yellowRect = new Kinetic.Rect({
+			width: yellowText.getWidth(),
+			height: yellowText.getHeight(),
+			fill: 'yellow',
+			stroke: 'black',
+			strokeWidth: 4
+		});
+
+		blueGroup.add(blueRect).add(blueText);
+		yellowGroup.add(yellowRect).add(yellowText);
+
+		layer.add(blueGroup);
+		layer.add(yellowGroup);
+
+		stage.add(layer);
+
+	</script>
+</body>
+</html>

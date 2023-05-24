@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>wedge</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.1.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		var layer = new Kinetic.Layer();
+		var wedge = new Kinetic.Wedge({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2,
+			radius: 80,
+			angleDeg: 45,
+			fill: 'blue',
+			stroke: 'black',
+			strokeWidth: 4,
+			rotationDeg: -90
+		});
+		layer.add(wedge);
+		stage.add(layer);
+	</script>
+</body>
+</html>

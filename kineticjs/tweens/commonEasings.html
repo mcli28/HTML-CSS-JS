@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>common easings</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+
+		var layer = new Kinetic.Layer();
+
+		var greenBox = new Kinetic.Rect({
+				x: 100,
+				y: stage.getHeight() / 2,
+				width: 100,
+				height: 50,
+				fill: 'green',
+				stroke: 'black',
+				strokeWidth: 4,
+				offset: {
+					x: 50,
+					y: 25
+				}
+			});
+
+		var blueBox = new Kinetic.Rect({
+				x: stage.getWidth() / 2,
+				y: stage.getHeight() / 2,
+				width: 100,
+				height: 50,
+				fill: 'blue',
+				stroke: 'black',
+				strokeWidth: 4,
+				offset: {
+					x: 50,
+					y: 25
+				}
+			});
+
+		var redBox = new Kinetic.Rect({
+				x: 478,
+				y: stage.getHeight() / 2,
+				width: 100,
+				height: 50,
+				fill: 'red',
+				stroke: 'black',
+				strokeWidth: 4,
+				offset: {
+					x: 50,
+					y: 25
+				}
+			});
+
+			layer.add(greenBox);
+			layer.add(blueBox);
+			layer.add(redBox);
+			stage.add(layer);
+
+			greenBox.tween = new Kinetic.Tween({
+				node: greenBox,
+				scaleX: 2,
+				scaleY: 1.5,
+				easing: Kinetic.Easings.EaseIn,
+				duration: 1
+			});
+
+			blueBox.tween = new Kinetic.Tween({
+				node: blueBox,
+				scaleX: 2,
+				scaleY: 1.5,
+				easing: Kinetic.Easings.EaseInOut,
+				duration: 1
+			});
+
+			redBox.tween = new Kinetic.Tween({
+				node: redBox,
+				scaleX: 2,
+				scaleY: 1.5,
+				easing: Kinetic.Easings.EaseOut,
+				duration: 1
+			});
+
+		layer.on('mouseover touchstart', function (evt) {
+			evt.targetNode.tween.play();
+		});
+
+		layer.on('mouseout touchend', function (evt) {
+			evt.targetNode.tween.reverse();
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>label</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		var layer = new Kinetic.Layer();
+
+		//tooltip
+		var tooltip = new Kinetic.Label({
+			x: 160,
+			y: 70,
+			opacity: 0.75
+		});
+
+		tooltip.add(new Kinetic.Tag({
+			fill: 'black',
+			pointerDirection: 'down',
+			pointerWidth: 10,
+			pointerHeight: 10,
+			lineJoin: 'round',
+			shadowColor: 'black',
+			shadowBlur: 10,
+			shadowOffset: 10,
+			shadowOpacity: 0.5
+		}));
+
+		tooltip.add(new Kinetic.Text({
+			text: 'holitas soy tu ayuda que apunta abajo',
+			fontFamily: 'Calibri',
+			fontSize: 18,
+			padding: 5,
+			fill: 'white'
+		}));
+
+		//label witb left pointer
+		var labelLeft = new Kinetic.Label({
+			x:195,
+			y:130,
+			opacity:0.75
+		});
+
+		labelLeft.add(new Kinetic.Tag({
+			fill: 'green',
+			pointerDirection: 'left',
+			pointerWidth: 20,
+			pointerHeight: 28,
+			lineJoin: 'round'
+		}));
+
+		labelLeft.add(new Kinetic.Text({
+			text: 'etiquetita que esta a la derecha',
+			fontFamily: 'Calibri',
+			fontSize: 18,
+			padding: 5,
+			fill: 'white'
+		}));
+
+		//simple label
+		var simpleLabel = new Kinetic.Label({
+			x: 350,
+			y: 50,
+			opacity: 0.75
+		});
+
+		simpleLabel.add(new Kinetic.Tag({
+			fill: 'yellow'
+		}));
+
+		simpleLabel.add(new Kinetic.Text({
+			text: 'una etiqueta simple',
+			fontFamily: 'Calibri',
+			fontSize: 18,
+			padding: 5,
+			fill: 'black'
+		}));
+
+		
+		layer.add(tooltip).add(labelLeft).add(simpleLabel);
+		
+		stage.add(layer);
+	</script>
+</body>
+</html>

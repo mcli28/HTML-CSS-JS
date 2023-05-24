@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>remove events</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		#buttons{
+			position: absolute;
+			left: 10px;
+			top: 0px;
+		}
+		button{
+			margin-top: 10px;
+			display: block;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<div id="buttons">
+		<button id="removeClick">remove onclick</button>
+	</div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var layer = new Kinetic.Layer();
+
+		var circle = new Kinetic.Circle({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2 + 10,
+			radius: 70,
+			fill: 'red',
+			stroke: 'black',
+			strokeWidth: 4,
+		});
+
+		circle.on('click', function () {
+			alert('you clicked on the circle');
+		});
+
+		layer.add(circle);
+
+		stage.add(layer);
+
+		document.getElementById('removeClick').addEventListener('click', function () {
+			circle.off('click');
+			alert('onclick removed');
+		}, false);
+	</script>
+</body>
+</html>

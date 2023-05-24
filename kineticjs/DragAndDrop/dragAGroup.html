@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>drag a group</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var shapesLayer = new Kinetic.Layer();
+		var group = new Kinetic.Group({
+			draggable: true
+		});
+
+		var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+
+		for (var n = 0; n < 6; n++) {
+			(function () {
+				var i = n;
+				var box = new Kinetic.Rect({
+					x: i * 30 + 210,
+					y: i * 18 + 40,
+					width: 100,
+					height: 50,	
+					name: colors[i],		
+					fill: colors[i],
+					stroke: 'black',
+					strokeWidth: 4,
+				});
+
+				group.add(box);
+			})();
+		};
+		
+
+		group.on('mouseover', function () {
+			document.body.style.cursor = 'pointer';
+		});
+
+		group.on('mouseout', function () {
+			document.body.style.cursor = 'default';
+		});
+
+		shapesLayer.add(group);
+
+		stage.add(shapesLayer);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fire events</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<script src="kineticv4.5.4.min.js"></script>
+
+</head>
+<body>
+	<div id="container"></div>
+	<script defer="defer">
+
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 578,
+			height: 200
+		});
+		
+		var layer = new Kinetic.Layer();
+
+		var circle = new Kinetic.Circle({
+			x: stage.getWidth() / 2,
+			y: stage.getHeight() / 2 + 10,
+			radius: 70,			
+			fill: 'red',
+			stroke: 'black',
+			strokeWidth: 4
+		});
+
+		var text = new Kinetic.Text({
+			text: '',
+			fontFamily: 'Calibri',
+			fontSize: 24,
+			fill: 'black'
+		});
+
+		circle.on('click', function (evt) {
+			text.setText('you clicked on the circle!');
+			layer.draw();
+		});
+
+		layer.add(circle).add(text);
+
+		stage.add(layer);
+
+		circle.fire('click');	
+
+	</script>
+</body>
+</html>
