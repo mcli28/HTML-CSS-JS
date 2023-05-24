@@ -1,0 +1,977 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"va",
+				"value	Attr"
+			],
+			[
+				"cals",
+				"class	Attr"
+			],
+			[
+				"clas",
+				"class	Attr"
+			],
+			[
+				"ite",
+				"item"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"u10",
+				"u1001"
+			],
+			[
+				"colo",
+				"_colors"
+			],
+			[
+				"bl",
+				"blue"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"pro",
+				"proto	Prototype"
+			],
+			[
+				"ele",
+				"elementWithId"
+			],
+			[
+				"tr",
+				"tree"
+			],
+			[
+				"say",
+				"sayHo"
+			],
+			[
+				"sa",
+				"sayHey"
+			],
+			[
+				"sayh",
+				"sayHey"
+			],
+			[
+				"str",
+				"String"
+			],
+			[
+				"num",
+				"Number"
+			],
+			[
+				"pto",
+				"prototype"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"a",
+				"android"
+			],
+			[
+				"class",
+				"classes"
+			],
+			[
+				"ro",
+				"room"
+			],
+			[
+				"pa",
+				"players"
+			],
+			[
+				"expres",
+				"express"
+			],
+			[
+				"click",
+				"ClickEvent"
+			],
+			[
+				"Clic",
+				"ClickHandler"
+			],
+			[
+				"but",
+				"Button"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"cle",
+				"client"
+			],
+			[
+				"ad",
+				"scene.addChild"
+			],
+			[
+				"pixel",
+				"pixelsToDraw"
+			],
+			[
+				"timelin",
+				"timelinePosition"
+			],
+			[
+				"keyfa",
+				"keyframeTimeline"
+			],
+			[
+				"curr",
+				"currentPlayer"
+			],
+			[
+				"requi",
+				"SGF.require"
+			],
+			[
+				"spe",
+				"self.speed"
+			],
+			[
+				"hello",
+				"HelloWorld"
+			],
+			[
+				"life",
+				"lifeLabel"
+			],
+			[
+				"back",
+				"Background"
+			],
+			[
+				"imga",
+				"images"
+			],
+			[
+				"dire",
+				"direction"
+			],
+			[
+				"Enemy",
+				"EnemyShoot"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"Player",
+				"PlayerShoot"
+			],
+			[
+				"rootScene",
+				"game.rootScene.addEventListener"
+			],
+			[
+				"lo",
+				"loop	Arduino loop"
+			],
+			[
+				"score",
+				"scoreLabel"
+			],
+			[
+				"add",
+				"addChild	gameRootSceneAddChild"
+			],
+			[
+				"input",
+				"game.input.right"
+			],
+			[
+				"to",
+				"girl.toY"
+			],
+			[
+				"map",
+				"map0"
+			],
+			[
+				"androi",
+				"Android"
+			],
+			[
+				"andoi",
+				"Android"
+			],
+			[
+				"wri",
+				"document.write"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"bouh",
+				"bounceheight"
+			],
+			[
+				"bounrate",
+				"bouncerate"
+			],
+			[
+				"re",
+				"Rect"
+			],
+			[
+				"cam",
+				"cameray"
+			],
+			[
+				"pla",
+				"playerCenterx"
+			],
+			[
+				"hal",
+				"HALF_WINWIDTH"
+			],
+			[
+				"invtm",
+				"INVULNTIME"
+			],
+			[
+				"grass",
+				"grassObjs"
+			],
+			[
+				"pix",
+				"pixelx"
+			],
+			[
+				"drawb",
+				"drawBox"
+			],
+			[
+				"box",
+				"BOXSIZE"
+			],
+			[
+				"boa",
+				"BOARDHEIGHT"
+			],
+			[
+				"drawbo",
+				"drawBoard"
+			],
+			[
+				"bla",
+				"BLANK"
+			],
+			[
+				"temp",
+				"TEMPLATEHEIGHT"
+			],
+			[
+				"fps",
+				"FPSCLOCK"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"movin",
+				"movingDown"
+			],
+			[
+				"movi",
+				"movingLeft"
+			],
+			[
+				"boar",
+				"board"
+			],
+			[
+				"mo",
+				"movingRight"
+			],
+			[
+				"fal",
+				"False"
+			],
+			[
+				"mov",
+				"movingLeft"
+			],
+			[
+				"kd",
+				"K_DOWN"
+			],
+			[
+				"fall",
+				"fallingPiece"
+			],
+			[
+				"O",
+				"O_SHAPE_TEMPLATE"
+			],
+			[
+				"Z",
+				"Z_SHAPE_TEMPLATE"
+			],
+			[
+				"win",
+				"WINDOWHEIGHT"
+			],
+			[
+				"darkgr",
+				"DARKGRAY"
+			],
+			[
+				"wind",
+				"WINDOWWIDTH"
+			],
+			[
+				"ap",
+				"appleRect"
+			],
+			[
+				"ce",
+				"CELLSIZE"
+			],
+			[
+				"cel",
+				"CELLSIZE"
+			],
+			[
+				"whi",
+				"while	While Loop"
+			],
+			[
+				"ove",
+				"overRect"
+			],
+			[
+				"game",
+				"gameSurf"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"ga",
+				"gameRect"
+			],
+			[
+				"f",
+				"FPSCLOCK"
+			],
+			[
+				"up",
+				"update"
+			],
+			[
+				"rota",
+				"rotate"
+			],
+			[
+				"degre",
+				"degrees1"
+			],
+			[
+				"titlesu",
+				"titleSurf1"
+			],
+			[
+				"rot",
+				"rotatedRect1"
+			],
+			[
+				"tit",
+				"titleFont"
+			],
+			[
+				"drak",
+				"DARKGREEN"
+			],
+			[
+				"ke",
+				"key"
+			],
+			[
+				"pre",
+				"pressKeyRect"
+			],
+			[
+				"pres",
+				"pressKeySurf"
+			],
+			[
+				"fp",
+				"FPS"
+			],
+			[
+				"wo",
+				"wormCoords"
+			],
+			[
+				"Dow",
+				"DOWN"
+			],
+			[
+				"wor",
+				"wormCoords"
+			],
+			[
+				"fro",
+				"for	For Loop"
+			],
+			[
+				"le",
+				"LEFT"
+			],
+			[
+				"star",
+				"starty"
+			],
+			[
+				"sta",
+				"startx"
+			],
+			[
+				"ra",
+				"randint"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"gre",
+				"GREEN"
+			],
+			[
+				"red",
+				"RED"
+			],
+			[
+				"yel",
+				"YELLOW"
+			],
+			[
+				"get",
+				"getButtonClicked"
+			],
+			[
+				"bg",
+				"bgColor"
+			],
+			[
+				"dra",
+				"drawButtons"
+			],
+			[
+				"new",
+				"newBgSurf"
+			],
+			[
+				"newb",
+				"newBgColor"
+			],
+			[
+				"rand",
+				"random"
+			],
+			[
+				"FPS",
+				"FPSCLOCK"
+			],
+			[
+				"flas",
+				"flashSurf"
+			],
+			[
+				"ye",
+				"YELLOWRECT"
+			],
+			[
+				"time",
+				"TIME"
+			],
+			[
+				"clic",
+				"clickedButton"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 14793,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 238.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"Snippet: encha",
+				"Snippet: enchant"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/expertJavascript/expertJavascript.sublime-project",
+		"/C/expertJavascript/chapter5/index.html",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/mc_li/Documents/ejercicioSiete.html",
+		"/C/Users/mc_li/Documents/ejercicioSeis.html",
+		"/C/Users/mc_li/Documents/ejercicioCinco.html",
+		"/C/expertJavascript/chapter5/coroutinerByConvention.js",
+		"/C/expertJavascript/chapter5/generatorsTres.js",
+		"/C/expertJavascript/chapter5/generatorsDos.js",
+		"/C/expertJavascript/chapter5/generators.js",
+		"/C/expertJavascript/chapter5/parallelJoins.js",
+		"/C/expertJavascript/chapter5/generators.html",
+		"/C/expertJavascript/chapter5/chainedAndDeferredExecution.js",
+		"/C/expertJavascript/chapter5/promisesBackFromTheFuture.html",
+		"/C/expertJavascript/chapter5/callbackHell.html",
+		"/C/expertJavascript/chapter5/continuationPassingStyle.html",
+		"/C/expertJavascript/chapter5/perceivedPerformance.html",
+		"/C/expertJavascript/chapter5/work.json",
+		"/C/expertJavascript/chapter5/callbacks.html",
+		"/C/expertJavascript/chapter5/stack.html",
+		"/C/expertJavascript/chapter4/watIndeed.html",
+		"/C/expertJavascript/chapter4/extras.txt",
+		"/C/expertJavascript/chapter4/unicodeForVariables.html",
+		"/C/expertJavascript/chapter4/allYourBase.html",
+		"/C/expertJavascript/chapter4/sneakyEval.html",
+		"/C/expertJavascript/chapter4/signumFunction.html",
+		"/C/expertJavascript/chapter4/parsingStringsIntoNumbers.html",
+		"/C/expertJavascript/chapter4/bitwiseArithmetic.html",
+		"/C/expertJavascript/chapter4/togglingBits.html",
+		"/C/expertJavascript/chapter4/determiningSignEquality.html",
+		"/C/expertJavascript/chapter4/truncatingNumbers.html",
+		"/C/expertJavascript/chapter4/convertingHexToRgb.html",
+		"/C/expertJavascript/chapter4/immediatelyInvokedFunctionExpression.html",
+		"/C/expertJavascript/chapter4/doubleNots.html",
+		"/C/expertJavascript/chapter4/shorthandBoolean.html",
+		"/C/expertJavascript/chapter4/defaultValues.html",
+		"/C/expertJavascript/chapter4/assignmentsThroughComparisonsOrImplicitFallback.html",
+		"/C/expertJavascript/chapter4/complexCoercion.html",
+		"/C/expertJavascript/chapter4/mixedTypeComparisonThroughCoercion.html",
+		"/C/expertJavascript/chapter4/coercionGotchas2.html",
+		"/C/expertJavascript/chapter4/coercionGotchas.html",
+		"/C/expertJavascript/chapter4/contextAwareCoercion.html",
+		"/C/expertJavascript/chapter4/coercion.html",
+		"/C/expertJavascript/chapter3/extras.txt",
+		"/C/expertJavascript/chapter3/singletonModulePattern.html",
+		"/C/expertJavascript/chapter3/contextuallyAwareDomManipulation.html",
+		"/C/expertJavascript/chapter3/createABindingProxy.html",
+		"/C/expertJavascript/chapter3/myFirstClosure2.html",
+		"/C/expertJavascript/chapter3/myFirstClosure.html",
+		"/C/expertJavascript/chapter3/letThereBeBlockScope.html",
+		"/C/expertJavascript/chapter3/letThereBeBlockScope.rb",
+		"/C/expertJavascript/chapter3/thisunderstandings2.html",
+		"/C/expertJavascript/chapter3/thisunderstandings.html",
+		"/C/expertJavascript/chapter3/theStraughtDopeOnScope.html",
+		"/C/expertJavascript/chapter2/debbugingFunctions2.html",
+		"/C/expertJavascript/chapter2/debbugingFunctions.html",
+		"/C/expertJavascript/chapter2/higherOrderFunctions.html",
+		"/C/expertJavascript/chapter2/recursiveFunctions.html",
+		"/C/expertJavascript/chapter2/expressionClosures.html",
+		"/C/expertJavascript/chapter2/arrowProne3.html",
+		"/C/expertJavascript/chapter2/functionScopes.html",
+		"/C/expertJavascript/chapter2/arrowProne.html",
+		"/C/expertJavascript/chapter2/arrowProne2.html",
+		"/C/expertJavascript/chapter2/extra.txt",
+		"/C/expertJavascript/chapter2/functionScopes.rb",
+		"/C/expertJavascript/chapter2/functionScopes.htm",
+		"/C/expertJavascript/chapter2/functionTypes3.html",
+		"/C/expertJavascript/chapter2/functionTypes2.html",
+		"/C/expertJavascript/chapter2/functionTypes.html",
+		"/C/expertJavascript/chapter2/rest2.html",
+		"/C/expertJavascript/chapter2/rest.html",
+		"/C/expertJavascript/chapter2/defaultParameters.html",
+		"/C/Users/mc_li/AppData/Roaming/Sublime Text 3/Packages/User/functionExpression.sublime-snippet",
+		"/C/expertJavascript/chapter2/winningArguments2.html",
+		"/C/expertJavascript/chapter2/winningArguments.html",
+		"/C/expertJavascript/chapter2/functionArguments.html",
+		"/C/expertJavascript/chapter2/blocksInJavascript.html",
+		"/C/expertJavascript/chapter1/classMethods.html",
+		"/C/expertJavascript/chapter1/classProperties.html",
+		"/C/expertJavascript/chapter1/instanceMethods.html",
+		"/C/expertJavascript/chapter1/instanceProperties.html",
+		"/C/expertJavascript/chapter1/constructors.html",
+		"/C/expertJavascript/chapter1/powerOfPrototype2.html",
+		"/C/expertJavascript/chapter1/powerOfPrototype.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/sampleApplicationActiviyiFile.java",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/additionsToAndroidManifest.xml",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/sampleApplicationFileApp.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/htmlFileForMobileApp.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/phonegapFilewriterExample.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/listeningForTheDevicereadyEvent.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/validatingAndApplyingPlayerMoves.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/lawnchairRemoveAndNukeExamples.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/applicationLandingPageCode.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/clientSideCodeToSendAndReceiveChatMessages.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/coffeekupTemplate.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/creatingAGameRoom.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/movingBetweenGameRooms.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/nowClientCode.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/serverSideCodeToSendAndReceiveChatMessages.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/socketHelloWorld.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/basicJoApplication.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/displayingACanvasInJo.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/lawnchairSaveAndGetExamples.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/lawnchairEachExample.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter10/creatingALawnchairStore.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter9/nowDemoApplicationFile.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/advanceRoutes.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/generatedHtmlCode.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/simpleCoffeekupPage.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/loggingSessionVisitCount.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/expressApplication.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/helloNode.js",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/extendingCoffeeScript.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/humanCoffeeScript.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/summationCoffeeScript.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/circleCoffeeScript.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/ShapeBuilderExample.java",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/SurfaceExample.java",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/hostPageforMyfirstPageClass.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/RImage.java",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter8/gwtHelloWorld.java",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter7/creatingStatsElement.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter7/bubbleParticleSystem.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter7/updatingTheWorld.html",
+		"/C/Tomcat 7.0/webapps/learninghtml5gameprogramming/chapter7/drawingASphereRigidBody.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tab",
+			"switch",
+			"yield",
+			"result",
+			"user",
+			"item5",
+			"text",
+			"button",
+			"text",
+			"item2",
+			"17950",
+			"1800",
+			"4600",
+			"6100",
+			"5650",
+			"item2",
+			"itemd2",
+			"item2",
+			"1000",
+			"item2",
+			"3000",
+			"item2",
+			"item1",
+			"argument",
+			"Things",
+			"i",
+			"a",
+			"square",
+			"person",
+			"argument",
+			"100",
+			"i",
+			"_endColor",
+			"to",
+			"from",
+			"form",
+			"first_argument",
+			"method_name",
+			"this",
+			"funExp",
+			"i",
+			"Document",
+			"true",
+			"hings",
+			"}]\n",
+			"i",
+			"success",
+			"first_argument",
+			"method_name",
+			"isetta",
+			"first_argument",
+			"method_name",
+			"ACCESS_COARSE_LOCATION",
+			"CAMERA",
+			"user",
+			"click",
+			"e",
+			"var",
+			"rgument",
+			"GREEN",
+			"ogg",
+			"Audio",
+			"particleSystem",
+			"fragmentShafe",
+			"argument",
+			"		\n",
+			"Things",
+			"i",
+			"argument",
+			"mode",
+			"40",
+			"rect",
+			"porperty",
+			"rolloverTimeline",
+			"true",
+			"minimax",
+			"argument",
+			"chapter4",
+			"speed",
+			"Things",
+			"i",
+			"argument",
+			"variable",
+			"i",
+			"Sprite",
+			"nombreClase",
+			"variable",
+			"nombreClase",
+			"variable",
+			"true",
+			"variable",
+			"nombreClase",
+			"variable",
+			"enchant",
+			"nombreClase",
+			"addChild",
+			"variable",
+			"nombreClase",
+			"variable",
+			"nombreClase",
+			"variable",
+			"x",
+			"Event",
+			"variable",
+			"x",
+			"Things",
+			"i",
+			"y",
+			"i",
+			"argument",
+			"x",
+			"argument",
+			"variable",
+			"20",
+			"32",
+			"enchant",
+			"variable",
+			"32",
+			"enchant",
+			"argument",
+			"variable",
+			"i",
+			"enchant",
+			"variable",
+			"width",
+			"x",
+			"x = Math.max(game.width, x + map.width) - map.width;",
+			"argument"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								923,
+								923
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.stino_log":
+	{
+		"height": 100.0
+	},
+	"project": "impressjs.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 199.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
