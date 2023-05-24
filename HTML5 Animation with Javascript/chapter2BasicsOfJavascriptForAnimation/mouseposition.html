@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mouse Position</title>
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400"></canvas>
+	<!-- <script src="utils.js"></script> -->
+	<script>
+		window.onload = function () {
+			var canvas = document.getElementById('canvas');
+			var mouse = captureMouse(canvas);
+			canvas.addEventListener('mousedown', function () {
+				console.log("x: "+ mouse.x +", y: "+ mouse.y);
+			}, false);
+		}
+
+		var captureMouse = function (element) {
+			var mouse = {x: 0, y: 0};
+			element.addEventListener('mousemove', function (event) {
+				var x, y;
+				if (event.pageX || event.pageY) {
+					x = event.pageX;
+					y = event.pageY;
+				} else {
+					x = event.clientX + document.body.scrollLeft +
+					document.documentElement.scrollLeft;
+					y = event.clientY + document.body.scrollTop +
+					document.documentElement.scrollTop;
+				}
+
+				x -= element.offsetLeft;
+				y -= element.offsetTop;
+
+				mouse.x = x;
+				mouse.y = y;
+
+			}, false);
+
+			return mouse;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trigonometry Functions</title>
+</head>
+<body>
+	<script>
+		console.log(Math.sin(30));
+		console.log(Math.sin(30 * Math.PI / 180));
+		console.log(Math.sin(-30 * Math.PI / 180));
+		console.log(Math.cos(-30 * Math.PI / 180));
+		console.log(Math.tan(-30 * Math.PI / 180));
+		console.log(Math.asin(0.5) * 180 / Math.PI);
+		console.log(Math.acos(0.5) * 180 / Math.PI);
+		console.log(Math.tan(0.577) * 180 / Math.PI);
+		console.log(Math.atan2(1, 2) * 180 / Math.PI);
+		console.log(Math.atan2(-1, -2) * 180 / Math.PI);
+
+		// waves
+		for (var angle = 0; angle < Math.PI*2; angle+= 0.1) {
+			console.log(Math.sin(angle));
+		}
+	</script>
+</body>
+</html>

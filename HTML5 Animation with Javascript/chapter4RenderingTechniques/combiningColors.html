@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hexadecimal Color Value</title>
+</head>
+<body>
+	<script>
+	// color = red << 16 | green << 8 | blue;
+
+	// var color = 0xff << 16 | 0x55 << 8 | 0xf3;
+	// var color = 255 << 16 | 85 << 8 | 243;
+
+	// red = color >> 16 & 0xff;
+	// green = color >> 8 & 0xff;
+	// blue = color & 0xff;
+
+	var r = 0xff,
+		g = 0x55,
+		b = 0xf3,
+		a = 0.2,
+		color = "rgba("+r+", "+g+", "+b+", "+a+")";
+	console.log(color);
+	
+	</script>
+</body>
+</html>

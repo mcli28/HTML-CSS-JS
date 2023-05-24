@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Random 5</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400"></canvas>
+	<script>
+		window.onload = function () {
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d'),
+				numDots = 300;
+
+			while (numDots--){
+				var x1 = Math.random() * canvas.width,
+					x2 = Math.random() * canvas.width,
+					x = (x1 + x2) / 2,
+					y = canvas.height / 2 + Math.random() * 50-25;
+				// draw circle
+				context.fillStyle = "#000000";
+				context.beginPath();
+				context.arc(x, y, 2, 0, (Math.PI*2), true);
+				context.closePath();
+				context.fill();
+			}
+		}
+	</script>
+</body>
+</html>

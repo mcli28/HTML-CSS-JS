@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rotation</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600"></canvas>
+	<script src="arrow.js"></script>
+	<script>
+		var canvas = document.getElementById('canvas');
+		var context = canvas.getContext('2d');
+		var flecha = new Arrow();
+		flecha.draw(context);
+	</script>
+</body>
+</html>

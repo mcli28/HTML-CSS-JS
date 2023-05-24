@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Timer</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400"></canvas>
+	<script src="utils.js"></script>
+	<script src="ball.js"></script>
+	<script>
+		window.onload = function () {
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d'),
+				ball = new Ball(),
+				fps = 30;
+
+			ball.y = canvas.height / 2;
+			ball.vx = 5;
+
+			function drawFrame () {
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				ball.x += ball.vx;
+				ball.draw(context);
+			}
+			window.setInterval(drawFrame, 1000/fps);
+		}
+	</script>
+</body>
+</html>

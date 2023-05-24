@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Random 7</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400"></canvas>
+	<script>
+		window.onload = function () {
+			var canvas = document.getElementById('canvas'),
+				context = canvas.getContext('2d'),
+				numDots = 300,
+				iterations = 6;
+
+			while (numDots--){
+				for (var i = 0, xpos = 0; i < iterations; i++) {
+					xpos += Math.random() * canvas.width;
+				}
+				for (var j = 0, ypos = 0; j < iterations; j++) {
+					ypos += Math.random() * canvas.height;
+				}
+				var x = xpos / iterations,
+					y = ypos / iterations;
+				// draw circle
+				context.fillStyle = "#000000";
+				context.beginPath();
+				context.arc(x, y, 2, 0, (Math.PI*2), true);
+				context.closePath();
+				context.fill();
+			}
+		}
+	</script>
+</body>
+</html>
