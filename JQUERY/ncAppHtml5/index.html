@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>NinjaCode.tv</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.0.css">
+	<link rel="stylesheet" type="text/css" href="jquery.mobile.theme-1.3.0.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.mobile.js"></script>
+	<script type="text/javascript" src="initial.js"></script>
+</head>
+<body>
+	<!--first page-->
+	<div data-role="page" id="loginpage">
+		<div data-role="header">
+			<h1>Login ninjacode.tv app</h1>
+		</div>
+		<div data-role="content">
+			<nav data-role="navbar">
+				<ul>
+					<li>hola</li>
+					<li>hola2</li>
+				</ul>
+			</nav>
+			<form>
+				<label for="user">User</label>
+				<input type="text" id="user" name="name" value="" />
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" value="" />
+			</form>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a id="login" data-role="button" data-theme="a">login</a>
+				<a id="register" data-role="button" data-theme="a" href="#registerpage">register</a>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h3>footer</h3>
+			</div>
+		</div>
+	</div>
+	<!--second page-->
+	<div data-role="page" id="registerpage">
+		<div data-role="header">
+			<h1>Login ninjacode.tv app</h1>
+		</div>
+		<div data-role="content">
+			<form>
+				<label for="user">User</label>
+				<input type="text" id="user" name="name" value="" />
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" value="" />
+			</form>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a id="login" data-role="button" data-theme="b">save</a>
+				<a id="register" data-role="button" data-theme="b" href="#loginpage">cancel</a>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h3>footer</h3>
+			</div>
+		</div>
+	</div>
+
+	<!--third page-->
+	<div data-role="fieldcontain">
+		<label for="slider">label</label>
+		<input type="range" name="slider" id="slider" value="25" min="0" max="100" />
+	</div>
+</body>
+</html>

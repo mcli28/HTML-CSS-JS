@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="jquery182.js">
+		$(document).on("ready", function () {
+			$("#f1").on("submit", function (evento) {
+				evento.preventDefault();
+				alert($(this).children("input:first").val());
+			});
+		});
+	</script>
+</head>
+<body>
+	<form id="f1">
+		nombre:<input type="text" name="nombre"><br>
+		edad:<input type="text" name="edad"><br>
+		<select name="sexo">
+			<option value="h">hombre</option>
+			<option value="m">mujer</option>
+		</select>
+		<input type="submit" value="enviar">
+	</form>
+</body>
+</html>
