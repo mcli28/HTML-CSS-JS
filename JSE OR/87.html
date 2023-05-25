@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>87</title>
+</head>
+<body>
+	<script>
+	var x = false; 
+	var foo = function () {
+		var x = false;
+		bar = function () {
+			var x = true;
+			console.log(x);
+		}();
+	}
+	foo();
+	</script>
+</body>
+</html>

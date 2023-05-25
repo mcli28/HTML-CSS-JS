@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>77</title>
+</head>
+<body>
+	<script>
+	var myObject = {
+		myProperty: 'i can see the light',
+		myMethod: function () {
+			var that = this;
+			var helperFunction = function () {
+				console.log(that.myProperty);
+				console.log(this);
+			}();
+		}
+	}
+
+	myObject.myMethod();
+	</script>
+</body>
+</html>

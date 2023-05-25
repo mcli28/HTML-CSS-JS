@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter8 99y100</title>
+</head>
+<body>
+	<script>
+		var Person = function () {}
+		Person.prototype.legs = 2;
+		Person.prototype.arms = 2;		
+		Person.prototype.countLimbs = function () {return this.legs + this.arms;}
+		var chuck = new Person();
+		console.log(chuck.countLimbs());
+	</script>
+</body>
+</html>

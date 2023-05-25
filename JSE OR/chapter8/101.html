@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter8 101</title>
+</head>
+<body>
+	<script>
+		var Person = function () { this.bar = 'bar';}
+		Person.prototype.foo = 'foo';
+		var Chef = function () { this.goo = 'goo';}
+		Chef.prototype = new Person();
+		var cody = new Chef();
+
+		console.log(cody.foo);
+		console.log(cody.goo);
+		console.log(cody.bar);		
+
+	</script>
+</body>
+</html>

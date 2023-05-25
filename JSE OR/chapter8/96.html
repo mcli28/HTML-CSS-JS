@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter8</title>
+</head>
+<body>
+	<script>
+		Object.prototype.foo = 'object-foo';
+		Array.prototype.foo = 'array-foo';
+		var myArray = [];
+		console.log(myArray.foo);
+		myArray.foo = 'bar';
+		console.log(myArray.foo);
+	</script>
+</body>
+</html>

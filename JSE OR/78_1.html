@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>78_1</title>
+</head>
+<body>
+	<script>
+	var myObject = {};
+
+	var myFunction = function (param1, param2) {
+		this.foo = param1;
+		this.bar = param2;
+		console.log(this);
+	}
+	
+	myFunction.apply(myObject, ['foo', 'bar']);
+	console.log(myObject);
+	</script>
+</body>
+</html>

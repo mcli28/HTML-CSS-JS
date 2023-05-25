@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter8</title>
+</head>
+<body>
+	<script>
+		var Foo = function Foo () {}
+		Foo.Prototype = {constructor:Foo};
+		var FooInstance = new Foo();
+		console.log(FooInstance.constructor === Foo);
+		console.log(FooInstance.constructor);
+	</script>
+</body>
+</html>

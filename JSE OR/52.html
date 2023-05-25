@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>52</title>
+</head>
+<body>
+	<script>
+	var addFunction = new Function('num1', 'num2', 'return num1 + num2');
+	var timesFunction = new Function('num1, num2', 'return num1 * num2');
+	console.log(addFunction(2, 2), timesFunction(2, 2));
+
+	var addFunction = function (num1, num2) { return num1 + num2;}
+	function addFunction (num1, num2) {	return num1 + num2;}
+	</script>
+</body>
+</html>

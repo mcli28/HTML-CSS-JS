@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>75</title>
+</head>
+<body>
+	<script>
+	window.foo = 'foo';
+	window.myObject = {foo: 'i am myObject.foo'}
+	window.sayFoo = function () {
+		console.log(this.foo);
+	}
+	window.myObject.sayFoo = window.sayFoo;
+	window.myObject.sayFoo();
+	window.sayFoo();
+	
+	</script>
+</body>
+</html>

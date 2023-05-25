@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>88</title>
+</head>
+<body>
+	<script>
+
+	var parentFunction = function () {
+		var foo = 'foo';
+		return function () {
+			console.log(foo);
+		}
+	}
+
+	var nestedFunction = parentFunction();
+
+	nestedFunction();
+	</script>
+</body>
+</html>

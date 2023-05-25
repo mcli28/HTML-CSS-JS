@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>65</title>
+</head>
+<body>
+	<script>
+	var countDownFrom = function countDownFrom (num) {
+		console.log(num);
+		num--;
+		if (num < 0) { return false; }
+		countDownFrom(num);
+	}
+	countDownFrom(5);
+	</script>
+</body>
+</html>

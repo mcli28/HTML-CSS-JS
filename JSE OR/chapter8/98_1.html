@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter8 98_1</title>
+</head>
+<body>
+	<script>
+		var Foo = function Foo () {}
+		Foo.prototype = {x:1};
+		var FooInstance = new Foo();
+		console.log(FooInstance.x);
+		Foo.prototype.x = 2;
+		console.log(FooInstance.x);
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>54y55</title>
+</head>
+<body>
+	<script>
+		var funcA = function () {}
+		var funcB = [function () {}];
+		var funcC = {method: function () {}}
+
+		var funcD = function (func) {
+			return func;
+		}
+
+		var runFuncPassedToFuncD = funcD(function () { console.log('hi'); });
+
+		runFuncPassedToFuncD();
+
+		var funcE = function () {}
+		funcE.answer = 'yup';
+		console.log(funcE.answer);
+
+	</script>
+</body>
+</html>

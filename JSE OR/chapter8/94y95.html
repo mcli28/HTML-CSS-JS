@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter8</title>
+</head>
+<body>
+	<script>
+		Array.prototype.foo = 'foo';
+		var myArray = new Array();
+		console.log(myArray.constructor.prototype.foo);
+		console.log(myArray.foo);
+	</script>
+</body>
+</html>

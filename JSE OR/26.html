@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>26</title>
+</head>
+<body>
+	<script>
+		
+		var CustomConstructor = function CustomConstructor (){ return 'Wow!'}
+		var instanceOfCustomObject = new CustomConstructor();
+
+		console.log(instanceOfCustomObject.constructor === CustomConstructor);
+
+		console.log(instanceOfCustomObject.constructor);
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>56_1</title>
+</head>
+<body>
+	<script>
+
+	var myObject1 = {
+		name: 'myObject1',
+		myMethod: function () {	console.log(this); }
+	};
+
+	myObject1.myMethod();
+
+	var myObject2 = function () { console.log(this); }
+
+	myObject2();
+
+	</script>
+</body>
+</html>

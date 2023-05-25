@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>59</title>
+</head>
+<body>
+	<script>
+
+	var addConstructor = new Function ('x', 'y', 'return x + y');
+
+	function addStatement (x, y) {
+		return x + y;
+	}
+
+	var addExpression = function (x, y) {
+		return x + y;
+	}
+
+	console.log(addConstructor(2,2), addStatement(2,2), addExpression(2,2));
+
+	</script>
+</body>
+</html>

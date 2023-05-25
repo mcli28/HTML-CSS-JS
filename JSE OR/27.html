@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>27</title>
+</head>
+<body>
+	<script>
+		var CustomConstructor = function () { this.foo = 'bar'; }
+		var instanceOfCustomObject = new CustomConstructor();
+		console.log(instanceOfCustomObject instanceof CustomConstructor);
+		console.log(new Array('foo') instanceof Array);
+	</script>
+</body>
+</html>

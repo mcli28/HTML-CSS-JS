@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>74 y 75</title>
+</head>
+<body>
+	<script>
+	var foo = 'foo';
+	var myObject = {foo: 'i am myObject.foo'}
+	var sayFoo = function () {
+		console.log(this['foo']);
+	}
+	myObject.sayFoo = sayFoo;
+	myObject.sayFoo();
+	sayFoo();
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>60y61</title>
+</head>
+<body>
+	<script>
+
+	var myFunction = function () { return 'foo'; }
+	console.log(myFunction());
+
+	var myObject = { myFunction: function () { return 'bar'; }}
+	console.log(myObject.myFunction());
+
+	var Cody = function () {
+		this.living = true;
+		this.age = 33;
+		this.gender = 'male';
+		this.getGender = function () { return this.gender;}
+	}
+
+	var cody = new Cody();
+	console.log(cody);
+
+	var greet = {
+		runGreet: function () {
+			console.log(this.name,arguments[0],arguments[1]);
+		}
+	}
+
+	var cody = {name: 'cody'}
+	var lisa = {name: 'lisa'}
+
+	greet.runGreet.call(cody, 'foo', 'bar');
+
+	greet.runGreet.apply(lisa, ['foo', 'bar']);
+
+	</script>
+</body>
+</html>

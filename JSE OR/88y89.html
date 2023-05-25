@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>88</title>
+</head>
+<body>
+	<script>
+		var countUpFromZero = function () {
+			var count = 0;
+			return function () {
+				return ++count;
+			}
+		}();
+
+		console.log(countUpFromZero());
+		console.log(countUpFromZero());
+		console.log(countUpFromZero());
+	</script>
+</body>
+</html>

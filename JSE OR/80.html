@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>80</title>
+</head>
+<body>
+	<script>
+
+	var Person = function (x) {
+		if (x) { this.fullName = x;}
+	}
+	
+	Person.prototype.whatIsMyFullName = function () {
+		return this.fullName;
+	}
+
+	var cody = new Person('cody lindley');
+	var lisa = new Person('lisa lindley');
+
+	console.log(cody.whatIsMyFullName(), lisa.whatIsMyFullName());
+
+	Object.prototype.fullName = 'john doe';
+	var john = new Person();
+	console.log(john.whatIsMyFullName());
+	</script>
+</body>
+</html>

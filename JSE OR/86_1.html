@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>86_1</title>
+</head>
+<body>
+	<script>
+	var x = 10;
+	var foo = function () {
+		var y = 20;
+		var bar = function () {
+			var z = 30;
+			console.log(z+y+x);
+		}();
+	}()
+
+	foo();
+	</script>
+</body>
+</html>

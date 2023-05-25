@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter8 100</title>
+</head>
+<body>
+	<script>
+		var Person = function (legs, arms) {
+			if (legs !== undefined) {this.legs = legs;}
+			if (arms !== undefined) {this.arms = arms;}
+		}
+
+		Person.prototype.legs = 2;
+		Person.prototype.arms = 2;
+		Person.prototype.countsLimbs = function () {return this.legs + this.arms;}
+
+		var chuck = new Person(0, 0);
+		console.log(chuck.countsLimbs());
+	</script>
+</body>
+</html>

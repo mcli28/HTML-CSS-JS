@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>76</title>
+</head>
+<body>
+	<script>
+	var myObject = {
+		func1: function () {
+			console.log(this);
+			var func2 = function () {
+				console.log(this);
+				var func3 = function () {
+					console.log(this);
+				}();
+			}();
+		}
+	}
+
+	myObject.func1();
+	</script>
+</body>
+</html>
