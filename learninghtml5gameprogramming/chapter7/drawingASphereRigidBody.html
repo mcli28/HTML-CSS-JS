@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+</head>
+<body>
+	<script>
+		var body = new jigLib,JSphere(null, 8);
+		body.set_mass(8);
+		body.moveTo(jigLib.Vector3DUtil.create(sphere.position.x, sphere.position.y, sphere.position.z, 0));
+		//body.moveTo([sphere.position.x, sphere.position.y, sphere.position.z, 0]);
+
+		system.addBody(body);
+		sphere.rigidBody = body;
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+	<script src="../jquery1110.js"></script>
+	<style>
+		#menubar{
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<div id="menubar">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, reiciendis sunt laborum praesentium voluptatibus ipsum labore enim quia obcaecati? Placeat iste cum corporis autem possimus totam facilis dolore neque deleniti.</div>
+	<script>
+		$(document).ready(function () {
+			$("#menubar").bind("click", function () {
+				console.log("Clicked on menu bar.");
+			});
+			$("#menubar").click(function () {
+				console.log("Clicked on menu bar.");
+			});
+		});
+	</script>
+</body>
+</html>

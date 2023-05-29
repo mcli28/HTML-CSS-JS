@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+</head>
+<body>
+	<script>
+		var plane = new THREE.Mesh(
+			new THREE.Plane(75, 75, 10, 10);
+			new THREE.MeshLambertMaterial({
+				color: 0x222222
+				});
+		);
+		
+		plane.translateY(-10);
+		plane.rotation.x = -70;
+		scene.addObject(plane);
+
+		var ground = new jigLib.JPlane();
+		ground.set_y(-10);
+		ground.set_rotation;
+		ground.set_movable(false);
+		system.addBody(ground);
+		plane.rigidBody = ground;
+
+	</script>
+</body>
+</html>

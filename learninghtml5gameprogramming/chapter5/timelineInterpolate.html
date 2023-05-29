@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+	<script src="../trident.js"></script>
+</head>
+<body>
+	<span id="myspan" onmouseover="rolloverTimeline.play();" onmouseout="rolloverTimeline.playReverse();">some text Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+	<script>
+		var rolloverTimeline = new Timeline(myspan.style);
+		rolloverTimeline.addPropertiesToInterpolate([
+			{
+				porperty: "font-size", from: 16, to: 36,
+				interpolator: new IntPropertyInterpolator()
+		}]);
+		rolloverTimeline.duration = 2000;
+	</script>
+</body>
+</html>

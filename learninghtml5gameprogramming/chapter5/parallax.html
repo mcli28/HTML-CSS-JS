@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+	<script src="../trident.js"></script>
+</head>
+<body>
+	<span id="keyframespan" onmouseover="keyframeTimeline.play();" onmouseout="keyframeTimeline.playReverse();">some text Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+	<script>
+		var keyframeTimeline = new Timeline(keyframespan.style);
+
+		self.setupTimeline = function () {
+			self.parallaxTimeline = new Timeline(this);
+			self.parallaxTimeline.duration = 5000;
+			self.parallaxTimeline.addEventListener("onpulse", function (timeline, durationFraction, timelinePosition) {
+				var ctx 0 self.context;
+				ctx.clearRect(0, 0, 320, 200);
+				ctx.drawImage(document.images[0], 0, 0);
+				self.drawLayer(timelinePosition, document.images[1]);
+				self.drawLayer(timelinePosition, document.images[2]);
+				self.drawLayer(timelinePosition, document.images[3]);
+			});
+			self.parallaxTimeline.playInfiniteLoop(RepeatBehavior.LOOP);
+		}
+
+		self.drawLayer = function (position, image) {
+			var ctx = self.context;
+			var startX = position*image.width;
+			var pixelsLeft = image.width - startX;
+			var pixelsToDraw;
+			ctx.drawImage(image, startX, 0, pixelsLeft, 200, 0, 0, pixelsLeft, 200);
+			if (pixelsLeft < 320) {
+				pixelsToDraw = image.width - pixelsLeft;
+				ctx.drawImage(image, 0, 0, pixelsToDraw, 200, pixelsLeft-1, 0, pixelsToDraw, 200);
+			}
+			ctx.save();
+			ctx.fillStyle = "rgb(150,150,0)";
+			ctx.shadowOffsetX = yellowOffset.x;
+			ctx.shadowOffsetY = yellowOffset.y;
+			ctx.beginPath();
+			ctx.rect(400, 200, 200, 200)
+			ctx.fill();
+			ctx.restore();
+		}
+
+		self.init = function () {
+			var self = this;
+			self.current = 0;
+			self.spriteTimeline = new Timeline(this);
+			self.spriteTimeline.addPropertiesToInterpolate([
+				{
+					property: "current", from: 0, to: 36,
+					interpolator: new IntPropertyInterpolator()
+				}]);
+			self.spriteTimeline.duration = 5000;
+			self.spriteTimeline.addEventListener(onpulse, function (Timeline, durationFraction, timelinePosition) {
+				self.drawSprite();
+			});
+			self.spriteTimeline.play();
+		}
+
+		self.drawSprite = function () {
+			var ctx = self.context;
+			var row = 3;
+			ctx.clearRect(0, 0, 128, 128);
+			ctx.drawImage(self.sheet, self.current * 128, row * 128, 128, 128, 0, 0, 128, 128);
+		}
+
+//		keyframeTimeline.addPropertiesToInterpolate([
+//			{
+//				property: "font-size", from: 16, to: 36,
+//				interpolator: new IntPropertyInterpolator()
+//			},
+//			{
+//				property: "color",
+//				goingTrough: {
+//					0: "rgb(0, 0, 0)",
+//					0.4: "rgb(0, 255, 0)",
+//					1: "rgb(200, 140, 140)"
+//			},
+//				interpolator: new RGBPropertyInterpolator()
+//			}
+//		]);
+//		keyframeTimeline.duration = 3000;
+	</script>
+</body>
+</html>

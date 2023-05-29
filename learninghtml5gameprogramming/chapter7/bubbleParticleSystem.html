@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+</head>
+<body>
+	<script>
+		
+		ballTexture = THREE.ImageUtils.LoadTexture("ball.png");
+		var material = new THREE.ParticleBasicMaterial({
+			size: 52,
+			depthFalse: false,
+			transparent: true,
+			map: ballTexture; 
+		});
+
+		randX = Math.random()*100;
+		randY = Math.random()*100;		
+		randZ = Math.random()*100;
+
+		for (var i = 0; i < numParticles; i++) {
+			geometry.vertices.push(v(randX, randY, randZ));
+		}
+
+		particleSystem = new THREE.ParticleSystem(geometry, material);
+
+		scene.addObject(particleSystem);
+
+	</script>
+</body>
+</html>

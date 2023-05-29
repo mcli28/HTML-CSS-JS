@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+</head>
+<body>
+	<script>
+		var shaderMaterial = new THREE.MeshShaderMaterial({
+			vertexShader: $('#vertexShader').get(0).innerHTML,
+			fragmentShader: $('#fragmentShader').get(0).innerHTML
+		});
+	</script>
+</body>
+</html>

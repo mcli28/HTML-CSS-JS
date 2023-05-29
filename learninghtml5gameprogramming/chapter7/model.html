@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+</head>
+<body>
+	<script>
+		
+		function drawCube () {
+			var loader = new THREE.JSONLoader();
+			loader.load({model: "cube.js", callback: createScene1});
+		}
+
+		function createScene1 (geometry) {
+			geometry.materials[0][0].shading = THREE.FlatShading;
+			mesh = THREE.SceneUtils.addMesh(
+				scene, geometry,
+				250, 400, 0, 0, 0, 0, 0, geometry.materials[0]
+			);
+		}
+
+	</script>
+</body>
+</html>

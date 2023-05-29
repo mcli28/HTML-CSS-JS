@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+</head>
+<body>
+	<script>
+		function Car () {
+			var self = this;
+			self.speed = 0;
+			self.start = function () {
+				console.log("Car started.");
+			}
+			self.accelerate = function () {
+				self.speed = self.speed + 10;
+				console.log("Speed if now:" + self.speed + "mph");
+			}
+			self.applyBrakes = function () {
+				self.speed = 0;
+				console.log("Brakes applied.");
+			}
+		}
+
+		myCar = new Car();
+		myCar.start();
+	</script>
+</body>
+</html>

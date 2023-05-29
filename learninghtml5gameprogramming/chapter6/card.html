@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chpater6</title>
+</head>
+<body>
+	<script>
+		function Card (ordinal, suit) {
+			if (!(this instanceof arguments.callee)) {
+				return new arguments.callee(arguments);
+			}
+			var ord;
+			var suit;
+			var cardBackPath = "";
+			var cardFrontPath = "";
+			var self = this;
+			self.init = function () {
+				var paper = Raphael($("#gameboard")0, 800, 600);
+				self.ord = ordinal;
+				self.suit = suit;
+			}
+			self.createCard = function (ordinal, suit) {}
+			self.init();
+		}
+	</script>
+</body>
+</html>

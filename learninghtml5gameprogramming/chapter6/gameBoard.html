@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter6</title>
+	<script src="../raphael.js"></script>
+</head>
+<body>
+	<div id="gameBoard"></div>
+	<script>
+		var paper = Raphael("gameBoard", 800, 600);
+		var rect = paper.rect(0, 0, 800, 600, 15);
+		rect.attr({
+			fill: '#090',
+			stroke: '#000'
+		});
+		var text = paper.text(600, 50, "Timer");
+	</script>
+</body>
+</html>

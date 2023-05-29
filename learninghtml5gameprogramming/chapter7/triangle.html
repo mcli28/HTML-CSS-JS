@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+	<script src="../Three.js"></script>
+</head>
+<body>
+	<script>
+		geometry = new THREE.Geometry();
+		geometry.vertices.push(new THREE.Vertex(new THREE.Vector3(0, 10, 0)));
+		geometry.vertices.push(new THREE.Vertex(new THREE.Vector3(-10, -10, 0)));
+		geometry.vertices.push(new THREE.Vertex(new THREE.Vector3(10, -10, 0)));
+		geometry.vertices.push(new THREE.Vertex(new THREE.Vector3(10, -10, 0)));
+		geometry.faces.push(new THREE.Face3(0, 1, 2));
+		var triangle = new THREE.Mesh(geometry, geoMaterial);
+
+		new THREE.AmbientLight(hexColor);
+		new THREE.PointLight(hexColor, [intensity], [distance]);
+		new THREE.DirectionalLight(hexColor, [intensity], [distance], [castShadow]);
+
+		function init () {
+			renderer = new THREE.WebGLRenderer();
+			renderer.setSize (WIDTH, HEIGHT);
+		}
+		function animate () {
+			requestAnimationFrame(animate);
+			render();
+		}
+		function render () {
+			renderer.render(scene, camera);
+		}
+
+		var topSegment, middleSegment, bottomSegement;
+		var whiteMaterial;
+		whiteMaterial = new THREE.MeshLamberMaterial({
+			color: 0xffffff;
+		});
+		bottomSegement = new THREE.Mesh(
+			new THREE.Sphere(8, 16, 16), whiteMaterial;
+		);
+		middleSegment = new THREE.Mesh(
+			new THREE.Sphere(6, 16, 16), whiteMaterial;
+		);
+		middleSegment.translateY(10);
+		topSegment = new THREE.Mesh(
+			new THREE.Sphere(5, 16, 16), whiteMaterial;
+		);
+
+		topSegment.translateY(19);
+
+		scene.addChild(topSegment);
+		scene.addChild(middleSegment);
+		scene.addChild(topSegment);		
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@title = "Hello World"
+doctype 5
+html ->
+	head ->
+		title @title
+	body ->
+		div id: 'content', ->
+		div id: 'fragment', ->
+			@body
+
+		coffeescript ->
+				document.getElementById('content').innerText = "Hello World!"

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+</head>
+<body>
+	<script>
+		function initJigLib () {
+			system = jigLib.PhysicsSystem.getInstance();
+			system.setSolverType("FAST");
+			system.setGravity(jigLib.Vector3DUtil.create(0, -9.8, 0, 0));
+		}
+
+	</script>
+</body>
+</html>

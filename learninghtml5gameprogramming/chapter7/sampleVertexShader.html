@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+</head>
+<body>
+	<script id="shader-vs" type="x-shader/x-vertex">
+		#ifdef GL_ES
+		precision highp float;
+		#endif
+
+		void main (void) {
+			gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter7</title>
+</head>
+<body>
+	<script>
+		function updateDynamicsWorld () {
+			var tl = new Date().getTime();
+			var elapsedTime = t1-t0;
+			t0 = t1;
+
+			system.integrate(elapsedTime/1000);
+			for (var i = 0; i < scene.objects.length; i++) {
+				var mesh = scene.objects[i];
+				if (mesh.rigidBody) {
+					var state = mesh.rigidBody.get_currentState();
+					var position = state.position;
+					var orientation = state.get_orientation().glmatrix;
+
+					mesh.position.x = position[0];
+					mesh.position.y = position[1];
+					mesh.position.z = position[2];
+
+					mesh.rotation.x = mesh.rigidBody.get_rotationX();
+					mesh.rotation.y = mesh.rigidBody.get_rotationY();
+					mesh.rotation.z = mesh.rigidBody.get_rotationZ();
+					
+				}
+			}
+		}
+	</script>
+</body>
+</html>

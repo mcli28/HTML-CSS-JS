@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webworkers</title>
+</head>
+<body>
+	<p>the times is now: <span id="result"></span></p>
+	<script>
+		var worker = new Worker('webworker.js');
+		worker.onmessage = function (event) {
+			document.getElementById('result').innerText = event.data;
+		}
+	</script>
+</body>
+</html>

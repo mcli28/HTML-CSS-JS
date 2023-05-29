@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+</head>
+<body>
+	<script>
+		var numChannels = 10;
+		channels = new Array();
+		for (var i = 0; i < numChannels; i++) {
+			channels[i] = new Audio();
+		}
+		var play_multi_channel = function (id) {
+			for (var i = 0; i < channels.length; i++) {
+				if (isNaN(channels[i].duration) || channels[i].currentTime) {
+					channels[i].src = document.getElementById(id).src;
+					channels[i].load();
+					channels[i].play();
+					console.log("Playing on Channel: "+i);
+					break;
+				}
+			}
+		}
+
+		self.playNext = function () {
+			var j = self.currentPosition++;
+			self.audios[j].audio.play();
+			self.audios[j].timeline.play();
+		}
+		
+	</script>
+</body>
+</html>

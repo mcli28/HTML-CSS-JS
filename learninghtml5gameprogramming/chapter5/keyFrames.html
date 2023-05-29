@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter5</title>
+	<script src="../trident.js"></script>
+</head>
+<body>
+	<span id="keyframespan" onmouseover="keyframeTimeline.play();" onmouseout="keyframeTimeline.playReverse();">some text Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+	<script>
+		var keyframeTimeline = new Timeline(keyframespan.style);
+		keyframeTimeline.addPropertiesToInterpolate([
+			{
+				property: "font-size", from: 16, to: 36,
+				interpolator: new IntPropertyInterpolator()
+			},
+			{
+				property: "color",
+				goingTrough: {
+					0: "rgb(0, 0, 0)",
+					0.4: "rgb(0, 255, 0)",
+					1: "rgb(200, 140, 140)"
+			},
+				interpolator: new RGBPropertyInterpolator()
+			}
+		]);
+		keyframeTimeline.duration = 3000;
+	</script>
+</body>
+</html>

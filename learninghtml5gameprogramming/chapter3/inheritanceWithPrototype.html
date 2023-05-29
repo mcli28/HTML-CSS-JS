@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter3</title>
+	<script src="../prototype.js"></script>
+</head>
+<body>
+	<script>
+		var Car = Class.create({
+			initialize: function () {
+				this.type = "Car";
+			},
+			go: function () {
+				console.log("Going...");
+			}
+		});
+
+		var Toyota = Class.create(Car, {
+			initialize: function () {
+				this.type = "Toyota";
+				this.isJapaneseCar = true;
+			},
+			go: function () {
+				console.log("A Toyota car is going...");
+			}
+		});
+	</script>
+</body>
+</html>
