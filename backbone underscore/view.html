@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div>
+		<table>
+			<tr>
+				<td>name:</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>age:</td>
+				<td><input type="text" name="age"></td>
+			</tr>
+			<tr>
+				<td>employed:</td>
+				<td><input type="checkbox" name="employed"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button class="add">Add</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div>
+		<table class="users-table">
+			<thead>
+				<th>name</th>
+				<th>age</th>
+				<th>employed</th>
+				<th>action</th>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+
+	<div class="templates" style="visibility:hidden">
+		<table>
+			<table>
+				<tbody data-template-name="user-row">
+					<tr data-user-id="{{id}}">
+						<td>{{name}}</td>
+						<td>{{age}}</td>
+						<td>{{employed}}</td>
+						<td><button class="delete" data-user-id="{{id}}">Delete</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</table>
+	</div>
+
+	<div class="console"></div>
+
+	<script type="text/javascript" src="jquery182.js"></script>
+	<script type="text/javascript" src="underscore.js"></script>
+	<script type="text/javascript" src="backbone.js"></script>
+	<script type="text/javascript" src="mustache.js"></script>
+	<script type="text/javascript" src="view.js"></script>
+</body>
+</html>

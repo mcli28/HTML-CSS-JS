@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<base href="localhost/backbone/route.html"/>
+	<title></title>
+</head>
+<body>
+	<div class="content">
+	</div>
+	<div class="templates">
+		<!-- Users Table Template -->
+		<div data-tempate-name="users-table">
+			<button class="add">Add</button>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Age</th>
+						<th>Employed</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<!-- User Row Template; Requires all the table or the browser removes the cells -->
+		<div data-template-name="user-form">
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td>
+						<input type="text" name="name" placeholder="User Name" value="{{name}}">
+					</td>
+				</tr>
+				<tr>
+					<td>Age:</td>
+					<td>
+						<input type="text" name="age" placeholder="Age (18+ Only)" value="{{age}}">
+					</td>
+				</tr>
+				<tr>
+					<td>Employed:</td>
+					<td>
+						<input type="ckeckbox" name="employed">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button class="{{buttonClass}}">{{buttonLabel}}</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="console"></div>
+
+	<script type="text/javascript" src="jquery182.js"></script>
+	<script type="text/javascript" src="underscore.js"></script>
+	<script type="text/javascript" src="backbone.js"></script>
+	<script type="text/javascript" src="mustache.js"></script>
+	<script type="text/javascript" src="view.js"></script>
+</body>
+</html>
