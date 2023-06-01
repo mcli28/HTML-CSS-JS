@@ -1,0 +1,38 @@
+body{
+	background: #eaeaea;
+}
+header{
+	background: #58d3f7;
+}
+header ul{
+	float: right;
+	margin-top: 2em;
+	padding: 1em 0;
+}
+header ul li a{
+	color: #fa5858;
+	padding: 0.5em 1em;
+}
+header ul li a:hover{
+	background: #fa5858;
+	color: #fff;
+}
+
+#contenido .post{
+	background: #ccc; 
+	border-bottom: 1px solid #666;
+	margin-bottom: 1em;
+}
+
+#contenido .post h2{
+	color: #222;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+#contenido .post p{
+	color: #222;
+}
+
+footer{
+	background: #58d3f7;
+}
