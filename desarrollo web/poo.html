@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="jquery182.js"></script>
+	<script type="text/javascript">
+	$.fn.figura = function (id, opciones) {
+		var _this = $(this);
+
+		//constructor
+		if(id){
+			//valores por defecto
+			var atributos = {
+				tono : "red",
+				texto : ""
+			}
+
+			$.extend(atributos, opciones);
+
+			var nuevo = "<div id='"+id+"' data-tono='"+atributos.tono+"' class='"+atributos+"'>"+atributos.texto+"</div>";
+
+			_this.append(nuevo);
+			return _this.find("#"+id).figura();
+		}else{
+			var metodos = {
+				//getters
+				getTono : function (){ return _this.attr("data-tono");}
+				getText : function (){ return _this.html();}
+
+				//setters
+				setTono : function (val){
+					_this.removeClass(this.getTono());
+					_this.attr("data-tono", val);
+					_this.addClass(_this.attr.("data-tono"));
+				}
+
+				setText : function () {
+					_this.html(val);
+				}
+
+				duplicate : function (newid) {
+					var nuevo = _this.clone().attr("id", newid);
+					_this.after(nuevo);
+					return _this.parent().find("#"+newid).figura();
+				}
+			}
+			return metodos;
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<section></section>
+
+<script type="text/javascript">
+	var caja = $("section").figura("caja", (tono: "red", texto: "hola"));
+	console.log(caja.getTono());
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="jquery182.js"></script>
+	<script type="text/javascript" src="bigtext.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$("#micapa").bigtext();
+			$("#cambiatexto").click(function (argument) {
+				$("#capainterna").text("ahora pruebo otra cosa");
+				$("#micapa").bigtext();
+			});
+		});
+	</script>
+	<style type="text/css">
+		#micapa {
+			max-width: 500px;
+			width: 50%;
+			background-color: #ccc;
+			margin: 0 auto;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="micapa">
+		<div id="capainterna">stuy</div>
+		<div>dani</div>
+		<div>heli</div>
+	</div>
+	<a href="#" id="cambiatexto">cambia texto</a>
+</body>
+</html>
