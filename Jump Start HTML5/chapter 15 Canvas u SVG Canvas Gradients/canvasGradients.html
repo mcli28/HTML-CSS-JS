@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// create a linear gradient
+	createLinearGradient(x,y,x1,y1)
+	// create a radial gradient
+	createRadialGradient(x,y,r,x1,y1,r1)
+	// create linear gradient
+	var grd = ctx.createLinearGradient(0,0,400,0);
+	grd.addColorStop(0,"blue");
+	grd.addColorStop(1,"yellow");
+	// fill with gradient
+	ctx.fillStyle = grd;
+	ctx.fillRect(40,20,300,160)
+
+	var grd = ctx.createLinearGradient(0,0,0,300);
+	var grd = ctx.createLinearGradient(0,0,100,100);
+
+	// create radial gradient
+	var grd = ctx.createRadialGradient(150,100,10,180,120,200);
+	grd.addColorStop(0,"blue");
+	grd.addColorStop(1,"yellow");
+
+	// fill with gradient
+	ctx.fillStyle = grd;
+	ctx.fillRect(0,0,300,150);
+
+	var grd = ctx.createLinearGradient(35,25,25,190,105,50);
+	grd.addColorStop(0,"red");
+	grd.addColorStop(0.25,"blue");
+	grd.addColorStop(0.3,"yellow");
+	grd.addColorStop(0.35,"magenta");
+	grd.addColorStop(0.4,"green");
+	grd.addColorStop(0.45,"pink");
+	grd.addColorStop(0.5,"gray");
+	grd.addColorStop(1,"white");
+
+	// Fill with gradient
+	ctx.fillStyle=grd;
+	ctx.fillRect(20,20,400,400);
+
+	var grd=ctx.createRadialGradient(35,25,25,190,105,50);
+	</script>
+</body>
+</html>

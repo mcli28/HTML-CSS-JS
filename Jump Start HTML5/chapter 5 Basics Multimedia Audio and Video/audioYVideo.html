@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Video</title>
+	<style>
+		video{
+			width: 960px;
+			height: 540px;
+		}
+	</style>
+</head>
+<body>
+	<video src="path_to_file.video" autoplay loop ></video>
+	<audio src="path_to_file.video" autoplay loop ></audio>
+
+	<video src="path_to_file.video" poster="path_to_poster_image.jpg" width="100%" height="100%"></video>
+
+	<audio controls>
+		<source src="path_to_mpeg3_file.mp3">
+		<source src="path_to_ogg_file.ogg">
+	</audio>
+
+	<audio controls>
+		<source src="path_to_mpeg3_file.mp3" type="audio/mpeg">
+		<source src="path_to_vorbis_file.ogg" type="audio/ogg" codec="vorbis">
+		<source src="path_to_flac_file.ogg" type="audio/ogg" codec="flac">
+	</audio>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <section id="applicationstatus"></section>
+    <section id="application" class="hidden">
+        <form id="addnew">
+            <p>
+                <label for="newitem">
+                What do you need to do today?
+                </label>
+                <input type="text" id="newitem" required autofocus>
+                <button type="submit" id="saveitem">Add</button>
+            </p>
+            <p>
+                <button type="button" id="delete">Delete completed</button>
+            </p>
+        </form>
+        <ul id="list"></ul>
+    </section>
+    <script src="js/appcache.js"></script>
+    <script src="js/todolist.js"></script>
+    <script>
+        var appstatus, app, progress, p;
+        appstatus = document.getElementById('applicationstatus');
+        app = document.getElementById('application');
+        progress = document.createElement('progress');
+        p = document.createElement('p');
+        appstatus.appendChild(p);
+        appstatus.appendChild(progress);
+        /* Create a reusable snippet for updating our messages */
+        function updatemessage(string){
+            var message = document.createTextNode(string);
+            if (p.firstChild) {
+                p.replaceChild(message, p.firstChild)
+            } else {
+                p.appendChild(message);
+            }
+        }
+
+        function checkinghandler(){
+            updatemessage('Checking for an update');
+        }
+        applicationCache.addEventListener('checking', checkinghandler)
+
+        function progresshandler(evt){
+            evt.preventDefault();
+            progress.max = evt.total;
+            progress.value = evt.loaded;
+            updatemessage('Checking for an update');
+        }
+        applicationCache.addEventListener('progress', progresshandler);
+
+        function whendonehandler(evt){
+            evt.preventDefault();
+            appstatus.classList.add('hidden');
+            app.classList.remove('hidden');
+        }
+        applicationCache.addEventListener('cached', whendonehandler);
+        applicationCache.addEventListener('noupdate', whendonehandler);
+
+        function updatereadyhandler(){
+            location.reload();
+        }
+        applicationCache.addEventListener('updateready',updatereadyhandler);
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>localStorage to do list</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form>
+      <p>
+        <label for="newitem">What do you need to do today?</label>
+        <input type="text" id="newitem" required />
+        <button type="submit" id="saveitem">Add</button>
+      </p>
+      <p>
+        <button type="button" id="deletedone">Delete completed</button>
+        <button type="button" id="deleteall">Reset the list</button>
+      </p>
+    </form>
+    <ul id="list"></ul>
+    <script src="js/todolist.js"></script>
+    <script>
+        function addItemToList(itemtxt){
+            var li = document.createElement('li'),
+            list = document.getElementById('list');
+            /* Saves the item to storage */
+            localStorage.setItem(itemtxt, 0);
+            /* Update the innerHTML value of our list item
+            and add as a child of our list */
+            li.innerHTML = itemtxt;
+            list.appendChild(li);
+        }
+
+        var form, updateList;
+        form = document.forms[0];
+        var updateList = function(event){
+            /* Prevent the default action, in this case, form submission */
+            event.preventDefault();
+            /* Invoke the addItemToList function */
+            addItemToList( document.getElementById('newitem').value );
+            /* Clear the input field */
+            document.getElementById('newitem').value = '';
+        }
+        form.addEventListener('submit', updateList);
+
+        function toggleStatus(event){
+            var status;
+            if(event.target.nodeName == 'LI'){
+                /*
+                Using + is a trick to convert numeric strings to numbers.
+                */
+                status = +localStorage.getItem(event.target.textContent);
+                if(status){
+                    localStorage.setItem(event.target.textContent,0);
+                } else {
+                    localStorage.setItem(event.target.textContent,1);
+                }
+                /* Toggle a 'done' class */
+                event.target.classList.toggle('done');
+            }
+        }
+        var list = document.getElementById('list');
+        list.addEventListener('click',toggleStatus);
+
+        localStorage['foo'] = 'bar';
+        console.log(localStorage.foo) // logs 'bar' to the console
+
+        var i = localStorage.length;
+        while( i-- ){ /* As long as i isn't 0, this is true */
+            console.log( localStorage.key(i) );
+        }
+        
+        var i = localStorage.length, key;
+        while( i-- ){
+            key = localStorage.key(i);
+            console.log( localStorage.getItem(key) );
+        }
+
+        function loadList(){
+            var len = localStorage.length;
+            while( len-- ){
+                var key = localStorage.key(len);
+                addItemToList(key, localStorage.getItem(key));
+            }
+        }
+        window.addEventListener('load', loadList);
+
+        function addItemToList(itemtxt, status){
+            var li = document.createElement('li');
+            if(status === undefined){
+                status = 0;
+                localStorage.setItem(itemtxt, status);
+            }
+            if(status == true){ li.classList.add('done'); }
+            li.textContent = itemtxt;
+            list.appendChild(li);
+        }
+
+        function clearAll() {
+            list.innerHTML = '';
+            localStorage.clear();
+        }
+
+        window.addEventListener('storage', storagehandler);
+
+        function storagehandler(event){
+            location.reload();
+        }
+
+        var arrayOfAnimals = ['cat','dog','hamster','mouse','frog','rabbit'];
+        localStorage.setItem('animals', arrayOfAnimals);
+        console.log(localStorage.animals[0])
+
+        var foodcouples = {
+            'ham':'cheese',
+            'peanut_butter':'jelly',
+            'eggs':'toast'
+        }
+        localStorage.setItem(
+            'foodpairs_string',
+            JSON.stringify(foodcouples)
+        );
+
+    </script>
+  </body>
+</html>

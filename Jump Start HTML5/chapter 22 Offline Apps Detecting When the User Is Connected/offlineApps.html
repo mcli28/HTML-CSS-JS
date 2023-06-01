@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Determining Whether the User Is Online
+        if(navigator.onLine){
+            console.log('We are connected!');
+        } else {
+            console.log("We don't have connectivity.");
+        }
+        //Listening for Changes in Connectivity State
+        window.ononline = function(){
+        // Alert the user that connectivity is back.
+        // Or sync local data with server data.
+        }
+        window.onoffline = function(){
+        // Alert the user that connectivity was lost.
+        // Or just silently save data locally.
+        }
+        window.addEventListener('offline', offlineHandler);
+        window.addEventListener('online', onlineHandler);
+
+        //Checking Connectivity With XMLHttpRequest
+        var form = document.querySelector('form');
+        var xhrerrorhandler = function(errorEvent){
+            var i = 0;
+            // Save the value if we have one
+            while(i < form.length){
+                if(form[i].value != ''){
+                    localStorage.setItem(form[i].name, form[i].value);
+                }
+                i++;
+            }
+        }
+
+        submithandler = function(submitEvent){
+            var fd, ls, i=0, key;
+            // Prevent form submission
+            submitEvent.preventDefault();
+            // If we have localStorage data, build a FormData object from it
+            // Otherwise, just use the form
+            if( localStorage.length > 0){
+                fd = new FormData();
+                ls = localStorage.length;
+                while(i < ls){
+                    key = localStorage.key(0);
+                    fd.append(key, localStorage.getItem(key));
+                    i++;
+                }
+            } else {
+                fd = new FormData(form);
+            }
+            // Set a timeout for slow connections
+            xhr.timeout = 3000;
+            xhr.open('POST','return.php');
+            xhr.send(fd);
+            // Set our error handlers.
+            xhr.addEventListener('timeout', xhrerrorhandler);
+            xhr.addEventListener('error', xhrerrorhandler);
+        }
+        form.addEventListener('submit', submithandler);
+        var xhronloadhandler = function(loadEvent){
+            if( loadEvent.target.status >= 400){
+                xhrerrorhandler();
+            } else {
+                // Parse the response.
+            }
+        }
+    </script>
+</body>
+</html>

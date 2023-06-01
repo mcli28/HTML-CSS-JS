@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var c = document.getElementById("MyCanvas");
+		var ctx=c.getContext("2d");
+		var img = document.getElementById("yourimage");
+		ctx.drawImage(img,10,10);
+		ctx.drawImage(img,x,y,width,height);
+		ctx.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
+		// canvas set-up
+		var canvas = document.getElementById('MyCanvas');
+		var ctx = canvas.getContext('2d');
+		// load image from a URL
+		var img = new Image();
+		img.src = "http://mydomain.com/image1.png";
+		// is image loaded?
+		if (img.complete) addToCanvas();
+		else img.onload = addToCanvas;
+		// add image to canvas
+		function addToCanvas() {
+		ctx.drawImage(img,10,10);
+		}
+
+		var video = document.createElement("video");
+		video.src = "yourvideo.mp4";
+		video.controls = true;
+
+		var canvas = document.getElementById('MyCanvas')
+		var ctx = canvas.getContext('2d');
+		// set canvas dimensions to same as video
+		video.onplay = function() {
+		canvas.width = video.videoWidth;
+		canvas.height = video.videoHeight;
+		draw();
+		};
+		// copy frame to canvas
+		function draw() {
+		if(video.paused || video.ended) return false;
+		ctx.drawImage(video, 0, 0);
+		setTimeout(draw, 20);
+		}
+		// start video playback
+		video.play();
+	</script>
+</body>
+</html>

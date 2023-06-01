@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Getting started with Canvas</title>
+<style type="text/css">
+	canvas { border: 1px solid black; }
+</style>
+</head>
+<body>
+<canvas id="MyCanvas" width="300" height="150"></canvas>
+<script>
+	(function() {
+		var canvas = document.getElementById('MyCanvas');
+		if (canvas.getContext){
+			var ctx = canvas.getContext('2d');
+			// ctx.fillStyle="#0000FF";
+			// ctx.fillRect(0,0,300,150);
+			// ctx.fillStyle="#0000FF";
+			// ctx.fillRect(0,0,150,75);
+
+			// ctx.strokeStyle = "#FFFFFF";
+			// ctx.beginPath();
+			// ctx.moveTo(0,0);
+			// ctx.lineTo(300,150);
+			// ctx.stroke();
+
+			// ctx.beginPath();
+			// ctx.arc(95,50,40,0,2*Math.PI);
+			// ctx.stroke();
+
+			// ctx.font = "25px Arial";
+			// ctx.fillText("HTML5 Canvas Rocks!",10,50);
+
+			// ctx.fillStyle= '#0000FF';
+			// ctx.font="Italic 25px Arial";
+			// ctx.fillText("HTML5 Canvas Rocks!",10,50);
+			// ctx.beginPath();
+			// ctx.moveTo(25,25);
+			// ctx.lineTo(105,25);
+			// ctx.lineTo(25,105);
+			// ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(125,125);
+			ctx.lineTo(125,45);
+			ctx.lineTo(45,125);
+			ctx.closePath();
+			ctx.stroke();
+		}
+	})();
+</script>
+</body>
+</html>

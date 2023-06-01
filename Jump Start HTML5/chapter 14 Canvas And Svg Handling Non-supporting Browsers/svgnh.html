@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="MyCanvas" width="150" height="300">
+		<img src="image.jpg" alt="Browser Not Supported" />
+	</canvas>
+	<script>
+		function supports_canvas () {
+			return !!document.createElement('canvas').getContext;
+		}
+
+		var canvas = document.createElement('MyCanvas');
+		if (!canvas.getContext || !canvas.getContext("2d")) {
+			alert("Sorry - canvas is not supported")
+		}
+		else {
+			// start drawing
+			var ctx = canvas.getContext('2d');
+		}
+	</script>
+</body>
+</html>

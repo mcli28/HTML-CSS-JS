@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>upload</title>
+	<style>
+		input[required], input:required{
+			border: 1px solid #c00;
+		}
+	</style>
+</head>
+<body>
+	<form action="/script" method="post" enctype="multipart/form-data">
+		<p>
+			<label for="upload">Your file(s):</label>
+			<input type="file" name="upload" id="upload" multiple
+				accept=".mp3, .ogv">
+		</p>
+		<p>
+			<button type="submit">Send it!</button>
+		</p>
+	</form>
+	
+</body>
+</html>

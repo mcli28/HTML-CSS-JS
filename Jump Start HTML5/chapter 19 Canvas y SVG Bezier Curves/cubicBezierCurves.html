@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubic Bezier Curves</title>
+</head>
+<body>
+    <svg width="1200" height="500" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <!-- cubic bezier curves -->
+        <path id="cubic1" d="M 100 350 c 150 -300 150 -300 300 0" stroke="red" stroke-width="5" fill="none"/>
+        <path id="cubic2" d="M 450 350 c 200 -300 100 -300 300 0" stroke="red" stroke-width="5" fill="none"/>
+        <path id="cubic3" d="M 800 350 c 100 -300 200 -300 300 0" stroke="red" stroke-width="5" fill="none"/>
+        <!-- show control points -->
+        <g stroke="blue" stroke-width="3" fill="blue">
+            <!-- left curve -->
+            <circle cx="250" cy="50" r="3"/>
+            <!-- middle curve control points -->
+            <circle cx="650" cy="50" r="3"/>
+            <circle cx="550" cy="50" r="3"/>
+            <!-- right curve control points -->
+            <circle cx="900" cy="50" r="3"/>
+            <circle cx="1000" cy="50" r="3"/>
+        </g>
+        <!-- text -->
+        <g font-size="30" font="sans-serif" fill="red" stroke="none" text-anchor="middle">
+            <text x="250" y="50" dy="-10"></text>
+            <text x="650" y="50" dy="-10">CP1</text>
+            <text x="550" y="50" dy="-10">CP2</text>
+            <text x="900" y="50" dy="-10">CP2</text>
+            <text x="1000" y="50" dy="-10">CP1</text>
+        </g>
+    </svg>
+</body>
+</html>

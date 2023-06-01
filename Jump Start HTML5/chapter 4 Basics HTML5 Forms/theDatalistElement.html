@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Datalist element</title>
+	<style>
+		input[required], input:required{
+			border: 1px solid #c00;
+		}
+	</style>
+</head>
+<body>
+	<datalist id="where_we_fly">
+		<option>Accra, Ghana</option>
+		<option>Paris, France</option>
+		<option>Melbourne, Australia</option>
+		<option>Lima, Peru</option>
+		<option>Los Angeles, United States</option>
+		<option>Kuala Lumpur, Malaysia</option>
+	</datalist>
+	<p>
+		<label for="destination">Where would you like to go?</label>
+		<input type="text" name="destination" id="destination" value="" list="where_we_fly">
+	</p>
+
+	<input type="range" value="" id="slider" min="0" max="100" step="10">
+	<input type="search">
+	<input type="number" name="num" id="num" value="" step=".05">
+	<input type="number" name="num" id="num" value="" step=".01">
+	<input type="number" name="num" id="num" value="" step=".001">
+	<input type="color">
+	<script>
+	var hasRange = function(slider){
+		return document.getElementById('slider').type == 'range';
+	}
+	</script>
+</body>
+</html>

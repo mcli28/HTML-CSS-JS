@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TRACK</title>
+</head>
+<body>
+	<video src="/path/to/media.file" controls>
+		<track src="/path/to/tracktext.vtt" srclang="en">
+	</video>
+	<video src="/path/to/media.file" controls>
+		<source src="/path/to/media.m4v" kind="video/mp4">
+		<source src="/path/to/media.webm" kind="video/webm">
+		<track src="/path/to/tracktext.vtt" srclang="en">
+	</video>
+	<video src="/path/to/media.file" controls>
+		<track src="/path/to/en-us.vtt" srclang="en-US"
+		label="English - USA">
+		<track src="/path/to/fr.vtt" srclang="fr"
+		label="Français">
+		<track src="/path/to/es-MX.vtt" srclang="es-mx"
+		label="Español - México">
+	</video>
+</body>
+</html>

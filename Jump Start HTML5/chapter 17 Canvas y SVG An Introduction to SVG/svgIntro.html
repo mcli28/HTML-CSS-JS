@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG Intro</title>
+</head>
+<body>
+	<h1>Shapes, Gradients and Patterns</h1>
+	<!-- inline SVG -->
+	<!--<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">-->
+		<!--<circle id="redcircle" cx="100" cy="100" r="100" fill="red" stroke='black' stroke-width='1' fill='red'></circle>-->
+		<!--<line x1="25" y1="150" x2="300" y2="150" stroke='#f00' stroke-width='5'></line>-->
+		<!--<polyline points="0, 40 40, 40 40, 80 80, 80 80, 120 120, 120 120, 160" stroke='#f00' stroke-width='5' fill="#fff"></polyline>-->
+		<!--<rect width='300' height="100" fill="#f00"></rect>-->
+		<!--<ellipse cx="300" cy="80" rx="100" ry="50" fill="#F00"/>-->
+		<!--<polygon points="200,10 250,190 160,210" stroke="#000" stroke-width="1" fill="#F00" />-->
+		<!--<polygon points="100,10 40,180 190,60 10,60 160,180 100,10" stroke="#000" stroke-width="1" fill="pink" />-->
+		<!--<path d="M300,200 h-150 a150,150 0 1,0 150,-150 z"fill="pink" stroke="red" stroke-width="3"/>-->
+		<!--<path d="M275,175 v-150 a150,150 0 0,0 -150,150 z" fill="purple" stroke="red" stroke-width="3"/>-->
+		<!-- define gradient -->
+		<!--<defs>
+			<linearGradient id="MyGradient">
+				<stop offset="10%" stop-color="yellow" />
+				<stop offset="90%" stop-color="blue" />
+			</linearGradient>
+		</defs> -->
+		<!-- use gradient in a circle -->
+		<!--<circle cx="100" cy="100" r="100" fill="url(#MyGradient)" />-->
+	<!--</svg>-->
+	<svg width="800" height="800">
+		<defs>
+			<pattern id="mypattern" x="0" y="0" width="150" height="100" patternUnits="userSpaceOnUse">
+				<circle cx="50" cy="50" r="10" fill="red" stroke="black" />
+				<rect x="100" y="0" width="50" height="50" fill="cyan" stroke="red" />
+			</pattern>
+		</defs>
+		<ellipse fill="url(#mypattern)" stroke="black" stroke-width="1" cx="200" cy="200" rx="200" ry="200" />
+	</svg>
+	<!-- define pattern -->
+	<defs>
+		<pattern id="mypattern" patternUnits="userSpaceOnUse" x="0" y="0" width="50" height="50">
+			<circle cx="25" cy="25" r="25" fill="red" stroke="black" />
+			<rect x="25" y="25" width="25" height="25" fill="cyan" stroke="red" />
+		</pattern>
+	</defs>
+	
+	<!-- use pattern in a circle -->
+	<circle cx="100" cy="100" r="100" fill="url(#MyPattern)" stroke-width="1" stroke="black" />
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scripting</title>
+</head>
+<body>
+	object.onclick = function_to_invoke;
+	object.addEventListener('event_name', function_to_invoke);
+	function function_to_invoke(event){
+		// function body that acts on our event
+	}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+		Scripting an audio and video player
+		</title>
+		<link rel="stylesheet" type="text/css" href="video.css">
+	</head>
+	<body>
+		<div id="video_wrapper">
+			113 Multimedia: Scripting Media Players
+			www.it-ebooks.info
+			<video preload="metadata">
+				<source src="./video_file.mp4" type="video/mp4">
+				<source src="./video_file.webm" type="video/webm">
+			</video>
+			<div id="video_time">
+				<progress value="0" id="playback"></progress>
+				<span id="elapsed"></span> <span id="duration"></span>
+			</div>
+			<div id="video_seek">
+				<label for="seek">Seek</label>
+				<input type="range" id="seek" title="seek" min="0" value="0" max="0">
+			</div>
+			<div id="video_controls">
+				<button type="button" id="play">Play</button>
+				<button type="button" id="pause" class="hidden">
+				Pause
+				</button>
+				<label for="volume">Volume</label>
+				<input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
+			</div>
+		</div>
+		<script type="text/javascript" src="video.js"></script>
+		<script>
+			var video = document.querySelector('video');
+			var video = document.getElementById('my_video');
+			var play = document.getElementById('play');
+			var pause = document.getElementById('pause');
+			var volume = document.getElementById('volume');
+			
+			play.addEventListener('click', clickhandler);
+			pause.addEventListener('click', clickhandler);
+			
+			function clickhandler(event){
+				var id = event.target.id;
+				if( id == 'play' ){
+					video.play();
+				}
+				if( id == 'pause' ){
+					video.pause();
+				}
+			}
+			function updateduration(event){
+				var durationdisplay = document.getElementById('duration'),
+					elapseddisplay = document.getElementById('elapsed');
+				durationdisplay.innerHTML = event.target.duration;
+				elapseddisplay.innerHTML = event.target.currentTime;
+			}
+
+			var seek = document.getElementById('seek'),
+				playback = document.getElementById('playback');
+			function updateseekmax(event){
+				if( event.target.duration ){
+					seek.max = event.target.duration;
+				}
+			}
+			function updateplaybackmax(event){
+				if( event.target.duration ){
+					playback.max = event.target.duration;
+				}
+			}
+
+			function timeupdatehandler(event){
+				var elapsed = document.getElementById('elapsed');
+				elapsed.innerHTML = event.target.currentTime;
+			}
+
+			function seekhandler(event){
+				video.currentTime = event.target.value;
+				playback.value = event.target.value
+			}
+
+			function volumehandler(event){
+				video.volume = event.target.value;
+			}
+
+			function clickhandler(event){
+				var id = event.target.id;
+				if( id === 'play' ){
+					video.play();
+					video.preload = 'metadata';
+				}
+				if( id === 'pause' ){
+					video.pause();
+				}
+			}
+
+			video.addEventListener('durationchange', updateduration);
+			video.addEventListener('durationchange', updateseekmax);
+			video.addEventListener('durationchange', updateplaybackmax);
+			video.addEventListener('timechange', timeupdatehandler);
+			seek.addEventListener('change', seekhandler);
+			volume.addEventListener('change', volumehandler);
+		</script>
+	</body>
+</html>

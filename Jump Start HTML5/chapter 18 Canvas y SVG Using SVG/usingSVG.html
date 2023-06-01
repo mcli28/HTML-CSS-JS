@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Using SVG</title>
+	<style>
+		#myelement {
+			background-image: url(image.svg);
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Using SVG</h1>
+	<object type="image/svg+xml" width="400" height="400" data="image.svg"></object>
+	<embed type="image/svg+xml" width="400" height="400" src="image.svg"></embed>
+	<iframe src="image.svg"></iframe>
+	<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+		<circle id="redcircle" cx="100" cy="100" r="100" fill="red" />
+	</svg>
+	<img src="image.svg" />
+</body>
+</html>
