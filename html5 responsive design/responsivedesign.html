@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" charset="UTF-8" content="text/html">
+	<title>stuy jobs</title>
+	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="mediaqueries.css">
+	<script type="text/javascript" src="jquery182.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			$("#display-languages").on("click", function (){
+				$("#top-box-register").hide();
+				$("#top-box-login").hide();
+				$("#top-box-languages").slideToggle("slow");
+			});
+
+			$("#display-register").on("click", function (){
+				$("#top-box-languages").hide();
+				$("#top-box-login").hide();
+				$("#top-box-register").slideToggle("slow");
+			});
+
+			$("#display-login").on("click", function (){
+				$("#top-box-register").hide();
+				$("#top-box-languages").hide();
+				$("#top-box-login").slideToggle("slow");
+			});
+
+			$("#register-name").on("focus", function (){
+				$("#register-name").val("");
+			});
+
+			$("#register-email").on("focus", function (){
+				$("#register-email").val("");
+			});
+
+			$("#register-password").on("focus", function (){
+				$("#register-password").val("");
+			});
+
+			$("#login-username").on("focus", function (){
+				$("#login-username").val("");
+			});
+
+			$("#login-password").on("focus", function (){
+				$("#login-password").val("");
+			});
+
+			$(this).mouseup(function (login){
+				if (!($(login.target).parents('.toggle').length >0)) {
+					$(".toggle").hide();
+				}
+			});
+
+
+		});
+	</script>	
+</head>
+<body>
+	<header id="topbar-wrapper">
+		<div id="topbar">
+			<nav>
+				<ul>
+					<li class="home"><a href="#">Home</a></li>
+					<li class="codes"><a href="#">Codes</a></li>
+					<li class="jobs"><a href="#">Jobs</a></li>
+					<li class="tv"><a href="#">Codejobs</a></li>
+					<li class="blog"><a href="#">Forums</a></li>
+					<li class="videos"><a href="#">Videos</a></li>
+					<li class="contact"><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div id="top-box-languages" class="toggle">
+				<img src="images/es.png" alt="español">
+				<img src="images/en.png" alt="español">
+				<img src="images/fr.png" alt="español">
+				<img src="images/pt.png" alt="español">
+			</div>
+
+			<div id="top-box-register" class="toggle">
+				<span class="bold">¿eres nuevo en codejobs?, registrate!</span><br>
+
+				<form action="" method="post" class="form-register">
+					<fieldset>
+						<input id="register-name" name="name" type="text" class="register-input" value="nombre completo"><br>
+						<input id="register-email" name="email" type="text" class="register-input" value="correo electronico"><br>
+						<input id="register-password" name="password" type="password" class="register-input" value="contraseña"><br>
+						<input name="register" type="submit" class="register-submit" value="registrate en codejobs"><br>
+
+					</fieldset>
+				</form>
+			</div>
+
+			<div id="top-box-login" class="toggle">
+				<span class="bold">¿tienes cuenta?, inicia sesion</span><br>
+				<form action="#" method="post" class="form-login">
+					<fieldset>
+						<input type="text" id="login-username" class="login-input" name="username" value="nombre de usuario o email">
+						<input type="password" id="login-password" class="login-input" name="password" value="contraseña">
+						<input type="checkbox" value="1" name="remenber">recordar datos <br>
+						<input type="submit" class="login-submit" name="register" value="iniciar sesion">
+					</fieldset>
+				</form>
+			</div>
+
+			<div id="top-box">
+				<ul>
+					<li class="float-right"><a id="display-login" title="iniciar sesion" href="#">iniciar sesion  <img src="arrow-down.png" ></a></li>
+					
+					<li class="float-right"><a id="display-register" title="registrate!" href="">registrate <img src="arrow-down.png" ></a></li>
+					<li class="float-right"> <img src=""><a id="display-languages" title="idioma" href="#">idioma <img src="arrow-down.png"> </a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="wrapper">
+			<div id="logo">
+				<h1>codejobs</h1>
+			</div>
+
+			<nav>
+				<ul>
+					<li class="contact"><a href="#">ajax</a></li>
+					<li class="contact"><a href="#">android</a></li>
+					<li class="contact"><a href="#">backbone.js</a></li>
+					<li class="contact"><a href="#">codeigniter</a></li>
+					<li class="codes"><a href="#">css3</a></li>
+					<li class="contact"><a href="#">database</a></li>
+					<li class="contact"><a href="#">emarketing</a></li>
+					<li class="blog"><a href="#">git &amp; github</a></li>
+					<li class="home"><a href="#">html5</a></li>
+					<li class="contact"><a href="#">ios</a></li>
+					<li class="contact"><a href="#">java</a></li>
+					<li class="contact"><a href="#">android</a></li>
+					<li class="contact"><a href="#">javascript</a></li>
+					<li class="contact"><a href="#">jquery</a></li>
+					<li class="contact"><a href="#">mongodb</a></li>
+					<li class="contact"><a href="#">mysql</a></li>
+					<li class="tv"><a href="#">node.js</a></li>
+					<li class="contact"><a href="#">php</a></li>
+					<li class="contact"><a href="#">python</a></li>
+					<li class="contact"><a href="#">ruby</a></li>
+					<li class="contact"><a href="#">ror</a></li>
+					<li class="contact"><a href="#"></a>social media</li>
+					<li class="jobs"><a href="#">zanphp</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div id="content">
+		<section class="post">
+			<header>
+				<p class="post-image">
+					<img src="">
+				</p>
+				
+				<h2><a href="#" title="nuevo taller de zanphp">nuevo taller de phph</a></h2>
+
+				<p class="small">
+					publicado por <span class="bold">carlos santana</span> el <span class="bold">viernes, 16 de marzo de 2012</span>con 100 comentarios <br>
+					<span class="bold">etiquetas:</span>programacion, zanphp, desarrollo <br>
+					<span class="bold">categorias:</span> talleres / videos
+				</p>
+			</header>
+			<div id="content">
+				<section class="post">
+					<header>
+						<p class="post-image">
+							<img src="">
+						</p>
+						<h2><a href="#" title="nuevo talle de zanphp">nuevo taller de zanphp</a></h2>
+						<p class="small">
+							publicado<span class="bold">carlos santana</span>el 
+							<span class="bold">viernes, 16 de marzo de 2012</span>con
+							100 comentarios <br>
+							<span class="bold">etiquetas:</span>programacion, zanphp
+							desarrollo <br>
+							<span class="bold">categorias:</span>talleres / videos
+						</p>
+					</header>
+
+					<article class="post-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						<p>
+							<img src="" class="image-center">
+						</p>
+					</article>
+				</section>
+			</div>
+
+			<aside>
+				<section class="social">
+					<a href="#"><img title="siguenos en twitter" src="" alt="siguenos en twitter"></a>
+					<a href="#"><img title="siguenos en facebook" src="" alt="siguenos en facebook"></a>
+					<a href="#"><img title="siguenos en youtube" src="" alt="siguenos en youtube"></a>
+					<a href=""><img title="siguenos mediante rss" src="" alt="siguenos mediante rss"></a>
+				</section>
+				<div class="line"></div>
+				<section class="transmission">
+					<header>
+						<h3>transmision en vivo</h3>
+					</header>
+					<span class="text">todos los sabados</span>
+					<ul>
+						<li>
+							<img title="mexico" src="" alt="mexico">
+							<span class="schedule1" padding-left:155px;>11:00am</span>
+						</li>
+						<li>
+							<img title="colombia-peru-ecuador" src="" alt="colombia-peru-ecuador">
+							<span class="schedule2" padding-left:155px;>12:00pm</span>
+						</li>
+						<li>
+							<img title="venezuela" src="" alt="venezuela">
+							<span class="schedule1" padding-left:155px;>12:30pm</span>
+						</li>
+						<li>
+							<img title="chile-argentina" src="" alt="chile-argentina">
+							<span class="schedule3" padding-left:155px;>02:00pm</span>
+						</li>
+						<li>
+							<img title="uruguay" src="" alt="uruguay">
+							<span class="schedule4" padding-left:155px;>03:00pm</span>
+						</li>
+						<li>
+							<img title="españa" src="" alt="españa">
+							<span class="schedule3" padding-left:155px;>06:00pm</span>
+						</li>
+					</ul>
+				</section>
+			</aside>
+			<div class="clear"></div>
+		</section>
+	</div>
+	<footer>
+		<p>adversiting - aviso legal - condiciones de uso acerca de <br> copyright c 2012 powered by stuy</p>
+	</footer>
+</body>
+</html>

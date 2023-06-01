@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		input:required:invalid, input:focus:invalid{
+			background-color: red;
+		}
+
+		input:required:valid{
+			background-color: blue;
+		}
+
+		#st{
+			background-color: blue;
+			border-radius: 4px;
+			box-shadow: 1px 1px 3px #292929;
+			text-shadow: 0 1px 0 yellow;
+			color: black;
+			opacity: .3;
+			-webkit-column-count: 2;
+			border-width: 20px;
+			border-image:url(invalid.png) 27 round;
+		}
+
+		ul a{
+			transition: paddin .4s;
+		}
+		a:hover{
+			padding-left: 6px;
+		}
+	</style>
+
+	<script type="text/javascript">
+	function getlocalization(){
+		navigator.geolocation.getCurrentPosition(coordinates);
+	}
+	function coordenadas(position){
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
+		alert("tus coordenadas son:("+latitude+","+longitude+")");
+	}
+	</script>
+</head>
+<body>
+	<form action="#" method="post">
+		<fieldset>
+			<input type="email" name="email"><br>
+			<input type="text" required name="name"><br>
+			<input type="number" name="number"><br>
+			<input type="date" name="birthday">
+		</fieldset>
+		<progress max="100" value="50"></progress>
+	</form>
+	<div id="st">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+
+	<ul>
+		<li><a href="">hola</a></li>
+	</ul>
+	<a href="javascript:getlocalization">get my position</a>
+</body>
+</html>

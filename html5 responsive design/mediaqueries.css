@@ -1,0 +1,49 @@
+@media(max-width: 1024px), (max-device-width: 1024px){
+	header #wrapper nav ul{
+		margin-left: 33%;
+		width: 600px;
+	}
+
+	header #logo{
+		margin-left: 25px;
+	}
+
+	#top-box-languages{
+		left: 915px;
+	}
+	#top-box-register{
+		left: 650px;
+	}
+	#top-box-login{
+		left: 575px;
+	}
+	#content{
+		width: 65%;
+		float: left;
+		margin-top: 3%;
+		margin-right: 3%;
+		margin-left: 2%;
+	}
+	.post h2{
+		font-size: 1.9em;
+	}
+}
+
+@media (max-width: 800px), (max-device-width: 800px){
+	header #wrapper nav ul{
+		width: 750px;
+		margin: 0px;
+		padding: 0px;
+		position: relative;
+		z-index: 2;
+		margin-left: 3%;
+	}
+	header #logo{
+		margin-left: 25%;
+	}
+	#top-box ul{
+		float: left;
+		margin-left: 10%;
+	}
+
+}

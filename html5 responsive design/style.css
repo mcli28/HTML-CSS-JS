@@ -1,0 +1,158 @@
+body {
+	background-color: #fffff7;
+	font: 16px/22px Helvetica, Arial, Verdana, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+a {
+	color: #cc2a2a;
+	outline: medium none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active, a:focus {
+	color: #0079ce;
+}
+
+p {
+	color: #363335;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 85%;
+	text-align: justify;
+}
+
+h2 {
+	color: #292929;
+	font-size: 160%;
+	letter-spacing: -0.06em;
+	line-height: 1.25em;
+	margin: 0 0 10px;
+}
+
+h3 {
+	color: #292929;
+	font-size: 120%;
+	letter-spacing: -0.06em;
+	margin-bottom: 8px;
+}
+
+h4 {
+	color: #292929;
+	font-size: 100%;
+	letter-spacing: -0.06em;
+	margin-bottom: 8px;
+}
+
+header #topbar-wrapper {
+	width: 100%;
+	height: 40%;
+	background-color: #292929;
+}
+
+header #topbar {
+	width: 1020px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 auto;
+}
+
+header #topbar nav {
+	float: left;
+}
+
+header #topbar nav ul {
+	width:  450px;
+	margin: 0px;
+	padding: 0px;
+}
+
+header #topbar nav ul li {
+	display: inline;
+	font-size: 70%;
+	list-style-type: none;
+	margin-bottom: 2px;
+}
+
+header #topbar nav ul li a{
+	background: none repeat scroll 0 0 #292929;
+	border-radius: 12px 12px 12px 12px;
+	color: #fffff7;
+	font-family: Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+	padding: 3px 9px;
+	text-decoration: none;
+}
+
+header #topbar nav ul li a:hover, header ul li a.current {
+	background: none repeat scroll 0 0 #cc2a2a;
+}
+
+header #wrapper {
+	width: 1020px;
+	margin: 0 auto;
+}
+
+header #wrapper nav ul {
+	width: 720px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	z-index: 2;
+	margin-left: 35%;
+	margin-top: -70px;
+}
+
+header #wrapper nav ul li{
+	display: inline;
+	font-size: 70%;
+	list-style-type: none;
+	margin-bottom: 2px;
+}
+
+header #wrapper nav ul li a {
+	background: none repeat scroll 0 0 #292929;
+	border-radius: 12px 12px 12px 12px;
+	color: #fffff7;
+	font-family: Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+	padding: 2px 9px;
+	text-decoration: none;
+	margin-top: 5px;
+}
+
+header #wrapper nav ul li a:hover, header ul li a.current {
+	background: none repeat scroll 0 0 #045c98;
+}
+
+header #logo {
+	width: 250px;
+	height: 90px;
+	background-image: url('../images/logo.png');
+	text-indent: -9999px;
+}
+
+#content {
+	width: 60%;
+	float: left;
+	margin-top: 6%;
+	margin-left:10.2%;
+	margin-right: 3%;
+}
+
+aside {
+	width: 23%;
+	float: left;
+	margin-top: 6%;
+}
+
+aside .social {
+	margin-left: 18%;
+}
+
+aside .transmission .text {
+
+}
