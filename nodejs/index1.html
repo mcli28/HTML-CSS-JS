@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="http://localhost:8080/socket.io/socket.io.js"></script>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+//network functions
+	var socket = io.connect('http://localhost:8080');
+
+	function submitname (form) {
+		var username = form.name.value;
+		socket.emit('testconnection',username);
+	}
+
+	socket.on('testthis', function (data) {
+		alert(data+"has joined.");
+	});
+</script>
+<body>
+	<form name="sendname" action="" method="get">
+		<input type="text" name="name" value="">
+		<input type="button" value="enter name" onclick="submitname(this.form)" >
+	</form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<script type="text/javascript" src="http://localhost:8080/socket.io/socket.io.js"></script>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>find the one</title>
+</head>
+	<script type="text/javascript">
+		var socket = io.connect('http://localhost:8080/');
+		var randid = Math.floor(Math.random()*9999);
+		var playername = "player" + randid;
+
+		function submitname (form) {
+			var button = form.name;
+			socket.emit('sendbutton', button, playername);
+		}
+		function startgame (form) {
+			var button = form.name;
+			socket.emit('startgame', playername);
+			form.gamestart.disable = true;
+		}
+		socket.emit('clientconnects', playername);
+
+		socket.on('newplayer', function (name){
+			document.getElementById('thistext').innerHTML = name + "has entered the game";
+		});
+		socket.on('getbutton', function (data, thisbutton){
+			//alert(data + " " + thisbutton )
+			if (data=='button1') {
+				button1.button1.value = thisbutton;
+				button1.button1.disable = true;
+			}
+			if (data=='button2') {
+				button2.button2.value = thisbutton;
+				button2.button2.disable = true;
+			}
+			if (data=='button3') {
+				button3.button3.value = thisbutton;
+				button3.button3.disable = true;
+			}
+
+		});
+
+		 /////show game started////////////
+ 		socket.on('gamestarted', function (name){
+ 			gamestart.gamestart.disable = true;
+ 			button1.button1.disable = false;
+ 			button2.button2.disable = false;
+ 			button3.button3.disable = false;
+ 			button1.button1.value = "button1";
+ 			button2.button2.value = "button2";
+ 			button3.button3.value = "button3";
+ 			document.getElementById('thistext').innerHTML = name + " started the game.";
+		});
+		socket.on('winner', function (name){
+			gamestart.gamestart.disable = false;
+			document.getElementById('thistext').innerHTML = name + "found the 1 and wins the game";
+		});
+	</script>
+<body>
+	there are 3 numbers; 1, 2, 3, all hiding behind a button the first person to find the 1 is winner
+	<form action="" name="button1" method="post" />
+		<input type="button" name="button1" value="button1" onclick='submitname(this.form)'>
+	</form>
+	<form action="" name="button2" method="post" />
+		<input type="button" name="button2" value="button2" onclick='submitname(this.form)'>
+	</form>
+	<form action="" name="button3" method="post" />
+		<input type="button" name="button3" value="button3" onclick='submitname(this.form)'>
+	</form>
+	<br>
+	<br>
+	<br>
+	<form action="" name="gamestart" method="post"/>
+	<input type="button" name="gamestart" value="startgame" onclick='startgame(this.form)'>
+	</form>
+	<div id="thistext"></div>
+</body>
+</html>

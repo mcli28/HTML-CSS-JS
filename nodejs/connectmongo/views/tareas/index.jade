@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+	h1 mis tareas de nuevo
+	- if (docs.length)
+	table
+		tr
+			th tarea
+				each tarea in docs
+					tr
+						td #{tarea.tarea}
+	- else
+		p no tienes ninguna tarea
+
+

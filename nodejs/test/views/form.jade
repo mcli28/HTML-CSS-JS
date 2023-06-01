@@ -1,0 +1,13 @@
+section.container
+	h2 ejemplo formulario
+		form (method='post', action='/')
+			fielset
+				legend añadir un usuario
+				p.clearfix
+					label nombre
+					input(name='usuario[nombre]')
+				p.clearfix
+					label apellidos
+					input(name='usuario[apellidos]')
+				p.actions
+					input(type='submit', value='guardar' class='btn primary')

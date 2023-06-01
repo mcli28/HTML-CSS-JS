@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		var val1;
+		function  ChequeaTodo(form) {
+
+		val1=document.getElementById('op').value;
+		val2=document.getElementById('op1').value;
+		console.log(val1);
+		console.log(val2);
+		
+		var socket = io.connect('http://localhost');
+		socket.on('news', function (data){
+			console.log(data);
+			socket.emit('my other event', val1, val2);
+		});
+
+		socket.on('otro', function (data){
+			console.log("esto es lo que recivo del server"+data);
+		});
+		socket.on('mas', function (data){
+			console.log("esto es lo que recivo del server por segunda ves"+data);
+		});
+
+		}
+	</script>
+	<!-- <script type="text/javascript">
+	
+	</script> -->
+</head>
+<body>
+	op1 <input type="text" id="op" value="18" onClick="ChequeaTodo(this)">
+	op1 <input type="text" id="op1" value="28" onClick="ChequeaTodo(this)">
+</body>
+</html>
